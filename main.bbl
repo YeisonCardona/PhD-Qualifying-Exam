@@ -1,0 +1,271 @@
+\begin{thebibliography}{}
+
+\bibitem[Abe et~al., 2021]{abe2021neuroscience}
+Abe, T., Kinsella, I., Saxena, S., Buchanan, E.~K., Couto, J., Briggs, J.,
+  Kitt, S.~L., Glassman, R., Zhou, J., Paninski, L., et~al. (2021).
+\newblock Neuroscience cloud analysis as a service.
+\newblock {\em bioRxiv}, pages 2020--06.
+
+\bibitem[Abiri et~al., 2019]{abiri2019comprehensive}
+Abiri, R., Borhani, S., Sellers, E.~W., Jiang, Y., and Zhao, X. (2019).
+\newblock A comprehensive review of eeg-based brain--computer interface
+  paradigms.
+\newblock {\em Journal of neural engineering}, 16(1):011001.
+
+\bibitem[Ahmadi et~al., 2012]{ahmadi2012brain}
+Ahmadi, A., Dehzangi, O., and Jafari, R. (2012).
+\newblock Brain-computer interface signal processing algorithms: A
+  computational cost vs. accuracy analysis for wearable computers.
+\newblock In {\em 2012 Ninth International Conference on Wearable and
+  Implantable Body Sensor Networks}, pages 40--45. IEEE.
+
+\bibitem[Al~Hamad and Zeki, 2018]{al2018accuracy}
+Al~Hamad, M. and Zeki, A.~M. (2018).
+\newblock Accuracy vs. cost in decision trees: A survey.
+\newblock In {\em 2018 international conference on innovation and intelligence
+  for informatics, computing, and technologies (3ICT)}, pages 1--4. IEEE.
+
+\bibitem[Amaducci et~al., 2019]{amaducci2019rthybrid}
+Amaducci, R., Reyes-Sanchez, M., Elices, I., Rodriguez, F.~B., and Varona, P.
+  (2019).
+\newblock Rthybrid: a standardized and open-source real-time software model
+  library for experimental neuroscience.
+\newblock {\em Frontiers in Neuroinformatics}, 13:11.
+
+\bibitem[Appelhoff and Stenner, 2021]{appelhoff2021we}
+Appelhoff, S. and Stenner, T. (2021).
+\newblock In com we trust: Feasibility of usb-based event marking.
+\newblock {\em Behavior Research Methods}, 53(6):2450--2455.
+
+\bibitem[Assran et~al., 2020]{assran2020advances}
+Assran, M., Aytekin, A., Feyzmahdavian, H.~R., Johansson, M., and Rabbat, M.~G.
+  (2020).
+\newblock Advances in asynchronous parallel and distributed optimization.
+\newblock {\em Proceedings of the IEEE}, 108(11):2013--2031.
+
+\bibitem[Attallah et~al., 2020]{attallah2020bci}
+Attallah, O., Abougharbia, J., Tamazin, M., and Nasser, A.~A. (2020).
+\newblock A bci system based on motor imagery for assisting people with motor
+  deficiencies in the limbs.
+\newblock {\em Brain sciences}, 10(11):864.
+
+\bibitem[Bansal and Mahajan, 2019]{bansal2019eeg}
+Bansal, D. and Mahajan, R. (2019).
+\newblock {\em EEG-Based Brain-Computer Interfaces: Cognitive Analysis and
+  Control Applications}.
+\newblock Academic Press.
+
+\bibitem[Bernardi et~al., 2019]{bernardi2019simplified}
+Bernardi, G.~B., Pimenta, T.~C., and Moreno, R.~L. (2019).
+\newblock A simplified tool for testing of feature selection and classification
+  algorithms in motor imagery of right and left hands of eeg signals.
+\newblock In {\em 2019 IEEE 10th Latin American Symposium on Circuits \&
+  Systems (LASCAS)}, pages 197--200. IEEE.
+
+\bibitem[Brunner and Schalk, 2018]{brunner2018bci}
+Brunner, P. and Schalk, G. (2018).
+\newblock Bci software.
+\newblock In {\em Brain--Computer Interfaces Handbook}, pages 323--340. CRC
+  Press.
+
+\bibitem[Caicedo-Acosta et~al., 2021]{caicedo2021deep}
+Caicedo-Acosta, J., Casta{\~n}o, G.~A., Acosta-Medina, C., Alvarez-Meza, A.,
+  and Castellanos-Dominguez, G. (2021).
+\newblock Deep neural regression prediction of motor imagery skills using eeg
+  functional connectivity indicators.
+\newblock {\em Sensors}, 21(6):1932.
+
+\bibitem[Chepurova et~al., 2022]{chepurova2022motor}
+Chepurova, A., Hramov, A., and Kurkin, S. (2022).
+\newblock Motor imagery: How to assess, improve its performance, and apply it
+  for psychosis diagnostics.
+\newblock {\em Diagnostics}, 12(4):949.
+
+\bibitem[Collazos-Huertas et~al., 2020]{collazos2020cnn}
+Collazos-Huertas, D.~F., {\'A}lvarez-Meza, A.~M., Acosta-Medina, C.~D.,
+  Casta{\~n}o-Duque, G., and Castellanos-Dom{\'\i}nguez, G. (2020).
+\newblock Cnn-based framework using spatial dropping for enhanced
+  interpretation of neural activity in motor imagery classification.
+\newblock {\em Brain Informatics}, 7(1):1--13.
+
+\bibitem[Davis et~al., 2020]{davis2020stimulus}
+Davis, C.~E., Martin, J.~G., and Thorpe, S.~J. (2020).
+\newblock Stimulus onset hub: An open-source, low latency, and opto-isolated
+  trigger box for neuroscientific research replicability and beyond.
+\newblock {\em Frontiers in Neuroinformatics}, 14.
+
+\bibitem[Deshmukh et~al., 2021]{deshmukh2021collaborative}
+Deshmukh, S., Thirupathi~Rao, K., and Shabaz, M. (2021).
+\newblock Collaborative learning based straggler prevention in large-scale
+  distributed computing framework.
+\newblock {\em Security and communication networks}, 2021.
+
+\bibitem[Duan and Lee, 2021]{duan2021educational}
+Duan, C. and Lee, T.~K. (2021).
+\newblock Educational use of free and open source software (foss):
+  international development and its implications for higher education.
+\newblock {\em Interactive Technology and Smart Education}.
+
+\bibitem[Hasan et~al., 2020]{hasan2020computationally}
+Hasan, M.~A., Khan, M.~U., and Mishra, D. (2020).
+\newblock A computationally efficient method for hybrid eeg-fnirs bci based on
+  the pearson correlation.
+\newblock {\em BioMed Research International}, 2020.
+
+\bibitem[Knierim et~al., 2021]{knierim2021open}
+Knierim, M.~T., Berger, C., and Reali, P. (2021).
+\newblock Open-source concealed eeg data collection for
+  brain-computer-interfaces-neural observation through openbci amplifiers with
+  around-the-ear ceegrid electrodes.
+\newblock {\em Brain-Computer Interfaces}, 8(4):161--179.
+
+\bibitem[Kuhn and George, 2021]{kuhn2021performance}
+Kuhn, S. and George, N. (2021).
+\newblock Performance of openbci eeg binary intent classification with
+  laryngeal imagery.
+\newblock {\em arXiv preprint arXiv:2107.00045}.
+
+\bibitem[Laport et~al., 2019]{laport2019comparative}
+Laport, F., Vazquez-Araujo, F.~J., Iglesia, D., Castro, P.~M., and Dapena, A.
+  (2019).
+\newblock A comparative study of low cost open source eeg devices.
+\newblock In {\em Multidisciplinary Digital Publishing Institute Proceedings},
+  volume~21, page~40.
+
+\bibitem[LaRocco et~al., 2020]{larocco2020systemic}
+LaRocco, J., Le, M.~D., and Paeng, D.-G. (2020).
+\newblock A systemic review of available low-cost eeg headsets used for
+  drowsiness detection.
+\newblock {\em Frontiers in neuroinformatics}, 14.
+
+\bibitem[Legenvre et~al., 2020]{legenvre2020open}
+Legenvre, H., Kauttu, P., Bos, M., and Khawand, R. (2020).
+\newblock Is open hardware worthwhile? learning from thales’ experience with
+  risc-v.
+\newblock {\em Research-Technology Management}, 63(4):44--53.
+
+\bibitem[Limchesing et~al., 2021]{limchesing2021review}
+Limchesing, T. J.~C., Chua, A. E.~C., Shi, C. J.~L., Baldovino, R.~G.,
+  Munsayac, F. E.~T., and Bugtai, N.~T. (2021).
+\newblock A review on recent applications of eeg-based bci in wheelchairs and
+  other assistive devices.
+\newblock In {\em 2021 IEEE 13th International Conference on Humanoid,
+  Nanotechnology, Information Technology, Communication and Control,
+  Environment, and Management (HNICEM)}, pages 1--6. IEEE.
+
+\bibitem[Maleki et~al., 2021]{maleki2021brain}
+Maleki, M., Manshouri, N., and Kayikcioglu, T. (2021).
+\newblock Brain-computer interface systems for smart homes-a review study.
+\newblock {\em Recent Advances in Electrical \& Electronic Engineering
+  (Formerly Recent Patents on Electrical \& Electronic Engineering)},
+  14(2):144--155.
+
+\bibitem[Mane et~al., 2020]{mane2020bci}
+Mane, R., Chouhan, T., and Guan, C. (2020).
+\newblock Bci for stroke rehabilitation: motor and beyond.
+\newblock {\em Journal of Neural Engineering}, 17(4):041001.
+
+\bibitem[Mudgal et~al., 2020]{mudgal2020brain}
+Mudgal, S.~K., Sharma, S.~K., Chaturvedi, J., and Sharma, A. (2020).
+\newblock Brain computer interface advancement in neurosciences: Applications
+  and issues.
+\newblock {\em Interdisciplinary Neurosurgery}, 20:100694.
+
+\bibitem[Mu{\~n}iz et~al., 2009]{muniz2009rtbiomanager}
+Mu{\~n}iz, C., Rodr{\'\i}guez, F. d.~B., and Varona, P. (2009).
+\newblock Rtbiomanager: a software platform to expand the applications of
+  real-time technology in neuroscience.
+\newblock {\em BMC Neuroscience}, 10(1):1--2.
+
+\bibitem[Netzer et~al., 2020]{netzer2020real}
+Netzer, E., Frid, A., and Feldman, D. (2020).
+\newblock Real-time eeg classification via coresets for bci applications.
+\newblock {\em Engineering applications of artificial intelligence}, 89:103455.
+
+\bibitem[Nicolas-Alonso and Gomez-Gil, 2012]{nicolas-alonso_brain_2012}
+Nicolas-Alonso, L.~F. and Gomez-Gil, J. (2012).
+\newblock Brain {Computer} {Interfaces}, a {Review}.
+\newblock {\em Sensors}, 12(2):1211--1279.
+
+\bibitem[Polat et~al., 2021]{polat2021eeg}
+Polat, K., Aygun, A.~B., and Kavsaoglu, A.~R. (2021).
+\newblock Eeg based brain-computer interface control applications: A
+  comprehensive review.
+\newblock {\em Journal of Bionic Memory}, 1(1):20--33.
+
+\bibitem[Potter et~al., 2014]{potter2014closed}
+Potter, S.~M., El~Hady, A., and Fetz, E.~E. (2014).
+\newblock Closed-loop neuroscience and neuroengineering.
+\newblock {\em Frontiers in neural circuits}, 8:115.
+
+\bibitem[Powell, 2012]{powell2012democratizing}
+Powell, A. (2012).
+\newblock Democratizing production through open source knowledge: from open
+  software to open hardware.
+\newblock {\em Media, Culture \& Society}, 34(6):691--708.
+
+\bibitem[Razavi et~al., 2022]{razavi2022opensync}
+Razavi, M., Janfaza, V., Yamauchi, T., Leontyev, A., Longmire-Monford, S., and
+  Orr, J. (2022).
+\newblock Opensync: An open-source platform for synchronizing multiple measures
+  in neuroscience experiments.
+\newblock {\em Journal of neuroscience methods}, 369:109458.
+
+\bibitem[Sophia et~al., 2021]{sophia2021real}
+Sophia, S., Devi, D., and Maheswari, S. (2021).
+\newblock Real time cognitive state prediction analysis using brain wave
+  signal.
+\newblock In {\em IOP Conference Series: Materials Science and Engineering},
+  volume 1055, page 012125. IOP Publishing.
+
+\bibitem[Sugiarto and Putro, 2009]{sugiarto2009application}
+Sugiarto, I. and Putro, I.~H. (2009).
+\newblock Application of distributed system in neuroscience, a case study of
+  bci framework.
+\newblock In {\em The 1st international seminar on science and technology}.
+
+\bibitem[Taherian and Davies, 2018]{taherian2018caregiver}
+Taherian, S. and Davies, T.~C. (2018).
+\newblock Caregiver and special education staff perspectives of a commercial
+  brain-computer interface as access technology: a qualitative study.
+\newblock {\em Brain-Computer Interfaces}, 5(2-3):73--87.
+
+\bibitem[Tariq et~al., 2018]{tariq2018eeg}
+Tariq, M., Trivailo, P.~M., and Simic, M. (2018).
+\newblock Eeg-based bci control schemes for lower-limb assistive-robots.
+\newblock {\em Frontiers in human neuroscience}, 12:312.
+
+\bibitem[Tremmel, 2019]{tremmel2019estimating}
+Tremmel, C. (2019).
+\newblock {\em Estimating Cognitive Workload in an Interactive Virtual Reality
+  Environment Using Electrophysiological and Kinematic Activity}.
+\newblock PhD thesis, Old Dominion University.
+
+\bibitem[Vasiljevic and de~Miranda, 2020]{vasiljevic2020brain}
+Vasiljevic, G. A.~M. and de~Miranda, L.~C. (2020).
+\newblock Brain--computer interface games based on consumer-grade eeg devices:
+  A systematic literature review.
+\newblock {\em International Journal of Human--Computer Interaction},
+  36(2):105--142.
+
+\bibitem[Wolpaw et~al., 2002]{wolpaw2002brain}
+Wolpaw, J.~R., Birbaumer, N., McFarland, D.~J., Pfurtscheller, G., and Vaughan,
+  T.~M. (2002).
+\newblock Brain--computer interfaces for communication and control.
+\newblock {\em Clinical neurophysiology}, 113(6):767--791.
+
+\bibitem[Yohanandan et~al., 2018]{yohanandan2018robust}
+Yohanandan, S.~A., Kiral-Kornek, I., Tang, J., Mshford, B.~S., Asif, U., and
+  Harrer, S. (2018).
+\newblock A robust low-cost eeg motor imagery-based brain-computer interface.
+\newblock In {\em 2018 40th Annual International Conference of the IEEE
+  Engineering in Medicine and Biology Society (EMBC)}, pages 5089--5092. IEEE.
+
+\bibitem[Zolubak et~al., 2019]{zolubak2019application}
+Zolubak, M., Pelc, M., Podpora, M., Chlewicki, W., Cichon, K., and
+  Kawala-Sterniuk, A. (2019).
+\newblock Application of cognitive changes markers for diagnostics' purposes
+  and in neurofeedback therapy.
+\newblock {\em IFAC-PapersOnLine}, 52(27):520--523.
+
+\end{thebibliography}
