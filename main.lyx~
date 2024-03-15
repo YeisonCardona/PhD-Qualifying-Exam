@@ -7,18 +7,20 @@
 \textclass beamer
 \begin_preamble
 %\usetheme{Warsaw}
-\usetheme{Pittsburgh}
+%\usetheme{Pittsburgh}
+\usetheme{Oxygen}
 % or ...
 
-\setbeamercovered{transparent}
-% or whatever (possibly just delete it)
+%\setbeamercovered{transparent}
+%\setbeamertemplate{headline}{}
 
-\setbeamertemplate{headline}{}
+\setbeamercovered{dynamic}
+\setbeamertemplate{navigation symbols}{}
+
 
 \definecolor{blue}{RGB}{0,102,255}
 \definecolor{Babyblue}{rgb}{0.54, 0.81, 0.94}
 \definecolor{mainblue}{RGB}{51, 51, 178}
-
 
 \usepackage{color, colortbl}
 \usepackage{xcolor}
@@ -37,7 +39,28 @@
 \usepackage{amssymb}
 \usepackage{pifont}
 
-\renewcommand\makebeamertitle{{\logo{\includegraphics[width=4cm]{assets/EscudoUN-2016_styledv2.png}\vspace{0.75cm}}\maketitle}}
+
+%\renewcommand\makebeamertitle{{\logo{\includegraphics[width=4cm]{assets/EscudoUN-2016_styledv2.png}\vspace{0.75cm}}\maketitle}}
+\renewcommand\makebeamertitle{{
+	\setbeamertemplate{headline}{} 
+	\setbeamertemplate{footline}{} 
+	\begin{frame}{} 
+		\vspace{0cm}     
+		\titlepage
+	\end{frame}
+}}
+
+
+\newcommand\ungraphic{{
+	\vspace{-0.5cm}
+	\includegraphics[width=0.1\textwidth]{assets/EscudoUN.png}\\
+	\scriptsize{
+		Universidad Nacional de Colombia\\
+		Signal Processing and Recognition Group - SPRG\\
+		Manizales, Colombia\\
+		\today
+	}
+}}
 \end_preamble
 \options aspectratio=169
 \use_default_options false
@@ -115,10 +138,10 @@
 \begin_layout Title
 Multimodal Data Exchange Systems for Enhanced Interaction and Management
 \begin_inset Argument 1
-status open
+status collapsed
 
 \begin_layout Plain Layout
-
+Multimodal Data Exchange Systems for Enhanced Interaction and Management
 \end_layout
 
 \end_inset
@@ -128,23 +151,39 @@ status open
 
 \begin_layout Author
 Yeison N.
- Cardona A.
+ Cardona-Alvarez
 \end_layout
 
 \begin_layout Institute
-Universidad Nacional de Colombia sede Manizales
+
+\series bold
+Advisor:
+\series default
+ Andrés Marino Álvarez-Meza, Ph.D
 \begin_inset Newline newline
 \end_inset
 
 
-\begin_inset VSpace defskip
+\series bold
+Co-Advisor:
+\series default
+ César Germán Castellanos-Domínguez, Ph.D
+\end_layout
+
+\begin_layout TitleGraphic
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ungraphic
+\end_layout
+
 \end_inset
 
-Advisor: Andrés Marino Álvarez Meza, Ph.D
-\begin_inset Newline newline
-\end_inset
 
-Co-advisor: César Germán Castellanos Domínguez, Ph.D
 \end_layout
 
 \begin_layout Date
@@ -153,58 +192,16 @@ status open
 
 \begin_layout Plain Layout
 
-
-\backslash
-today
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
-If you have a file called "institution-logo-filename.xxx", where xxx is a
- graphic format that can be processed by latex or pdflatex, resp., then you
- can add a logo by uncommenting the following:
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-%%
-\backslash
-pgfdeclareimage[height=5cm]{assets/EscudoUN-2016.png}{assets/EscudoUN-2016.png}
-\end_layout
-
-\begin_layout Plain Layout
-
-%%
-\backslash
-logo{
-\backslash
-pgfuseimage{assets/EscudoUN-2016.png}}
-\end_layout
-
-\begin_layout Plain Layout
-
-%%
-\backslash
-titlegraphic{
-\backslash
-includegraphics[width=2cm]{assets/EscudoUN-2016.png}}
+Let this empty
 \end_layout
 
 \end_inset
@@ -232,7 +229,7 @@ status open
 
 \begin_layout Plain Layout
 
-%
+%% 
 \backslash
 AtBeginSection[]{
 \backslash
@@ -241,79 +238,6 @@ frame<beamer>{
 frametitle{Outline}
 \backslash
 tableofcontents[currentsection,currentsubsection]}}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Insert page number
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-addtobeamertemplate{navigation symbols}{}{
-\end_layout
-
-\begin_layout Plain Layout
-
-	%
-\backslash
-usebeamerfont{footline}    
-\end_layout
-
-\begin_layout Plain Layout
-
-	%
-\backslash
-usebeamercolor[fg]{footline}  
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-hspace{1em} 
-\end_layout
-
-\begin_layout Plain Layout
-
-	
-\backslash
-large
-\end_layout
-
-\begin_layout Plain Layout
-
-    {
-\backslash
-color{mainblue}
-\backslash
-insertframenumber/
-\backslash
-inserttotalframenumber}
-\end_layout
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
 \end_inset
@@ -443,7 +367,7 @@ Motivation
 status open
 
 \begin_layout Plain Layout
-BCI system
+Motivation
 \end_layout
 
 \end_inset
@@ -452,15 +376,1137 @@ BCI system
 \end_layout
 
 \begin_deeper
-\begin_layout Standard
-...
+\begin_layout FrameSubtitle
+Data Exchange: Definition
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Data Exchange is the 
+\series bold
+proficient and secure transfer
+\series default
+ of data across various platforms and processes.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Data Exchange refers to the 
+\series bold
+efficient and secure
+\series default
+ flow of data between different platforms and procedures 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zhang2021fault,thakare2021secure"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/data_exchange_1.jpg
+	lyxscale 10
+	width 40text%
+	rotateOrigin center
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Graphics
+	filename images/data_exchange_2.jpg
+	lyxscale 10
+	width 40text%
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Motivation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Data Exchange: Applications
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Although data interchange provides advantages, it is essential to tackle
+ obstacles such as 
+\series bold
+strong security
+\series default
+ measures and encryption, guaranteeing the 
+\series bold
+precision
+\series default
+ and 
+\series bold
+dependability
+\series default
+ of data, and complying with industry-specific rules.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+While data exchange offers benefits, it's crucial to address challenges
+ like robust security and encryption, ensuring data accuracy and reliability,
+ and adhering to 
+\series bold
+industry-specific compliance regulations
+\series default
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Las dificultades están intrínsecamente ligadas a las aplicaciones de intercambio
+ de datos.
+ Describirlas en la sección de aplicaciones ayuda a comprender mejor las
+ condiciones y requisitos necesarios para que estas aplicaciones funcionen
+ correctamente.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Although data interchange provides advantages, it's crucial to address
+\series bold
+ intrinsic requirements
+\series default
+ such as robust security and encryption, ensuring data accuracy and reliability,
+ and adhering to industry-specific 
+\series bold
+compliance regulations
+\series default
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Despite its benefits, data exchange requires strong security and encryption,
+ data quality and dependability, and industry-specific 
+\series bold
+compliance standards
+\series default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "attiogbe2021advances"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.65
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Business intelligence and analytics 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "kouper2021challenges"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Companies gather data from different sources (sales, customer interaction,
+ marketing campaigns, etc.) and centralize it within data warehouses.
+ Data exchange protocols make building and updating these warehouses efficient.
+ This combined data fuels powerful analytics tools to get insights that
+ drive business strategy.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Marketing and advertising 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "mishra2023application"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Data exchanges often operate as marketplaces where companies can buy or
+ sell user data.
+ This data often includes demographics, browsing behavior, interests, and
+ more.
+ Marketers use this data to fine-tune targeted advertising and create highly
+ personalized campaigns.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Finance and banking 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Elsaify2021Data"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Credit checks, risk assessment, and fraud detection rely heavily on data
+ exchange.
+ Financial institutions securely exchange information across multiple systems
+ to assess the creditworthiness of individuals or to flag suspicious transaction
+s.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Healthcare 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "al2022application"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Sharing patient data securely between different healthcare providers (hospitals,
+ specialists, labs) is vital for coordinated patient care.
+ Data exchange protocols and healthcare-specific data formats ensure sensitive
+ medical records are transferred according to the highest security and privacy
+ standards.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Government and public services 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ball2020Organizational"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Government agencies often need to share data to improve services and create
+ efficient policies.
+ This could include exchanging data between social security services, taxation
+ offices, or law enforcement agencies.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Research and academia 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "qiu2021comprehensive,paltun2021diverse,adiga2022enhancing"
+literal "false"
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The cornerstone of scientific discovery is often built on collaboration
+ and data sharing.
+ Researchers across different institutions and disciplines use data exchange
+ platforms to pool raw data, results, and findings.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.35
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement b
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+animategraphics[autoplay,loop,width=1
+\backslash
+textwidth]{0.5}{images/application_}{1}{5}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Motivation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Innovating Research through Advanced Information Integration
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Data exchange in research serves as a 
+\series bold
+pivotal foundation for innovation
+\series default
+, uniting diverse fields into a 
+\series bold
+unified force
+\series default
+ propelling forward groundbreaking discoveries.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Data exchange in research plays a crucial role as a fundamental 
+\series bold
+basis for innovation
+\series default
+, bringing together several fields into a 
+\series bold
+cohesive force
+\series default
+ that drives forward revolutionary discoveries 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cappiello2020data"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.3
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/research.jpg
+	lyxscale 10
+	width 90text%
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.7
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Exploring the potential of multimodal information 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zhang2020multimodal"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Este punto sugiere una inmersión profunda en los beneficios de utilizar
+ diferentes tipos de datos.
+ La información multimodal enriquece y profundiza los hallazgos de la investigac
+ión, permitiendo un análisis más completo y variado de los temas estudiados.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Advancing data exchange techniques 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Deng2020A"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Aquí se enfatiza la importancia de desarrollar y perfeccionar los métodos
+ para el intercambio de datos.
+ Estas mejoras son cruciales para que los procesos de investigación sean
+ más eficientes y efectivos, facilitando el manejo y análisis de grandes
+ volúmenes de datos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Designing future-ready data exchange architectures 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Srijith2022Inter-Service"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Este punto subraya la necesidad de un diseño proactivo en los sistemas de
+ intercambio de datos.
+ Es esencial que estas arquitecturas sean adaptables y robustas para satisfacer
+ las demandas de investigación futuras, especialmente en un entorno tecnológico
+ en constante evolución.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Encouraging interdisciplinary collaboration in research 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "talebkhah2023comprehensive"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Este punto subraya la importancia de combinar conocimientos y métodos de
+ distintas disciplinas para enriquecer el proceso de investigación.
+ Se destaca cómo la fusión de estas diferentes perspectivas puede llevar
+ a un análisis más completo y a la generación de ideas innovadoras, abordando
+ así problemas complejos de manera más eficaz.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Motivation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Signal Processing and Recognition Group
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Our research group is deeply committed to advancing the field of 
+\series bold
+interdisciplinary data exchange
+\series default
+, recognizing its pivotal role in unlocking innovative solutions and driving
+ collaborative breakthroughs across 
+\series bold
+diverse research domains
+\series default
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Our research group develops 
+\series bold
+transdisciplinary data exchange
+\series default
+ since we know that it exposes novel approaches and supports collaborative
+ discoveries 
+\series bold
+across academic areas
+\series default
+.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gomezestrategia,aguirre2023feet,martinez2023comparative"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.1
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/Clipped_image_20240308_082937.png
+	lyxscale 10
+	height 40theight%
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.2
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+animategraphics[autoplay,loop,height=0.4
+\backslash
+textheight]{10}{images/thermo/anim-}{00}{30}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/tolimaRegion.svg
+	lyxscale 10
+	height 40theight%
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Section
 Problem statement
 \end_layout
 
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Problem statement
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Limitations of Data Exchange Methodologies
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+When developing data exchange methods, it is essential to prioritize 
+\series bold
+improving the compatibility
+\series default
+ of systems, guaranteeing the 
+\series bold
+accuracy 
+\series default
+and
+\series bold
+ protection 
+\series default
+of data, and effectively handling the transmission of 
+\series bold
+massive amounts of data
+\series default
+ at fast speeds by incorporating various specialized technologies and procedures.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Scientific data sharing requires combining 
+\series bold
+methods
+\series default
+ while resolving their constraints.
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Achieving success requires optimizing these systems so that they can collaborate
+ with one another to improve data processing, analysis, and the overall
+ experience of researchers.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\size scriptsize
+APIs:
+\series default
+ Request rate, security, and provider stability/changes limit them 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "velepucha2023survey"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\size scriptsize
+Messaging:
+\series default
+ Distributed system scalability, delivery assurance, state management, and
+ security issues 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "fang2019integrating"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\size scriptsize
+ETL:
+\series default
+ Data quality-dependent performance and complexity concerns with big amounts
+ of different data 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "abdelhafiz2021sharding"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\size scriptsize
+File Transfer:
+\series default
+ Security, file size, and bandwidth issues 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ordonez2023blockchain,yi2023compound"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -482,21 +1528,30 @@ Problem statement
 \end_layout
 
 \begin_deeper
+\begin_layout FrameSubtitle
+API Request Rate Challenges 
+\end_layout
+
 \begin_layout Standard
-...
-\end_layout
-
-\end_deeper
-\begin_layout Section
-State-of-the-art BCI systems
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
+\begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-State-of-the-art BCI systems
+
+\series bold
+Optimización de la Tasa de Solicitudes en APIs para Entornos Multimodales
+ y Tiempo Real:
+\end_layout
+
+\begin_layout Plain Layout
+
+\emph on
+Problema de Investigación:
+\emph default
+ Investigar cómo optimizar la tasa de solicitudes en APIs para soportar
+ de manera eficiente la transmisión de datos en entornos multimodales y
+ de tiempo real, garantizando adaptabilidad y rendimiento continuo tras
+ modificaciones de proveedores de APIs.
 \end_layout
 
 \end_inset
@@ -504,18 +1559,311 @@ State-of-the-art BCI systems
 
 \end_layout
 
+\begin_layout Standard
+API request rate limits may cause data transmission difficulties, especially
+ in multimodal and real-time situations, and make API provider changes harder
+ to adapt and maintain 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Malki2022Impact,Malki2023Combining"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Enumerate
+
+\series bold
+Optimización de Algoritmos de Control de Tasa de Solicitudes:
+\series default
+ Investigar y desarrollar algoritmos avanzados que gestionen de manera más
+ eficiente las tasas de solicitud, minimizando los cuellos de botella y
+ mejorando la escalabilidad.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Técnicas de Adaptación Dinámica a Cambios de API:
+\series default
+ Desarrollar métodos para que las aplicaciones se adapten automáticamente
+ a los cambios en las APIs, reduciendo la necesidad de intervención manual
+ y manteniendo la operatividad continua.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Análisis Predictivo y ¿Machine Learning?:
+\series default
+ Utilizar técnicas de análisis predictivo y aprendizaje automático para
+ predecir y gestionar las demandas de tráfico de API, optimizando así el
+ uso de recursos y la gestión de solicitudes.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Soluciones de Microservicios y Contenedores:
+\series default
+ Investigar cómo las arquitecturas basadas en microservicios y contenedores
+ pueden ayudar a manejar mejor las limitaciones de las APIs, proporcionando
+ mayor flexibilidad y escalabilidad.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Seguridad y Gestión de API: 
+\series default
+Abordar los desafíos de seguridad asociados con las APIs, desarrollando
+ métodos robustos para autenticación, autorización y cifrado.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Interoperabilidad y Estándares de API: 
+\series default
+Estudiar y proponer estándares o protocolos que mejoren la interoperabilidad
+ entre APIs de diferentes proveedores, facilitando así una integración más
+ fluida.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Análisis de Impacto de Cambios en APIs:
+\series default
+ Realizar investigaciones que cuantifiquen el impacto de los cambios en
+ las APIs en las aplicaciones existentes, proporcionando datos valiosos
+ para desarrolladores y empresas.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Documentación y Herramientas de Desarrollo:
+\series default
+ Desarrollar herramientas y técnicas para mejorar la documentación de APIs
+ y facilitar el desarrollo y la actualización de aplicaciones cliente.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
 \begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Problem statement
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Scalability in Messaging Systems 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Escalabilidad y Fiabilidad de Sistemas de Mensajería Distribuidos en Tiempo
+ Real y Contextos Multimodales:
+\end_layout
+
+\begin_layout Plain Layout
+
+\emph on
+Problema de Investigación:
+\emph default
+ Desarrollar y validar métodos para mejorar la escalabilidad y aseguramiento
+ de entrega en sistemas de mensajería distribuidos, enfocándose en la eficiencia
+ de la comunicación y dependabilidad en tiempo real y entornos multimodales.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Scalability and delivery certainty problems in distributed messaging systems
+ can lead to the loss or delay of messages, which can have a severe influence
+ on the efficiency and reliability of communication in real-time and multimodal
+ contexts.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Problem statement
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+ETL Complexities with Big Data 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Manejo Efectivo de Grandes Volúmenes de Datos Diversos en Tiempo Real para
+ Procesos ETL Multimodales:
+\end_layout
+
+\begin_layout Plain Layout
+
+\emph on
+Problema de Investigación:
+\emph default
+ Explorar estrategias para el manejo eficiente de grandes cantidades de
+ datos variados en tiempo real, centrando la atención en la optimización
+ de procesos ETL multimodales para reducir errores de procesamiento y retrasos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The inadequate management of substantial volumes of diverse data in real-time
+ presents considerable difficulties in multimodal ETL procedures, heightening
+ the likelihood of processing inaccuracies and disruptions in data transmission.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Problem statement
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+File Transfer Security and Efficiency
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+Seguridad y Eficiencia en la Transferencia de Archivos en Sistemas Multimodales
+ y de Tiempo Real:
+\end_layout
+
+\begin_layout Plain Layout
+
+\emph on
+Problema de Investigación:
+\emph default
+ Formular soluciones para reforzar la seguridad y optimizar el manejo del
+ tamaño de archivos y el uso del ancho de banda en la transferencia de archivos,
+ especialmente en sistemas que requieren operaciones multimodales y en tiempo
+ real.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+File transfer in multimodal and real-time situations faces significant obstacles
+ due to security concerns, file size constraints, and high bandwidth utilization.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+State-of-the-Art
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+State-of-the-Art
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
 \begin_deeper
 \begin_layout Standard
-
-\series bold
 ...
 \end_layout
 
 \end_deeper
+\begin_layout Frame
+
+\end_layout
+
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -620,29 +1968,6 @@ Development [obj1]
 
 \end_deeper
 \begin_layout Section
-Demostration
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Demostration
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Description
-...
-\end_layout
-
-\end_deeper
-\begin_layout Section
 Conclusions and academic discussion
 \end_layout
 
@@ -717,17 +2042,7 @@ Papers, patents and software registers
 \end_layout
 
 \begin_layout Itemize
-[2022] Paper submitted to 
-\emph on
-SoftwareX - Journals | Elsevier
-\emph default
- with the name 
-\series bold
-"A real-time acquisition, visualization, and stimuli delivery Python-based
- tool for neurophysiological experiments"
-\series default
-\emph on
-.
+[2023] Paper published...
 \end_layout
 
 \begin_layout Itemize
@@ -826,22 +2141,11 @@ References
 \begin_layout Standard
 
 \size tiny
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\size tiny
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
 btprint "btPrintCited"
 bibfiles "references"
 options "apalike"
-
-\end_inset
-
-
-\end_layout
 
 \end_inset
 
