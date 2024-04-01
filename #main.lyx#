@@ -1,0 +1,4290 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass beamer
+\begin_preamble
+%\usetheme{Warsaw}
+%\usetheme{Pittsburgh}
+\usetheme{Oxygen}
+% or ...
+
+%\setbeamercovered{transparent}
+%\setbeamertemplate{headline}{}
+
+\setbeamercovered{dynamic}
+\setbeamertemplate{navigation symbols}{}
+
+
+\definecolor{blue}{RGB}{0,102,255}
+\definecolor{Babyblue}{rgb}{0.54, 0.81, 0.94}
+\definecolor{mainblue}{RGB}{51, 51, 178}
+
+\usepackage{color, colortbl}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+
+\usepackage{movie15}
+\usepackage{animate}
+\usepackage{graphicx}
+
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{amssymb}
+\usepackage{svg}
+\usepackage{media9}
+\usepackage{ulem}
+\usepackage{amssymb}
+\usepackage{pifont}
+
+\usepackage[edges]{forest} 
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+
+\usepackage{forest}
+\forestset{
+  qtree/.style={
+    baseline,
+    for tree={
+      parent anchor=south,
+      child anchor=north,
+      align=center,
+      inner sep=1pt,
+    }}}
+\usepackage{flexisym}
+
+
+%\renewcommand\makebeamertitle{{\logo{\includegraphics[width=4cm]{assets/EscudoUN-2016_styledv2.png}\vspace{0.75cm}}\maketitle}}
+\renewcommand\makebeamertitle{{
+	\setbeamertemplate{headline}{} 
+	\setbeamertemplate{footline}{} 
+	\begin{frame}{} 
+		\vspace{0cm}     
+		\titlepage
+	\end{frame}
+}}
+
+
+\newcommand\ungraphic{{
+	\vspace{-0.5cm}
+	\includegraphics[width=0.1\textwidth]{assets/EscudoUN.png}\\
+	\scriptsize{
+		Universidad Nacional de Colombia\\
+		Signal Processing and Recognition Group - SPRG\\
+		Manizales, Colombia\\
+		\today
+	}
+}}
+\end_preamble
+\options aspectratio=169
+\use_default_options false
+\maintain_unincluded_children false
+\language english
+\language_package 
+\inputencoding utf8
+\fontencoding global
+\font_roman "lmodern" "default"
+\font_sans "lmss" "default"
+\font_typewriter "lmtt" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures false
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 0
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation indent
+\paragraph_indentation 0cm
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Multimodal Data Exchange System for
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Enhanced Interaction and Management
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+Multimodal Data Exchange Systems for Enhanced Interaction and Management
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Sistema de Intercambio de Datos Multimodales para Interacción y Gestión
+ Mejoradas
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+Yeison Nolberto Cardona-Álvarez
+\end_layout
+
+\begin_layout Institute
+
+\series bold
+Advisor:
+\series default
+ Andrés Marino Álvarez-Meza, Ph.D
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Co-Advisor:
+\series default
+ César Germán Castellanos-Domínguez, Ph.D
+\end_layout
+
+\begin_layout TitleGraphic
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ungraphic
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Date
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Let this empty
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+The following causes the table of contents to be shown at the beginning
+ of every section.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%% 
+\backslash
+AtBeginSection[]{
+\backslash
+frame<beamer>{
+\backslash
+frametitle{Outline}
+\backslash
+tableofcontents[currentsection,currentsubsection]}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Cites with custom color and tiny size
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+let
+\backslash
+oldcite
+\backslash
+cite
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand*
+\backslash
+cite[1]{{
+\backslash
+color {gray}
+\backslash
+tiny{
+\backslash
+oldcite{#1}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand*
+\backslash
+citet[1]{{
+\backslash
+color {gray}
+\backslash
+fontsize{4}{4}
+\backslash
+selectfont{
+\backslash
+oldcite{#1}}}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Description
+b will cause the bottom lines of the columns to be vertically aligned.
+\end_layout
+
+\begin_layout Description
+c will cause the columns to be centered vertically relative to each other.
+ Default, unless the global option t is used.
+\end_layout
+
+\begin_layout Description
+onlytextwidth is the same as totalwidth=
+\backslash
+textwidth.
+ This option can also be set for the whole document with the onlytextwidth
+ class option: 
+\backslash
+documentclass[onlytextwidth]{beamer}
+\end_layout
+
+\begin_layout Description
+t will cause the first lines of the columns to be aligned.
+ Default if global option t is used.
+\end_layout
+
+\begin_layout Description
+T is similar to the t option, but T aligns the tops of the first lines while
+ t aligns the so-called baselines of the first lines.
+ If strange things seem to happen in conjunction with the t option (for
+ example if a graphic suddenly “drops down” with the t option instead of
+ “going up,”), try using this option instead.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Outline
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Motivation
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+5 min (0 min)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Motivation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Data Exchange: Definition
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Data Exchange is the 
+\series bold
+proficient and secure transfer
+\series default
+ of data across various platforms and processes.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Data Exchange refers to the 
+\series bold
+efficient and secure
+\series default
+ flow of data between different platforms and procedures 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zhang2021fault,thakare2021secure"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/data_exchange_1.jpg
+	lyxscale 10
+	width 30text%
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Motivation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Data Exchange: Applications and Investments
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Although data interchange provides advantages, it is essential to tackle
+ obstacles such as 
+\series bold
+strong security
+\series default
+ measures and encryption, guaranteeing the 
+\series bold
+precision
+\series default
+ and 
+\series bold
+dependability
+\series default
+ of data, and complying with industry-specific rules.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+While data exchange offers benefits, it's crucial to address challenges
+ like robust security and encryption, ensuring data accuracy and reliability,
+ and adhering to 
+\series bold
+industry-specific compliance regulations
+\series default
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Las dificultades están intrínsecamente ligadas a las aplicaciones de intercambio
+ de datos.
+ Describirlas en la sección de aplicaciones ayuda a comprender mejor las
+ condiciones y requisitos necesarios para que estas aplicaciones funcionen
+ correctamente.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Although data interchange provides advantages, it's crucial to address
+\series bold
+ intrinsic requirements
+\series default
+ such as robust security and encryption, ensuring data accuracy and reliability,
+ and adhering to industry-specific 
+\series bold
+compliance regulations
+\series default
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It requires strong security and encryption, data quality and dependability,
+ and industry-specific 
+\series bold
+compliance standards
+\series default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "attiogbe2021advances"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.66
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Business intelligence and analytics 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "kouper2021challenges"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Companies gather data from different sources (sales, customer interaction,
+ marketing campaigns, etc.) and centralize it within data warehouses.
+ Data exchange protocols make building and updating these warehouses efficient.
+ This combined data fuels powerful analytics tools to get insights that
+ drive business strategy.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Finance and banking 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Elsaify2021Data"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Credit checks, risk assessment, and fraud detection rely heavily on data
+ exchange.
+ Financial institutions securely exchange information across multiple systems
+ to assess the creditworthiness of individuals or to flag suspicious transaction
+s.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Government and public services 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Ball2020Organizational"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Government agencies often need to share data to improve services and create
+ efficient policies.
+ This could include exchanging data between social security services, taxation
+ offices, or law enforcement agencies.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Marketing and advertising 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "mishra2023application"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Data exchanges often operate as marketplaces where companies can buy or
+ sell user data.
+ This data often includes demographics, browsing behavior, interests, and
+ more.
+ Marketers use this data to fine-tune targeted advertising and create highly
+ personalized campaigns.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Healthcare 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "al2022application"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Sharing patient data securely between different healthcare providers (hospitals,
+ specialists, labs) is vital for coordinated patient care.
+ Data exchange protocols and healthcare-specific data formats ensure sensitive
+ medical records are transferred according to the highest security and privacy
+ standards.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Research and academia 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "qiu2021comprehensive,paltun2021diverse,adiga2022enhancing"
+literal "false"
+
+\end_inset
+
+.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The cornerstone of scientific discovery is often built on collaboration
+ and data sharing.
+ Researchers across different institutions and disciplines use data exchange
+ platforms to pool raw data, results, and findings.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.34
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\size scriptsize
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Amazon Web Service
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Microsoft Azure 
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Google Cloud
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+IMB Cloud
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Oracle Cloud
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Alibaba CLoud (Aliyun) 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/datacenters.svg
+	lyxscale 10
+	width 100col%
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Motivation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+The Growth of Data Centers in Colombia
+\end_layout
+
+\begin_layout Standard
+Latin America's technological revolution plays a crucial role in promoting
+ 
+\series bold
+regional economic growth
+\series default
+, closing the digital gap, creating a foundation for improved connectivity,
+ innovation, and robust digital infrastructure 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "KearneyGlobalServices2023"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.6
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Fourth largest data center market in Latin America.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
+
+\size scriptsize
+Colombia se destaca como el cuarto mercado más grande en América Latina
+ en términos de capacidad y desarrollo de Data Centers.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Esto refleja la creciente demanda de infraestructura de TI en el país, impulsada
+ por el aumento en el uso de servicios en la nube, el almacenamiento de
+ datos y las aplicaciones empresariales.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Significant investments in infrastructure.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
+
+\size scriptsize
+Grandes empresas de tecnología como IBM han realizado inversiones significativas
+ en Colombia para desarrollar Data Centers.
+ Estas inversiones son indicativas del potencial que ven en el mercado colombian
+o y su compromiso con el crecimiento del sector de tecnologías de la información
+ en la región.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Aunque las cifras exactas de estas inversiones pueden no estar públicamente
+ disponibles, su magnitud sugiere un impacto considerable en la economía
+ digital del país.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Attractive for international investments.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
+
+\size scriptsize
+Colombia ofrece un entorno político y económico estable, lo que aumenta
+ su atractivo para los inversores internacionales.
+ Este entorno proporciona la seguridad y previsibilidad que buscan los inversore
+s al expandir sus operaciones o al entrar en nuevos mercados.
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+La demanda en aumento de servicios digitales en el país crea oportunidades
+ para que los inversores extranjeros participen y contribuyan al desarrollo
+ de la infraestructura digital y de Data Centers en Colombia.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Strategic location advantage.
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
+
+\size scriptsize
+La ubicación geográfica de Colombia es estratégicamente ventajosa, ya que
+ ofrece una conexión central en el continente americano.
+ Esto es especialmente beneficioso para operaciones de Data Centers, ya
+ que la proximidad y la conectividad son cruciales para la eficiencia y
+ la velocidad de los servicios de datos.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+El país tiene el potencial de convertirse en un hub regional para Data Centers,
+ sirviendo como un punto clave de conexión y transferencia de datos para
+ otras naciones en América Latina.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.4
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/platanal.jpg
+	lyxscale 10
+	width 50col%
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Motivation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Innovating Research through Advanced Information Integration
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Data exchange in research serves as a 
+\series bold
+pivotal foundation for innovation
+\series default
+, uniting diverse fields into a 
+\series bold
+unified force
+\series default
+ propelling forward groundbreaking discoveries.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Data exchange in research plays a crucial role as a fundamental 
+\series bold
+basis for innovation
+\series default
+, bringing together several fields into a 
+\series bold
+cohesive force
+\series default
+ that drives forward revolutionary discoveries 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "cappiello2020data"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.3
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/research.jpg
+	lyxscale 10
+	width 90text%
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.7
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Exploring the potential of multimodal information 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "zhang2020multimodal"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Este punto sugiere una inmersión profunda en los beneficios de utilizar
+ diferentes tipos de datos.
+ La información multimodal enriquece y profundiza los hallazgos de la investigac
+ión, permitiendo un análisis más completo y variado de los temas estudiados.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Advancing data exchange techniques 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Deng2020A"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Aquí se enfatiza la importancia de desarrollar y perfeccionar los métodos
+ para el intercambio de datos.
+ Estas mejoras son cruciales para que los procesos de investigación sean
+ más eficientes y efectivos, facilitando el manejo y análisis de grandes
+ volúmenes de datos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Designing future-ready data exchange architectures 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Srijith2022Inter-Service"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Este punto subraya la necesidad de un diseño proactivo en los sistemas de
+ intercambio de datos.
+ Es esencial que estas arquitecturas sean adaptables y robustas para satisfacer
+ las demandas de investigación futuras, especialmente en un entorno tecnológico
+ en constante evolución.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Encouraging interdisciplinary collaboration in research 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "talebkhah2023comprehensive"
+literal "false"
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Este punto subraya la importancia de combinar conocimientos y métodos de
+ distintas disciplinas para enriquecer el proceso de investigación.
+ Se destaca cómo la fusión de estas diferentes perspectivas puede llevar
+ a un análisis más completo y a la generación de ideas innovadoras, abordando
+ así problemas complejos de manera más eficaz.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\end_inset
+
+
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Motivation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+SPRG: Signal Processing and Recognition Group
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Our research group is deeply committed to advancing the field of 
+\series bold
+interdisciplinary data exchange
+\series default
+, recognizing its pivotal role in unlocking innovative solutions and driving
+ collaborative breakthroughs across 
+\series bold
+diverse research domains
+\series default
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Our research group develops 
+\series bold
+transdisciplinary data exchange
+\series default
+ since we know that it exposes novel approaches and supports collaborative
+ discoveries 
+\series bold
+across academic areas
+\series default
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "gomezestrategia,aguirre2023feet"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Data heterogeneity.
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Handling unstructured data.
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Real-Time Data Processing and Exchange.
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Privacy and security regulations.
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Interoperability and accessibility.
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Scalability and efficient management.
+\end_layout
+
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/research.svg
+	lyxscale 10
+	width 100col%
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Section
+Problem statement
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+5 min (5 min)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Problem statement
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Limitations of Data Exchange Methodologies
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+When developing data exchange methods, it is essential to prioritize 
+\series bold
+improving the compatibility
+\series default
+ of systems, guaranteeing the 
+\series bold
+accuracy 
+\series default
+and
+\series bold
+ protection 
+\series default
+of data, and effectively handling the transmission of 
+\series bold
+massive amounts of data
+\series default
+ at fast speeds by incorporating various specialized technologies and procedures.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Scientific data sharing requires combining 
+\series bold
+methods
+\series default
+ while resolving their constraints.
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Achieving success requires optimizing these systems so that they can collaborate
+ with one another to improve data processing, analysis, and the overall
+ experience of researchers.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+\series bold
+\size scriptsize
+APIs:
+\series default
+ Request rate, security, and provider stability/changes limit them 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "velepucha2023survey"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+\series bold
+\size scriptsize
+Messaging:
+\series default
+ Distributed system scalability, delivery assurance, state management, and
+ security issues 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "fang2019integrating"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+\series bold
+\size scriptsize
+ETL:
+\series default
+ Data quality-dependent performance and complexity concerns with big amounts
+ of different data 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "abdelhafiz2021sharding"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+\series bold
+\size scriptsize
+File
+\begin_inset space \space{}
+\end_inset
+
+Transfer:
+\series default
+ Security, file size, and bandwidth issues 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ordonez2023blockchain,yi2023compound"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Problem statement
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+API Request Limits
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Optimización de la Tasa de Solicitudes en APIs para Entornos Multimodales
+ y Tiempo Real:
+\end_layout
+
+\begin_layout Plain Layout
+
+\emph on
+Problema de Investigación:
+\emph default
+ Investigar cómo optimizar la tasa de solicitudes en APIs para soportar
+ de manera eficiente la transmisión de datos en entornos multimodales y
+ de tiempo real, garantizando adaptabilidad y rendimiento continuo tras
+ modificaciones de proveedores de APIs.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+API request 
+\series bold
+rate limits
+\series default
+ may cause data transmission difficulties, especially in multimodal and
+ real-time situations, and make API provider changes 
+\series bold
+harder to adapt
+\series default
+ and maintain 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Malki2022Impact,Malki2023Combining"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Enumerate
+
+\series bold
+Optimización de Algoritmos de Control de Tasa de Solicitudes:
+\series default
+ Investigar y desarrollar algoritmos avanzados que gestionen de manera más
+ eficiente las tasas de solicitud, minimizando los cuellos de botella y
+ mejorando la escalabilidad.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Técnicas de Adaptación Dinámica a Cambios de API:
+\series default
+ Desarrollar métodos para que las aplicaciones se adapten automáticamente
+ a los cambios en las APIs, reduciendo la necesidad de intervención manual
+ y manteniendo la operatividad continua.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Análisis Predictivo y ¿Machine Learning?:
+\series default
+ Utilizar técnicas de análisis predictivo y aprendizaje automático para
+ predecir y gestionar las demandas de tráfico de API, optimizando así el
+ uso de recursos y la gestión de solicitudes.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Soluciones de Microservicios y Contenedores:
+\series default
+ Investigar cómo las arquitecturas basadas en microservicios y contenedores
+ pueden ayudar a manejar mejor las limitaciones de las APIs, proporcionando
+ mayor flexibilidad y escalabilidad.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Seguridad y Gestión de API: 
+\series default
+Abordar los desafíos de seguridad asociados con las APIs, desarrollando
+ métodos robustos para autenticación, autorización y cifrado.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Interoperabilidad y Estándares de API: 
+\series default
+Estudiar y proponer estándares o protocolos que mejoren la interoperabilidad
+ entre APIs de diferentes proveedores, facilitando así una integración más
+ fluida.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Análisis de Impacto de Cambios en APIs:
+\series default
+ Realizar investigaciones que cuantifiquen el impacto de los cambios en
+ las APIs en las aplicaciones existentes, proporcionando datos valiosos
+ para desarrolladores y empresas.
+\end_layout
+
+\begin_layout Enumerate
+
+\series bold
+Documentación y Herramientas de Desarrollo:
+\series default
+ Desarrollar herramientas y técnicas para mejorar la documentación de APIs
+ y facilitar el desarrollo y la actualización de aplicaciones cliente.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status collapsed
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.04
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Amazon Web Service
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Microsoft Azure
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Google Cloud
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+IMB Cloud
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Oracle Cloud
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Alibaba CLoud (Aliyun)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/warning.jpg
+	lyxscale 10
+	width 100col%
+	rotateOrigin center
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.96
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Request rate, security, and provider stability/changes limit them 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "velepucha2023survey"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/diagrams/API_01.svg
+	lyxscale 10
+	height 35pheight%
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Problem statement
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Messaging Scalability
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Escalabilidad y Fiabilidad de Sistemas de Mensajería Distribuidos en Tiempo
+ Real y Contextos Multimodales:
+\end_layout
+
+\begin_layout Plain Layout
+
+\emph on
+Problema de Investigación:
+\emph default
+ Desarrollar y validar métodos para mejorar la escalabilidad y aseguramiento
+ de entrega en sistemas de mensajería distribuidos, enfocándose en la eficiencia
+ de la comunicación y dependabilidad en tiempo real y entornos multimodales.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Scalability and delivery certainty problems in distributed messaging systems
+ can lead to the 
+\series bold
+loss or delay of messages
+\series default
+, which can have a severe influence on the 
+\series bold
+efficiency and reliability
+\series default
+ of communication in real-time and multimodal contexts 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Arellanes2020Evaluating,basin2020scalable"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/diagrams/MSG_01.svg
+	lyxscale 10
+	height 35pheight%
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Problem statement
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Multimodal ETL & AI 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Manejo Efectivo de Grandes Volúmenes de Datos Diversos en Tiempo Real para
+ Procesos ETL Multimodales:
+\end_layout
+
+\begin_layout Plain Layout
+
+\emph on
+Problema de Investigación:
+\emph default
+ Explorar estrategias para el manejo eficiente de grandes cantidades de
+ datos variados en tiempo real, centrando la atención en la optimización
+ de procesos ETL multimodales para reducir errores de procesamiento y retrasos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The inadequate management of substantial volumes of diverse data in real-time
+ presents considerable difficulties in multimodal ETL procedures, heightening
+ the likelihood of 
+\series bold
+processing inaccuracies and disruptions
+\series default
+ in data transmission.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Complex multimodal ETL processes can lead to 
+\series bold
+inaccurate data and disruptions
+\series default
+ in AI analysis due to challenges with data integration and real-time data
+ management
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Qaiser2023Comparative,Soussi2021Big-Parallel-ETL:"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/diagrams/ETL_01.svg
+	lyxscale 10
+	height 35pheight%
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Problem statement
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Large-Scale File Transmission
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\series bold
+Seguridad y Eficiencia en la Transferencia de Archivos en Sistemas Multimodales
+ y de Tiempo Real:
+\end_layout
+
+\begin_layout Plain Layout
+
+\emph on
+Problema de Investigación:
+\emph default
+ Formular soluciones para reforzar la seguridad y optimizar el manejo del
+ tamaño de archivos y el uso del ancho de banda en la transferencia de archivos,
+ especialmente en sistemas que requieren operaciones multimodales y en tiempo
+ real.
+ 
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+La 
+\begin_inset Quotes eld
+\end_inset
+
+sincronización
+\begin_inset Quotes erd
+\end_inset
+
+ se refiere a garantizar que los datos más recientes y precisos estén disponible
+s en todas las plataformas necesarias simultáneamente, lo cual puede ser
+ desafiante en entornos dinámicos y multimodales.
+ 
+\end_layout
+
+\begin_layout Plain Layout
+"tiempo real" a menudo está más asociada con la transmisión continua de
+ datos (como en los sistemas de mensajería) que con la transferencia tradicional
+ de archivos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+The real-time file transfer encounters the crucial obstacle of 
+\series bold
+synchronizing
+\series default
+ and safeguarding 
+\series bold
+precise and timely
+\series default
+ data across many platforms 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zheng2020Design,Yin2023Network"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Large-scale file transmission requires efficient and safe administration
+ of continuous data flow, especially in integrating systems and platforms,
+ while ensuring data 
+\series bold
+integrity
+\series default
+ and 
+\series bold
+accessibility
+\series default
+ in changing contexts 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Zheng2020Design,yin2023network"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/diagrams/FLA_01.svg
+	lyxscale 10
+	height 35pheight%
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+State-of-the-Art
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+5 min (10 min)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+State-of-the-Art
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+APIs: Infrastructure Improving
+\end_layout
+
+\begin_layout Standard
+\noindent
+
+\size footnotesize
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
+\noindent
+
+\size footnotesize
+Adaptive REST API testing with reinforcement learning 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "kim2023adaptive"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\noindent
+
+\size footnotesize
+Dynamic resources management under limited communication based on multi-level
+ agent system 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "wang2023dynamic"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\noindent
+
+\size footnotesize
+Online task allocation and scheduling in fog IoT using virtual bidding 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "joshi2022online"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\noindent
+
+\size footnotesize
+Event-triggered communication network with limited-bandwidth constraint
+ for multi-agent reinforcement learning 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hu2021event"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+\noindent
+
+\size footnotesize
+On the design and implementation of real-time resource access protocols
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "dos2020design"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Towards self-managing cloud storage with reinforcement learning 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "noel2019towards"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{forest}
+\end_layout
+
+\begin_layout Plain Layout
+
+  qtree,
+\end_layout
+
+\begin_layout Plain Layout
+
+  for tree={
+\end_layout
+
+\begin_layout Plain Layout
+
+    grow=0,             
+\end_layout
+
+\begin_layout Plain Layout
+
+    parent anchor=children,       
+\end_layout
+
+\begin_layout Plain Layout
+
+    child anchor=parent, 
+\end_layout
+
+\begin_layout Plain Layout
+
+    anchor=parent,
+\end_layout
+
+\begin_layout Plain Layout
+
+    l sep=5mm,  
+\end_layout
+
+\begin_layout Plain Layout
+
+	font=
+\backslash
+tiny,       
+\end_layout
+
+\begin_layout Plain Layout
+
+  },
+\end_layout
+
+\begin_layout Plain Layout
+
+  where level=0{
+\end_layout
+
+\begin_layout Plain Layout
+
+    %grow=0,            
+\end_layout
+
+\begin_layout Plain Layout
+
+  }{
+\end_layout
+
+\begin_layout Plain Layout
+
+    if n children=0{folder}{}, 
+\end_layout
+
+\begin_layout Plain Layout
+
+    edge path'={(!u.parent anchor) -- ++(2.5mm,0) |- (.child anchor)[line width=0.6p
+t]},
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  [Optimization in
+\backslash
+
+\backslash
+Computer Systems, rotate=90 
+\end_layout
+
+\begin_layout Plain Layout
+
+    [Resource
+\backslash
+
+\backslash
+Management, rotate=90
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Dynamic Resources Management Under Limited Communication Based on
+ Multi-level Agent System 
+\backslash
+citet{wang2023dynamic}.]
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Online Task Allocation and Scheduling in Fog IoT using Virtual Bidding
+ 
+\backslash
+citet{joshi2022online}.]
+\end_layout
+
+\begin_layout Plain Layout
+
+    ]
+\end_layout
+
+\begin_layout Plain Layout
+
+    [Communication
+\backslash
+
+\backslash
+Efficiency, rotate=90 
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Event-Triggered Communication Network with Limited-Bandwidth Constraint
+ for Multi-Agent Reinforcement Learning 
+\backslash
+citet{hu2021event}.]
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Adaptive REST API Testing with Reinforcement Learning 
+\backslash
+citet{kim2023adaptive}.]
+\end_layout
+
+\begin_layout Plain Layout
+
+    ]
+\end_layout
+
+\begin_layout Plain Layout
+
+    [Real-Time
+\backslash
+
+\backslash
+Systems, rotate=90  
+\end_layout
+
+\begin_layout Plain Layout
+
+      [On the Design and Implementation of Real-Time Resource Access Protocols
+ 
+\backslash
+citet{dos2020design}.]
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Towards Self-Managing Cloud Storage with Reinforcement Learning 
+\backslash
+citet{noel2019towards}.]
+\end_layout
+
+\begin_layout Plain Layout
+
+    ]
+\end_layout
+
+\begin_layout Plain Layout
+
+  ]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{forest}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Limitations in 
+\series bold
+real-time API performance
+\series default
+ and 
+\series bold
+adaptability
+\series default
+ due to static configuration settings.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+State-of-the-Art
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Distributed Messaging: Scalability and Reliability
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
+
+\size footnotesize
+Pistis: an event-triggered real-time byzantine-resilient protocol suite
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "kozhaya2021pistis"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Designing a real-time IoT data streaming testbed for horizontally scalable
+ analytical platforms: Czech post case study 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vstufi2021designing"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Adaptive topology for scalability and immediacy in distributed publish/subscribe
+ messaging 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "banno2020adaptive"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Reliability enhancements for high-availability systems using distributed
+ event streaming platforms 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "dincua2023reliability"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Adaptive topology for scalability and immediacy in distributed publish/subscribe
+ messaging 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "banno2020adaptive"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Towards Scalable Cross-Chain Messaging 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "otavio2023towards"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{forest}
+\end_layout
+
+\begin_layout Plain Layout
+
+  qtree,
+\end_layout
+
+\begin_layout Plain Layout
+
+  for tree={
+\end_layout
+
+\begin_layout Plain Layout
+
+    grow=0,             
+\end_layout
+
+\begin_layout Plain Layout
+
+    parent anchor=children,       
+\end_layout
+
+\begin_layout Plain Layout
+
+    child anchor=parent, 
+\end_layout
+
+\begin_layout Plain Layout
+
+    anchor=parent,
+\end_layout
+
+\begin_layout Plain Layout
+
+    l sep=5mm,  
+\end_layout
+
+\begin_layout Plain Layout
+
+	font=
+\backslash
+tiny,       
+\end_layout
+
+\begin_layout Plain Layout
+
+  },
+\end_layout
+
+\begin_layout Plain Layout
+
+  where level=0{
+\end_layout
+
+\begin_layout Plain Layout
+
+    %grow=0,            
+\end_layout
+
+\begin_layout Plain Layout
+
+  }{
+\end_layout
+
+\begin_layout Plain Layout
+
+    if n children=0{folder}{}, 
+\end_layout
+
+\begin_layout Plain Layout
+
+    edge path'={(!u.parent anchor) -- ++(2.5mm,0) |- (.child anchor)[line width=0.6p
+t]},
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  [Distributed Real-Time
+\backslash
+
+\backslash
+Messaging and Scalability, rotate=90 
+\end_layout
+
+\begin_layout Plain Layout
+
+    [Event Streaming and
+\backslash
+
+\backslash
+Async.
+ Communication, rotate=90
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Reliability enhancements for high-availability systems using distributed
+ event streaming platforms 
+\backslash
+citet{dincua2023reliability}.]
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Adaptive Topology for Scalability and Immediacy in Distributed Publish-Su
+bscribe Messaging 
+\backslash
+citet{banno2020adaptive}.]
+\end_layout
+
+\begin_layout Plain Layout
+
+    ]
+\end_layout
+
+\begin_layout Plain Layout
+
+    [IoT and Scalable
+\backslash
+
+\backslash
+Architectures, rotate=90 
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Designing a Real-Time IoT Data Streaming Testbed for Horizontally
+ Scalable Analytical Platforms 
+\backslash
+citet{vstufi2021designing}.]
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Towards Scalable Cross-Chain Messaging 
+\backslash
+citet{otavio2023towards}.]
+\end_layout
+
+\begin_layout Plain Layout
+
+      [PISTIS: An Event-Triggered Real-Time Byzantine-Resilient Protocol
+ Suite 
+\backslash
+citet{kozhaya2021pistis}.]
+\end_layout
+
+\begin_layout Plain Layout
+
+    ]
+\end_layout
+
+\begin_layout Plain Layout
+
+  ]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{forest}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\series bold
+Inefficiencies and scalability issues
+\series default
+ in distributed messaging systems affecting real-time communication.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+State-of-the-Art
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+AI-Enhanced ETL Processes
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
+
+\size footnotesize
+Data pipeline for real-time energy consumption data management and prediction
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "im2024data"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Machine Learning Revolution in Early Disease Detection for Healthcare: Advanceme
+nts, Challenges, and Future Prospects 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "reddy2023machine"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Integrating IoT and Machine Learning for Real-Time Patient Health Monitoring
+ with Sensor Networks 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vimal2023integrating"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Deep Learning Applications in Vessel Dead Reckoning to Deal with Missing
+ Automatic Identification System Data 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jmse12010152"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Deep learning from latent spatiotemporal information of the heart: Identifying
+ advanced bioimaging markers from echocardiograms 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "chang2024deep"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{forest}
+\end_layout
+
+\begin_layout Plain Layout
+
+  qtree,
+\end_layout
+
+\begin_layout Plain Layout
+
+  for tree={
+\end_layout
+
+\begin_layout Plain Layout
+
+    grow=0,             
+\end_layout
+
+\begin_layout Plain Layout
+
+    parent anchor=children,       
+\end_layout
+
+\begin_layout Plain Layout
+
+    child anchor=parent, 
+\end_layout
+
+\begin_layout Plain Layout
+
+    anchor=parent,
+\end_layout
+
+\begin_layout Plain Layout
+
+    l sep=5mm,  
+\end_layout
+
+\begin_layout Plain Layout
+
+	font=
+\backslash
+tiny,       
+\end_layout
+
+\begin_layout Plain Layout
+
+  },
+\end_layout
+
+\begin_layout Plain Layout
+
+  where level=0{
+\end_layout
+
+\begin_layout Plain Layout
+
+    %grow=0,            
+\end_layout
+
+\begin_layout Plain Layout
+
+  }{
+\end_layout
+
+\begin_layout Plain Layout
+
+    if n children=0{folder}{}, 
+\end_layout
+
+\begin_layout Plain Layout
+
+    edge path'={(!u.parent anchor) -- ++(2.5mm,0) |- (.child anchor)[line width=0.6p
+t]},
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  [Data Integration and
+\backslash
+
+\backslash
+Real-Time Management, rotate=90 
+\end_layout
+
+\begin_layout Plain Layout
+
+    [Real-Time Health
+\backslash
+
+\backslash
+Monitoring, rotate=90
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Integrating IoT and Machine Learning for Real-Time Patient Health
+ Monitoring with Sensor Networks 
+\backslash
+citet{vimal2023integrating}.]
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Data pipeline for real-time energy consumption data management and
+ prediction 
+\backslash
+citet{im2024data}.]
+\end_layout
+
+\begin_layout Plain Layout
+
+    ]
+\end_layout
+
+\begin_layout Plain Layout
+
+    [Advances in Disease
+\backslash
+
+\backslash
+Detection and Analysis, rotate=90 
+\end_layout
+
+\begin_layout Plain Layout
+
+      [{Machine Learning Revolution in Early Disease Detection for Healthcare
+ 
+\backslash
+citet{reddy2023machine}}.]
+\end_layout
+
+\begin_layout Plain Layout
+
+      [{Deep learning from latent spatiotemporal information of the heart
+ 
+\backslash
+citet{chang2024deep}}.]
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Deep Learning Applications in Vessel Dead Reckoning to Deal with
+ Missing Automatic Identification System Data 
+\backslash
+citet{jmse12010152}.]
+\end_layout
+
+\begin_layout Plain Layout
+
+    ]
+\end_layout
+
+\begin_layout Plain Layout
+
+  ]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{forest}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Inefficiencies in processing 
+\series bold
+unstructured and temporal data
+\series default
+ in AI-driven multimodal ETL systems.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+State-of-the-Art
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Advancements in Large-Scale File Transmission
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
+
+\size footnotesize
+Design and optimization of a distributed file system based on RDMA 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "he2023design"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Network coding for efficient file transfer in narrowband environments 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "yin2023network"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+The design of intelligent transportation video processing system in big
+ data environment 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hao2020design"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Survey of network coding based P2P file sharing in large scale networks
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "abudaqa2020survey"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Reliable, Efficient Large-File Delivery over Lossy, Unidirectional Links
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "van2021reliable"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{forest}
+\end_layout
+
+\begin_layout Plain Layout
+
+  qtree,
+\end_layout
+
+\begin_layout Plain Layout
+
+  for tree={
+\end_layout
+
+\begin_layout Plain Layout
+
+    grow=0,             
+\end_layout
+
+\begin_layout Plain Layout
+
+    parent anchor=children,       
+\end_layout
+
+\begin_layout Plain Layout
+
+    child anchor=parent, 
+\end_layout
+
+\begin_layout Plain Layout
+
+    anchor=parent,
+\end_layout
+
+\begin_layout Plain Layout
+
+    l sep=5mm,  
+\end_layout
+
+\begin_layout Plain Layout
+
+	font=
+\backslash
+tiny,       
+\end_layout
+
+\begin_layout Plain Layout
+
+  },
+\end_layout
+
+\begin_layout Plain Layout
+
+  where level=0{
+\end_layout
+
+\begin_layout Plain Layout
+
+    %grow=0,            
+\end_layout
+
+\begin_layout Plain Layout
+
+  }{
+\end_layout
+
+\begin_layout Plain Layout
+
+    if n children=0{folder}{}, 
+\end_layout
+
+\begin_layout Plain Layout
+
+    edge path'={(!u.parent anchor) -- ++(2.5mm,0) |- (.child anchor)[line width=0.6p
+t]},
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  [Data Flow Management and
+\backslash
+
+\backslash
+Large-Scale File Transmission, rotate=90 
+\end_layout
+
+\begin_layout Plain Layout
+
+    [Protocols and
+\backslash
+
+\backslash
+Network Security, rotate=90
+\end_layout
+
+\begin_layout Plain Layout
+
+      [{Reliable, Efficient Large-File Delivery over Lossy, Unidirectional
+ Links 
+\backslash
+citet{van2021reliable}}.]
+\end_layout
+
+\begin_layout Plain Layout
+
+      [The Design of Intelligent Transportation Video Processing System
+ in Big Data Environment 
+\backslash
+citet{hao2020design}.]
+\end_layout
+
+\begin_layout Plain Layout
+
+    ]
+\end_layout
+
+\begin_layout Plain Layout
+
+    [Coding Techniques and
+\backslash
+
+\backslash
+Distributed Systems, rotate=90 
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Design and Optimization of a Distributed File System Based on RDMA
+ 
+\backslash
+citet{he2023design}.]
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Network coding for efficient file transfer in narrowband environments
+ 
+\backslash
+citet{yin2023network}.]
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Survey of Network Coding Based P2P File Sharing in Large Scale Networks
+ 
+\backslash
+citet{abudaqa2020survey}.]
+\end_layout
+
+\begin_layout Plain Layout
+
+    ]
+\end_layout
+
+\begin_layout Plain Layout
+
+  ]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{forest}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+Challenges in ensuring 
+\series bold
+efficient and secure
+\series default
+ large-scale file transmission in 
+\series bold
+varying network conditions
+\series default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Question research
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+¿Cómo pueden los algoritmos de aprendizaje automático o reforzado mejorar
+ la adaptabilidad y el rendimiento de las APIs REST en tiempo real mediante
+ la configuración dinámica y autoajustable en un entorno de servidor basado
+ en contenedores?
+\end_layout
+
+\begin_layout Itemize
+¿Qué métodos y arquitecturas pueden ser desarrollados para superar los desafíos
+ de eficiencia y escalabilidad en sistemas de mensajería distribuida, garantizan
+do la comunicación en tiempo real eficiente y confiable?
+\end_layout
+
+\begin_layout Itemize
+¿Cómo pueden los enfoques avanzados de aprendizaje profundo y redes neuronales
+ mejorar la eficiencia y precisión en el procesamiento de datos no estructurados
+ y temporales en sistemas ETL multimodales dirigidos por IA?
+\end_layout
+
+\begin_layout Itemize
+¿Qué técnicas y modelos predictivos pueden ser implementados para optimizar
+ la transmisión de archivos a gran escala, asegurando eficiencia y seguridad
+ bajo variadas condiciones de red?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+How can advanced artificial intelligence and machine learning techniques
+ be used to address important issues in data management and communications
+ in digital environments? Specifically, how can they improve the flexibility
+ and effectiveness of real-time APIs, enhance the efficiency and scalability
+ of distributed messaging systems, process unstructured and temporal data
+ effectively in multimodal ETL systems, and optimize large-scale file transmissi
+on in different network conditions?
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Aims
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+5 min (15 min)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+General aim
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\align block
+...
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Specific aims
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+...
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Section
+Methodology
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Methodology [obj1]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Propongo un sistema basado en aprendizaje reforzado que ajuste dinámicamente
+ los parámetros de configuración de una API REST.
+ Este sistema sería capaz de modificar en tiempo real aspectos críticos
+ como la configuración del servidor (que opera en un entorno basado en contenedo
+res) y la interacción con la base de datos.
+ La idea central es que el sistema aprenda y se adapte automáticamente a
+ las variaciones en el uso y demanda de la API, optimizando recursos, mejorando
+ el rendimiento y garantizando una gestión eficiente de la tasa de solicitudes.
+ Este enfoque busca combinar la flexibilidad y escalabilidad de los contenedores
+ con la inteligencia y adaptabilidad proporcionadas por el aprendizaje reforzado
+, enfocándose en mantener un alto nivel de servicio y disponibilidad de
+ la API, incluso ante cambios dinámicos en el entorno y la demanda.
+\end_layout
+
+\begin_layout Standard
+El problema a abordar es cómo superar las limitaciones de tasa de solicitudes
+ de API, que generan dificultades en la transmisión de datos en escenarios
+ multimodales y en tiempo real, y complican la adaptación y mantenimiento
+ cuando se cambian los proveedores de API.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Methodology [obj2]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Propongo un sistema avanzado de mensajería distribuida, basado en una red
+ de malla donde cada nodo puede enviar y recibir mensajes.
+ Esta red integra específicamente tecnologías de inteligencia artificial
+ para optimizar su funcionamiento: utiliza Redes Neuronales Recurrentes
+ (RNN) para el enrutamiento dinámico y predecir la congestión de la red,
+ técnicas de clustering para el balanceo equitativo de carga, Autoencoders
+ para la detección de anomalías y seguridad, y aprendizaje por refuerzo
+ para la optimización constante de rutas.
+ Además, emplea modelos de regresión para predecir fallos de nodos y algoritmos
+ de segmentación de usuarios para personalizar la experiencia de comunicación.
+ Este enfoque brinda una red más eficiente, segura y adaptable, mejorando
+ la entrega de mensajes y la experiencia del usuario, al mismo tiempo que
+ aumenta la resistencia de la red a fallos y ataques.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Methodology [obj3]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Propongo un sistema orientado a optimizar los procesos de ETL multimodal
+ en entornos de inteligencia artificial a través de algoritmos avanzados
+ de aprendizaje automático y aprendizaje profundo, centrado en la integración
+ eficiente y procesamiento de datos no estructurados mediante redes neuronales
+ convolucionales y la gestión dinámica de secuencias de datos temporales
+ utilizando redes neuronales recurrentes.
+ Este enfoque práctico involucra el desarrollo de prototipos y su validación
+ en escenarios de uso real, destacando aplicaciones como la monitorización
+ en tiempo real y el análisis de grandes conjuntos de datos, con el objetivo
+ de mejorar significativamente la precisión, eficiencia y capacidad de respuesta
+ de los sistemas de ETL, proporcionando un marco concreto y aplicable para
+ enfrentar desafíos actuales en el procesamiento de datos en IA.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Methodology [obj4]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Para optimizar la transmisión de archivos a gran escala, propongo un sistema
+ de servidor inteligente capaz de adaptarse en tiempo real a las condiciones
+ de conexión y restricciones del cliente, como la pérdida de paquetes y
+ variaciones en el ancho de banda.
+ Este sistema utilizará Redes Neuronales Recurrentes, en particular Long
+ Short-Term Memory (LSTM), para monitorear y predecir de manera continua
+ y precisa las condiciones de la red del cliente.
+ Basándose en esta información, el servidor ajustará dinámicamente la tasa
+ de transmisión de archivos, seleccionará protocolos de comunicación óptimos
+ y aplicará técnicas de compresión de datos para adaptarse a las limitaciones
+ del cliente.
+ Además, el sistema contará con mecanismos de aprendizaje continuo que le
+ permitirán mejorar progresivamente su capacidad de adaptación, asegurando
+ una transmisión eficiente y confiable en un amplio rango de condiciones
+ de red.
+ Esta propuesta busca proporcionar una experiencia de usuario óptima con
+ un enfoque proactivo y adaptable a las necesidades específicas de cada
+ cliente.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Academic advances
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Academic advances
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Papers, patents and software registers
+\end_layout
+
+\begin_layout Itemize
+[2023] Paper published...
+\end_layout
+
+\begin_layout Itemize
+[2022] The systems were submitted to the 
+\series bold
+Crearlo no es suficiente
+\series default
+ summons for a 
+\emph on
+patentability search process
+\emph default
+ with the 
+\emph on
+Universidad Nacional de Colombia sede Manizales
+\emph default
+ as main beneficiary with the title 
+\series bold
+"MÉTODO Y SISTEMA PARA LA SINCRONIZACIÓN DE MARCADORES ASOCIADOS A SISTEMAS
+ DE INTERFAZ CEREBRO-COMPUTADOR"
+\series default
+, postulation 
+\emph on
+ID 343 
+\emph default
+and Application number 
+\emph on
+NC2022/0007405
+\emph default
+ from May 28, 2022.
+\end_layout
+
+\begin_layout Itemize
+[2022] A script developed with BCI-Framework for
+\series bold
+ Motor imagery paradigm with game-based stimulus (Pacman interface)
+\series default
+ was submitted to the software register in the 
+\emph on
+Universidad Nacional de Colombia sede Manizales
+\emph default
+.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Acknowledgements
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Acknowledgements
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+...
+\end_layout
+
+\end_deeper
+\begin_layout Section
+References
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 3
+status collapsed
+
+\begin_layout Plain Layout
+allowframebreaks
+\end_layout
+
+\end_inset
+
+
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+References
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+\size tiny
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+btprint "btPrintCited"
+bibfiles "references"
+options "apalike"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\end_body
+\end_document

@@ -39,6 +39,22 @@
 \usepackage{amssymb}
 \usepackage{pifont}
 
+\usepackage[edges]{forest} 
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+
+\usepackage{forest}
+\forestset{
+  qtree/.style={
+    baseline,
+    for tree={
+      parent anchor=south,
+      child anchor=north,
+      align=center,
+      inner sep=1pt,
+    }}}
+\usepackage{flexisym}
+
 
 %\renewcommand\makebeamertitle{{\logo{\includegraphics[width=4cm]{assets/EscudoUN-2016_styledv2.png}\vspace{0.75cm}}\maketitle}}
 \renewcommand\makebeamertitle{{
@@ -309,6 +325,23 @@ cite[1]{{
 color {gray}
 \backslash
 tiny{
+\backslash
+oldcite{#1}}}}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand*
+\backslash
+citet[1]{{
+\backslash
+color {gray}
+\backslash
+fontsize{4}{4}
+\backslash
+selectfont{
 \backslash
 oldcite{#1}}}}
 \end_layout
@@ -2212,7 +2245,7 @@ efficiency and reliability
  of communication in real-time and multimodal contexts 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Basin2020Scalable,Arellanes2020Evaluating"
+key "Arellanes2020Evaluating,basin2020scalable"
 literal "false"
 
 \end_inset
@@ -2486,7 +2519,7 @@ accessibility
  in changing contexts 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Zheng2020Design,Yin2023Network"
+key "Zheng2020Design,yin2023network"
 literal "false"
 
 \end_inset
@@ -2548,14 +2581,21 @@ State-of-the-Art
 
 \begin_deeper
 \begin_layout FrameSubtitle
-APIs Infrastructure Improving
+APIs: Infrastructure Improving
 \end_layout
+
+\begin_layout Standard
+\noindent
+
+\size footnotesize
+\begin_inset Note Note
+status collapsed
 
 \begin_layout Itemize
 \noindent
 
 \size footnotesize
-Adaptive REST API Testing with Reinforcement Learning 
+Adaptive REST API testing with reinforcement learning 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "kim2023adaptive"
@@ -2564,18 +2604,14 @@ literal "false"
 \end_inset
 
 .
-\begin_inset VSpace bigskip
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
 \noindent
 
 \size footnotesize
-Dynamic Resources Management Under Limited Communication Based on Multi-level
- Agent System
+Dynamic resources management under limited communication based on multi-level
+ agent system 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "wang2023dynamic"
@@ -2584,17 +2620,13 @@ literal "false"
 \end_inset
 
 .
-\begin_inset VSpace bigskip
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
 \noindent
 
 \size footnotesize
-Online Task Allocation and Scheduling in Fog IoT using Virtual Bidding 
+Online task allocation and scheduling in fog IoT using virtual bidding 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "joshi2022online"
@@ -2603,18 +2635,14 @@ literal "false"
 \end_inset
 
 .
-\begin_inset VSpace bigskip
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
 \noindent
 
 \size footnotesize
-Event-Triggered Communication Network With Limited-Bandwidth Constraint
- for Multi-Agent Reinforcement Learning 
+Event-triggered communication network with limited-bandwidth constraint
+ for multi-agent reinforcement learning 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "hu2021event"
@@ -2623,17 +2651,13 @@ literal "false"
 \end_inset
 
 .
-\begin_inset VSpace bigskip
-\end_inset
-
-
 \end_layout
 
 \begin_layout Itemize
 \noindent
 
 \size footnotesize
-On the Design and Implementation of Real-Time Resource Access Protocols
+On the design and implementation of real-time resource access protocols
  
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -2645,11 +2669,1136 @@ literal "false"
 .
 \end_layout
 
+\begin_layout Itemize
+
+\size footnotesize
+Towards self-managing cloud storage with reinforcement learning 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "noel2019towards"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{forest}
+\end_layout
+
+\begin_layout Plain Layout
+
+  qtree,
+\end_layout
+
+\begin_layout Plain Layout
+
+  for tree={
+\end_layout
+
+\begin_layout Plain Layout
+
+    grow=0,             
+\end_layout
+
+\begin_layout Plain Layout
+
+    parent anchor=children,       
+\end_layout
+
+\begin_layout Plain Layout
+
+    child anchor=parent, 
+\end_layout
+
+\begin_layout Plain Layout
+
+    anchor=parent,
+\end_layout
+
+\begin_layout Plain Layout
+
+    l sep=5mm,  
+\end_layout
+
+\begin_layout Plain Layout
+
+	font=
+\backslash
+tiny,       
+\end_layout
+
+\begin_layout Plain Layout
+
+  },
+\end_layout
+
+\begin_layout Plain Layout
+
+  where level=0{
+\end_layout
+
+\begin_layout Plain Layout
+
+    %grow=0,            
+\end_layout
+
+\begin_layout Plain Layout
+
+  }{
+\end_layout
+
+\begin_layout Plain Layout
+
+    if n children=0{folder}{}, 
+\end_layout
+
+\begin_layout Plain Layout
+
+    edge path'={(!u.parent anchor) -- ++(2.5mm,0) |- (.child anchor)[line width=0.6p
+t]},
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  [Optimization in
+\backslash
+
+\backslash
+Computer Systems, rotate=90 
+\end_layout
+
+\begin_layout Plain Layout
+
+    [Resource
+\backslash
+
+\backslash
+Management, rotate=90
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Dynamic Resources Management Under Limited Communication Based on
+ Multi-level Agent System 
+\backslash
+citet{wang2023dynamic}]
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Online Task Allocation and Scheduling in Fog IoT using Virtual Bidding
+ 
+\backslash
+citet{joshi2022online}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    ]
+\end_layout
+
+\begin_layout Plain Layout
+
+    [Communication
+\backslash
+
+\backslash
+Efficiency, rotate=90 
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Event-Triggered Communication Network with Limited-Bandwidth Constraint
+ for Multi-Agent Reinforcement Learning 
+\backslash
+citet{hu2021event}]
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Adaptive REST API Testing with Reinforcement Learning 
+\backslash
+citet{kim2023adaptive}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    ]
+\end_layout
+
+\begin_layout Plain Layout
+
+    [Real-Time
+\backslash
+
+\backslash
+Systems, rotate=90  
+\end_layout
+
+\begin_layout Plain Layout
+
+      [On the Design and Implementation of Real-Time Resource Access Protocols
+ 
+\backslash
+citet{dos2020design}]
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Towards Self-Managing Cloud Storage with Reinforcement Learning 
+\backslash
+citet{noel2019towards}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    ]
+\end_layout
+
+\begin_layout Plain Layout
+
+  ]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{forest}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+Challenges in dynamically adapting REST API parameters under real-time and
+ multimodal constraints.
+\end_layout
+
 \end_deeper
 \begin_layout Frame
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+State-of-the-Art
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Distributed Messaging: Scalability and Reliability
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Itemize
+
+\size footnotesize
+Pistis: an event-triggered real-time byzantine-resilient protocol suite
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "kozhaya2021pistis"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Designing a real-time IoT data streaming testbed for horizontally scalable
+ analytical platforms: Czech post case study 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vstufi2021designing"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Adaptive topology for scalability and immediacy in distributed publish/subscribe
+ messaging 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "banno2020adaptive"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Reliability enhancements for high-availability systems using distributed
+ event streaming platforms 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "dincua2023reliability"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Adaptive topology for scalability and immediacy in distributed publish/subscribe
+ messaging 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "banno2020adaptive"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Towards Scalable Cross-Chain Messaging 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "otavio2023towards"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{forest}
+\end_layout
+
+\begin_layout Plain Layout
+
+  qtree,
+\end_layout
+
+\begin_layout Plain Layout
+
+  for tree={
+\end_layout
+
+\begin_layout Plain Layout
+
+    grow=0,             
+\end_layout
+
+\begin_layout Plain Layout
+
+    parent anchor=children,       
+\end_layout
+
+\begin_layout Plain Layout
+
+    child anchor=parent, 
+\end_layout
+
+\begin_layout Plain Layout
+
+    anchor=parent,
+\end_layout
+
+\begin_layout Plain Layout
+
+    l sep=5mm,  
+\end_layout
+
+\begin_layout Plain Layout
+
+	font=
+\backslash
+tiny,       
+\end_layout
+
+\begin_layout Plain Layout
+
+  },
+\end_layout
+
+\begin_layout Plain Layout
+
+  where level=0{
+\end_layout
+
+\begin_layout Plain Layout
+
+    %grow=0,            
+\end_layout
+
+\begin_layout Plain Layout
+
+  }{
+\end_layout
+
+\begin_layout Plain Layout
+
+    if n children=0{folder}{}, 
+\end_layout
+
+\begin_layout Plain Layout
+
+    edge path'={(!u.parent anchor) -- ++(2.5mm,0) |- (.child anchor)[line width=0.6p
+t]},
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  [Distributed Real-Time
+\backslash
+
+\backslash
+Messaging and Scalability, rotate=90 
+\end_layout
+
+\begin_layout Plain Layout
+
+    [Event Streaming and
+\backslash
+
+\backslash
+Async.
+ Communication, rotate=90
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Reliability enhancements for high-availability systems using distributed
+ event streaming platforms 
+\backslash
+citet{dincua2023reliability}]
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Adaptive Topology for Scalability and Immediacy in Distributed Publish-Su
+bscribe Messaging 
+\backslash
+citet{banno2020adaptive}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    ]
+\end_layout
+
+\begin_layout Plain Layout
+
+    [IoT and Scalable
+\backslash
+
+\backslash
+Architectures, rotate=90 
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Designing a Real-Time IoT Data Streaming Testbed for Horizontally
+ Scalable Analytical Platforms 
+\backslash
+citet{vstufi2021designing}]
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Towards Scalable Cross-Chain Messaging 
+\backslash
+citet{otavio2023towards}]
+\end_layout
+
+\begin_layout Plain Layout
+
+      [PISTIS: An Event-Triggered Real-Time Byzantine-Resilient Protocol
+ Suite 
+\backslash
+citet{kozhaya2021pistis}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    ]
+\end_layout
+
+\begin_layout Plain Layout
+
+  ]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{forest}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+State-of-the-Art
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+AI-Enhanced ETL Processes
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+
+\size footnotesize
+Data pipeline for real-time energy consumption data management and prediction
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "im2024data"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Machine Learning Revolution in Early Disease Detection for Healthcare: Advanceme
+nts, Challenges, and Future Prospects 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "reddy2023machine"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Integrating IoT and Machine Learning for Real-Time Patient Health Monitoring
+ with Sensor Networks 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "vimal2023integrating"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Deep Learning Applications in Vessel Dead Reckoning to Deal with Missing
+ Automatic Identification System Data 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "jmse12010152"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Deep learning from latent spatiotemporal information of the heart: Identifying
+ advanced bioimaging markers from echocardiograms 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "chang2024deep"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{forest}
+\end_layout
+
+\begin_layout Plain Layout
+
+  qtree,
+\end_layout
+
+\begin_layout Plain Layout
+
+  for tree={
+\end_layout
+
+\begin_layout Plain Layout
+
+    grow=0,             
+\end_layout
+
+\begin_layout Plain Layout
+
+    parent anchor=children,       
+\end_layout
+
+\begin_layout Plain Layout
+
+    child anchor=parent, 
+\end_layout
+
+\begin_layout Plain Layout
+
+    anchor=parent,
+\end_layout
+
+\begin_layout Plain Layout
+
+    l sep=5mm,  
+\end_layout
+
+\begin_layout Plain Layout
+
+	font=
+\backslash
+tiny,       
+\end_layout
+
+\begin_layout Plain Layout
+
+  },
+\end_layout
+
+\begin_layout Plain Layout
+
+  where level=0{
+\end_layout
+
+\begin_layout Plain Layout
+
+    %grow=0,            
+\end_layout
+
+\begin_layout Plain Layout
+
+  }{
+\end_layout
+
+\begin_layout Plain Layout
+
+    if n children=0{folder}{}, 
+\end_layout
+
+\begin_layout Plain Layout
+
+    edge path'={(!u.parent anchor) -- ++(2.5mm,0) |- (.child anchor)[line width=0.6p
+t]},
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  [Data Integration and Real-Time
+\backslash
+
+\backslash
+Management Challenges, rotate=90 
+\end_layout
+
+\begin_layout Plain Layout
+
+    [Health Analysis
+\backslash
+
+\backslash
+and Diseases, rotate=90
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Integrating IoT and Machine Learning for Real-Time Patient Health
+ Monitoring with Sensor Networks 
+\backslash
+citet{vimal2023integrating}]
+\end_layout
+
+\begin_layout Plain Layout
+
+      [{Machine Learning Revolution in Early Disease Detection for Healthcare
+ 
+\backslash
+citet{reddy2023machine}}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    ]
+\end_layout
+
+\begin_layout Plain Layout
+
+    [Technological Applications
+\backslash
+
+\backslash
+in Health, rotate=90 
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Data pipeline for real-time energy consumption data management and
+ prediction 
+\backslash
+citet{im2024data}]
+\end_layout
+
+\begin_layout Plain Layout
+
+      [{Deep learning from latent spatiotemporal information of the heart
+ 
+\backslash
+citet{chang2024deep}}]
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Deep Learning Applications in Vessel Dead Reckoning to Deal with
+ Missing Automatic Identification System Data 
+\backslash
+citet{jmse12010152}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    ]
+\end_layout
+
+\begin_layout Plain Layout
+
+  ]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{forest}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+State-of-the-Art
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Advancements in Large-Scale File Transmission
+\end_layout
+
+\begin_layout Standard
+
+\size footnotesize
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+
+\size footnotesize
+Design and optimization of a distributed file system based on RDMA 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "he2023design"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Network coding for efficient file transfer in narrowband environments 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "yin2023network"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+The design of intelligent transportation video processing system in big
+ data environment 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "hao2020design"
+literal "false"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Survey of network coding based P2P file sharing in large scale networks
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "abudaqa2020survey"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Reliable, Efficient Large-File Delivery over Lossy, Unidirectional Links
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "van2021reliable"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{forest}
+\end_layout
+
+\begin_layout Plain Layout
+
+  qtree,
+\end_layout
+
+\begin_layout Plain Layout
+
+  for tree={
+\end_layout
+
+\begin_layout Plain Layout
+
+    grow=0,             
+\end_layout
+
+\begin_layout Plain Layout
+
+    parent anchor=children,       
+\end_layout
+
+\begin_layout Plain Layout
+
+    child anchor=parent, 
+\end_layout
+
+\begin_layout Plain Layout
+
+    anchor=parent,
+\end_layout
+
+\begin_layout Plain Layout
+
+    l sep=5mm,  
+\end_layout
+
+\begin_layout Plain Layout
+
+	font=
+\backslash
+tiny,       
+\end_layout
+
+\begin_layout Plain Layout
+
+  },
+\end_layout
+
+\begin_layout Plain Layout
+
+  where level=0{
+\end_layout
+
+\begin_layout Plain Layout
+
+    %grow=0,            
+\end_layout
+
+\begin_layout Plain Layout
+
+  }{
+\end_layout
+
+\begin_layout Plain Layout
+
+    if n children=0{folder}{}, 
+\end_layout
+
+\begin_layout Plain Layout
+
+    edge path'={(!u.parent anchor) -- ++(2.5mm,0) |- (.child anchor)[line width=0.6p
+t]},
+\end_layout
+
+\begin_layout Plain Layout
+
+  }
+\end_layout
+
+\begin_layout Plain Layout
+
+  [Data Flow Management and
+\backslash
+
+\backslash
+Large-Scale File Transmission, rotate=90 
+\end_layout
+
+\begin_layout Plain Layout
+
+    [Protocols and
+\backslash
+
+\backslash
+Network Security, rotate=90
+\end_layout
+
+\begin_layout Plain Layout
+
+      [{Reliable, Efficient Large-File Delivery over Lossy, Unidirectional
+ Links 
+\backslash
+citet{van2021reliable}}]
+\end_layout
+
+\begin_layout Plain Layout
+
+      [The Design of Intelligent Transportation Video Processing System
+ in Big Data Environment 
+\backslash
+citet{hao2020design}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    ]
+\end_layout
+
+\begin_layout Plain Layout
+
+    [Coding Techniques and
+\backslash
+
+\backslash
+Distributed Systems, rotate=90 
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Design and Optimization of a Distributed File System Based on RDMA
+ 
+\backslash
+citet{he2023design}]
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Network coding for efficient file transfer in narrowband environments
+ 
+\backslash
+citet{yin2023network}]
+\end_layout
+
+\begin_layout Plain Layout
+
+      [Survey of Network Coding Based P2P File Sharing in Large Scale Networks
+ 
+\backslash
+citet{abudaqa2020survey}]
+\end_layout
+
+\begin_layout Plain Layout
+
+    ]
+\end_layout
+
+\begin_layout Plain Layout
+
+  ]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{forest}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -2759,7 +3908,151 @@ Methodology [obj1]
 
 \begin_deeper
 \begin_layout Standard
-...
+Propongo un sistema basado en aprendizaje reforzado que ajuste dinámicamente
+ los parámetros de configuración de una API REST.
+ Este sistema sería capaz de modificar en tiempo real aspectos críticos
+ como la configuración del servidor (que opera en un entorno basado en contenedo
+res) y la interacción con la base de datos.
+ La idea central es que el sistema aprenda y se adapte automáticamente a
+ las variaciones en el uso y demanda de la API, optimizando recursos, mejorando
+ el rendimiento y garantizando una gestión eficiente de la tasa de solicitudes.
+ Este enfoque busca combinar la flexibilidad y escalabilidad de los contenedores
+ con la inteligencia y adaptabilidad proporcionadas por el aprendizaje reforzado
+, enfocándose en mantener un alto nivel de servicio y disponibilidad de
+ la API, incluso ante cambios dinámicos en el entorno y la demanda.
+\end_layout
+
+\begin_layout Standard
+El problema a abordar es cómo superar las limitaciones de tasa de solicitudes
+ de API, que generan dificultades en la transmisión de datos en escenarios
+ multimodales y en tiempo real, y complican la adaptación y mantenimiento
+ cuando se cambian los proveedores de API.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Methodology [obj2]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Propongo un sistema avanzado de mensajería distribuida, basado en una red
+ de malla donde cada nodo puede enviar y recibir mensajes.
+ Esta red integra específicamente tecnologías de inteligencia artificial
+ para optimizar su funcionamiento: utiliza Redes Neuronales Recurrentes
+ (RNN) para el enrutamiento dinámico y predecir la congestión de la red,
+ técnicas de clustering para el balanceo equitativo de carga, Autoencoders
+ para la detección de anomalías y seguridad, y aprendizaje por refuerzo
+ para la optimización constante de rutas.
+ Además, emplea modelos de regresión para predecir fallos de nodos y algoritmos
+ de segmentación de usuarios para personalizar la experiencia de comunicación.
+ Este enfoque brinda una red más eficiente, segura y adaptable, mejorando
+ la entrega de mensajes y la experiencia del usuario, al mismo tiempo que
+ aumenta la resistencia de la red a fallos y ataques.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Methodology [obj3]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Propongo un sistema orientado a optimizar los procesos de ETL multimodal
+ en entornos de inteligencia artificial a través de algoritmos avanzados
+ de aprendizaje automático y aprendizaje profundo, centrado en la integración
+ eficiente y procesamiento de datos no estructurados mediante redes neuronales
+ convolucionales y la gestión dinámica de secuencias de datos temporales
+ utilizando redes neuronales recurrentes.
+ Este enfoque práctico involucra el desarrollo de prototipos y su validación
+ en escenarios de uso real, destacando aplicaciones como la monitorización
+ en tiempo real y el análisis de grandes conjuntos de datos, con el objetivo
+ de mejorar significativamente la precisión, eficiencia y capacidad de respuesta
+ de los sistemas de ETL, proporcionando un marco concreto y aplicable para
+ enfrentar desafíos actuales en el procesamiento de datos en IA.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Methodology [obj4]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Para optimizar la transmisión de archivos a gran escala, propongo un sistema
+ de servidor inteligente capaz de adaptarse en tiempo real a las condiciones
+ de conexión y restricciones del cliente, como la pérdida de paquetes y
+ variaciones en el ancho de banda.
+ Este sistema utilizará Redes Neuronales Recurrentes, en particular Long
+ Short-Term Memory (LSTM), para monitorear y predecir de manera continua
+ y precisa las condiciones de la red del cliente.
+ Basándose en esta información, el servidor ajustará dinámicamente la tasa
+ de transmisión de archivos, seleccionará protocolos de comunicación óptimos
+ y aplicará técnicas de compresión de datos para adaptarse a las limitaciones
+ del cliente.
+ Además, el sistema contará con mecanismos de aprendizaje continuo que le
+ permitirán mejorar progresivamente su capacidad de adaptación, asegurando
+ una transmisión eficiente y confiable en un amplio rango de condiciones
+ de red.
+ Esta propuesta busca proporcionar una experiencia de usuario óptima con
+ un enfoque proactivo y adaptable a las necesidades específicas de cada
+ cliente.
 \end_layout
 
 \end_deeper
