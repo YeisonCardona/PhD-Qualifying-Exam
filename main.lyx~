@@ -43,6 +43,20 @@
 \usepackage{tikz}
 \usepackage{tikz-qtree}
 
+%
+\usepackage{tabularx}
+\usepackage{etoolbox}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{arydshln}
+\usepackage{bm}
+%
+
+
 \usepackage{forest}
 \forestset{
   qtree/.style={
@@ -77,6 +91,10 @@
 		\today
 	}
 }}
+
+
+\definecolor{UN_primary}{RGB}{148,180,59}
+\definecolor{UN_comp4}{RGB}{177,178,176}
 \end_preamble
 \options aspectratio=169
 \use_default_options false
@@ -99,7 +117,7 @@
 \use_dash_ligatures false
 \graphics default
 \default_output_format default
-\output_sync 0
+\output_sync 1
 \bibtex_command default
 \index_command default
 \paperfontsize default
@@ -152,6 +170,10 @@
 \begin_body
 
 \begin_layout Title
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 Multimodal Data Exchange System for
 \begin_inset ERT
 status open
@@ -168,22 +190,47 @@ status open
 \end_inset
 
 Enhanced Interaction and Management
-\begin_inset Argument 1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Developing an AI-Driven Framework for
+\begin_inset ERT
 status open
 
 \begin_layout Plain Layout
-Multimodal Data Exchange Systems for Enhanced Interaction and Management
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+Real-Time Signal Processing and Data Exchange
+\begin_inset Argument 1
+status collapsed
+
+\begin_layout Plain Layout
+Developing an AI-Driven Framework for Real-Time Signal Processing and Data
+ Management
 \end_layout
 
 \end_inset
 
 
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
-Sistema de Intercambio de Datos Multimodales para Interacción y Gestión
- Mejoradas
+Desarrollo de un Sistema Inteligente para el Procesamiento de Señales en
+ Tiempo-Real e Intercambio de Datos
 \end_layout
 
 \end_inset
@@ -200,7 +247,7 @@ Yeison Nolberto Cardona-Álvarez
 \series bold
 Advisor:
 \series default
- Andrés Marino Álvarez-Meza, Ph.D
+ Andres Marino Alvarez-Meza, Ph.D
 \begin_inset Newline newline
 \end_inset
 
@@ -208,7 +255,7 @@ Advisor:
 \series bold
 Co-Advisor:
 \series default
- César Germán Castellanos-Domínguez, Ph.D
+ Germán Castellanos-Domínguez, Ph.D
 \end_layout
 
 \begin_layout TitleGraphic
@@ -346,6 +393,23 @@ selectfont{
 oldcite{#1}}}}
 \end_layout
 
+\begin_layout Plain Layout
+
+
+\backslash
+newcommand*
+\backslash
+reallysmall[1]{{
+\backslash
+color {gray}
+\backslash
+fontsize{2}{2}
+\backslash
+selectfont{
+\backslash
+oldcite{#1}}}}
+\end_layout
+
 \end_inset
 
 
@@ -450,7 +514,7 @@ Data Exchange: Definition
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Data Exchange is the 
@@ -544,7 +608,7 @@ Data Exchange: Applications and Investments
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Although data interchange provides advantages, it is essential to tackle
@@ -570,7 +634,7 @@ dependability
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 While data exchange offers benefits, it's crucial to address challenges
@@ -589,7 +653,7 @@ industry-specific compliance regulations
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Las dificultades están intrínsecamente ligadas a las aplicaciones de intercambio
@@ -688,7 +752,7 @@ literal "false"
 
 .
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Companies gather data from different sources (sales, customer interaction,
@@ -716,7 +780,7 @@ literal "false"
 
 .
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Credit checks, risk assessment, and fraud detection rely heavily on data
@@ -744,7 +808,7 @@ literal "false"
 
 .
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Government agencies often need to share data to improve services and create
@@ -771,7 +835,7 @@ literal "false"
 
 .
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Data exchanges often operate as marketplaces where companies can buy or
@@ -800,7 +864,7 @@ literal "false"
 
 .
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Sharing patient data securely between different healthcare providers (hospitals,
@@ -828,7 +892,7 @@ literal "false"
 
 .
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 The cornerstone of scientific discovery is often built on collaboration
@@ -1021,7 +1085,7 @@ textwidth
 Fourth largest data center market in Latin America.
  
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Itemize
 
@@ -1050,7 +1114,7 @@ Esto refleja la creciente demanda de infraestructura de TI en el país, impulsad
 Significant investments in infrastructure.
  
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Itemize
 
@@ -1082,7 +1146,7 @@ Aunque las cifras exactas de estas inversiones pueden no estar públicamente
 Attractive for international investments.
  
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Itemize
 
@@ -1112,7 +1176,7 @@ La demanda en aumento de servicios digitales en el país crea oportunidades
 Strategic location advantage.
  
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Itemize
 
@@ -1191,10 +1255,6 @@ status open
 \end_deeper
 \end_deeper
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
 \begin_inset Separator plain
 \end_inset
 
@@ -1216,48 +1276,20 @@ Motivation
 
 \begin_deeper
 \begin_layout FrameSubtitle
-Innovating Research through Advanced Information Integration
+AI-Driven Hyperautomation: The Future of Smart Workflows
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset Note Note
-status collapsed
+\begin_layout Standard
 
-\begin_layout Plain Layout
-Data exchange in research serves as a 
 \series bold
-pivotal foundation for innovation
+Hyperautomation
 \series default
-, uniting diverse fields into a 
+ elevates traditional software automation, infusing it with AI to transform
+ data ecosystems into adaptive, 
 \series bold
-unified force
+self-optimizing entities
 \series default
- propelling forward groundbreaking discoveries.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-Data exchange in research plays a crucial role as a fundamental 
-\series bold
-basis for innovation
-\series default
-, bringing together several fields into a 
-\series bold
-cohesive force
-\series default
- that drives forward revolutionary discoveries 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "cappiello2020data"
-literal "false"
-
-\end_inset
-
-.
+, reshaping the dynamics of data management and analysis.
 \end_layout
 
 \begin_layout ColumnsTopAligned
@@ -1271,7 +1303,7 @@ status open
 
 \begin_layout Plain Layout
 
-0.3
+0.5
 \backslash
 textwidth
 \end_layout
@@ -1281,23 +1313,113 @@ textwidth
 
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
+\begin_layout Itemize
+
+\size scriptsize
+Data Process Automation 
+\begin_inset Note Note
 status open
 
 \begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename images/research.jpg
-	lyxscale 10
-	width 90text%
-	rotateOrigin center
+
+\size scriptsize
+Implement RPA to automate data collection, entry, and management in Data
+ Exchange systems.
+\end_layout
 
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Analysis and Decision-Making 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Apply ML/AI for pattern identification, predictive analytics, and informed
+ data exchange decision-making based on insights from extensive data sets.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Workflow Optimization 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Use Hyperautomation tools to design Data Exchange workflows that automatically
+ adjust to data load variations and system demands.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+System Integration 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Orchestrate seamless data flow and integration across diverse platforms
+ and applications using advanced Hyperautomation capabilities.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Data Governance 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Strengthen data governance and compliance through automated systems that
+ manage the quality and security of exchanged data.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Scalability and Maintenance 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Leverage Hyperautomation for efficient scaling of Data Exchange systems
+ and proactive maintenance management.
 \end_layout
 
 \end_inset
@@ -1311,7 +1433,7 @@ status open
 
 \begin_layout Plain Layout
 
-0.7
+0.5
 \backslash
 textwidth
 \end_layout
@@ -1321,117 +1443,23 @@ textwidth
 
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset VSpace 1cm
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\size scriptsize
-Exploring the potential of multimodal information 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "zhang2020multimodal"
-literal "false"
-
-\end_inset
-
- 
-\begin_inset Note Note
-status collapsed
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
 
 \begin_layout Plain Layout
-Este punto sugiere una inmersión profunda en los beneficios de utilizar
- diferentes tipos de datos.
- La información multimodal enriquece y profundiza los hallazgos de la investigac
-ión, permitiendo un análisis más completo y variado de los temas estudiados.
-\end_layout
+\align center
+\begin_inset Graphics
+	filename images/Hyperautomation-1.png
+	lyxscale 10
+	width 50col%
+	rotateOrigin centerBaseline
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Itemize
-
-\size scriptsize
-Advancing data exchange techniques 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Deng2020A"
-literal "false"
-
-\end_inset
-
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Aquí se enfatiza la importancia de desarrollar y perfeccionar los métodos
- para el intercambio de datos.
- Estas mejoras son cruciales para que los procesos de investigación sean
- más eficientes y efectivos, facilitando el manejo y análisis de grandes
- volúmenes de datos.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\size scriptsize
-Designing future-ready data exchange architectures 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Srijith2022Inter-Service"
-literal "false"
-
-\end_inset
-
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Este punto subraya la necesidad de un diseño proactivo en los sistemas de
- intercambio de datos.
- Es esencial que estas arquitecturas sean adaptables y robustas para satisfacer
- las demandas de investigación futuras, especialmente en un entorno tecnológico
- en constante evolución.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-
-\size scriptsize
-Encouraging interdisciplinary collaboration in research 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "talebkhah2023comprehensive"
-literal "false"
-
-\end_inset
-
- 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Este punto subraya la importancia de combinar conocimientos y métodos de
- distintas disciplinas para enriquecer el proceso de investigación.
- Se destaca cómo la fusión de estas diferentes perspectivas puede llevar
- a un análisis más completo y a la generación de ideas innovadoras, abordando
- así problemas complejos de manera más eficaz.
 \end_layout
 
 \end_inset
@@ -1440,10 +1468,30 @@ Este punto subraya la importancia de combinar conocimientos y métodos de
 \end_layout
 
 \end_deeper
-\end_deeper
+\begin_layout Standard
+\begin_inset VSpace vfill
 \end_inset
 
+Integrating 
+\series bold
+AI
+\series default
+ into software transforms data ecosystems into intelligent, self-evolving
+ networks, revolutionizing the approach to data management and analysis.
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "haleem2021hyperautomation"
+literal "false"
 
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
 \begin_inset Separator plain
 \end_inset
 
@@ -1631,7 +1679,7 @@ status open
 \end_deeper
 \end_deeper
 \begin_layout Section
-Problem statement
+Problem Statement
 \begin_inset Note Note
 status open
 
@@ -1644,12 +1692,27 @@ status open
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+En "Planteamiento del problema", se enfatiza la relevancia y el impacto
+ del problema, utilizando una frase que conecte los desafíos técnicos con
+ la necesidad de soluciones innovadoras.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Frame
 \begin_inset Argument 4
 status open
 
 \begin_layout Plain Layout
-Problem statement
+Problem Satement
 \end_layout
 
 \end_inset
@@ -1659,65 +1722,7 @@ Problem statement
 
 \begin_deeper
 \begin_layout FrameSubtitle
-Limitations of Data Exchange Methodologies
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-When developing data exchange methods, it is essential to prioritize 
-\series bold
-improving the compatibility
-\series default
- of systems, guaranteeing the 
-\series bold
-accuracy 
-\series default
-and
-\series bold
- protection 
-\series default
-of data, and effectively handling the transmission of 
-\series bold
-massive amounts of data
-\series default
- at fast speeds by incorporating various specialized technologies and procedures.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Scientific data sharing requires combining 
-\series bold
-methods
-\series default
- while resolving their constraints.
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Achieving success requires optimizing these systems so that they can collaborate
- with one another to improve data processing, analysis, and the overall
- experience of researchers.
-\end_layout
-
-\end_inset
-
-
+Methodologies for Data Exchange 
 \end_layout
 
 \begin_layout ColumnsTopAligned
@@ -1747,7 +1752,8 @@ textwidth
 \size scriptsize
 APIs:
 \series default
- Request rate, security, and provider stability/changes limit them 
+ They are limited by request rate, security, and provider stability/changes
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "velepucha2023survey"
@@ -1771,8 +1777,9 @@ literal "false"
 \size scriptsize
 Messaging:
 \series default
- Distributed system scalability, delivery assurance, state management, and
- security issues 
+ Scalability, delivery assurance, state management, and security issues
+ in distributed systems.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "fang2019integrating"
@@ -1805,8 +1812,9 @@ textwidth
 \size scriptsize
 ETL:
 \series default
- Data quality-dependent performance and complexity concerns with big amounts
- of different data 
+ Performance and complexity concerns related to data quality and handling
+ large amounts of diverse data.
+ 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "abdelhafiz2021sharding"
@@ -1815,6 +1823,22 @@ literal "false"
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size scriptsize
+En el ámbito del data exchange, ETL facilita la interoperabilidad, estandarizaci
+ón y calidad de los datos intercambiados entre sistemas heterogéneos, asegurando
+ que la información sea útil y confiable para su análisis y toma de decisiones.
+ Además, su automatización permite mantener flujos de datos consistentes
+ y eficientes.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1859,7 +1883,7 @@ literal "false"
 status open
 
 \begin_layout Plain Layout
-Problem statement
+Problem Statement
 \end_layout
 
 \end_inset
@@ -1874,7 +1898,7 @@ API Request Limits
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -2005,155 +2029,6 @@ Documentación y Herramientas de Desarrollo:
 \end_inset
 
 
-\begin_inset Note Note
-status collapsed
-
-\begin_layout ColumnsTopAligned
-
-\end_layout
-
-\begin_deeper
-\begin_layout Column
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-b
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-0.04
-\backslash
-textwidth
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\size scriptsize
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-
-\size scriptsize
-Amazon Web Service
-\end_layout
-
-\begin_layout Plain Layout
-
-\size scriptsize
-Microsoft Azure
-\end_layout
-
-\begin_layout Plain Layout
-
-\size scriptsize
-Google Cloud
-\end_layout
-
-\begin_layout Plain Layout
-
-\size scriptsize
-IMB Cloud
-\end_layout
-
-\begin_layout Plain Layout
-
-\size scriptsize
-Oracle Cloud
-\end_layout
-
-\begin_layout Plain Layout
-
-\size scriptsize
-Alibaba CLoud (Aliyun)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename images/warning.jpg
-	lyxscale 10
-	width 100col%
-	rotateOrigin center
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Column
-\begin_inset Argument 1
-status open
-
-\begin_layout Plain Layout
-b
-\end_layout
-
-\end_inset
-
-
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-0.96
-\backslash
-textwidth
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-
-\size scriptsize
-Request rate, security, and provider stability/changes limit them 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "velepucha2023survey"
-literal "false"
-
-\end_inset
-
-.
-\end_layout
-
-\end_deeper
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -2180,6 +2055,16 @@ status open
 
 \end_layout
 
+\begin_layout Standard
+\align center
+
+\shape slanted
+\size scriptsize
+\color red
+Manual configurations limit API effectiveness in multimodal and real-time
+ environments.
+\end_layout
+
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -2193,7 +2078,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-Problem statement
+Problem Statement
 \end_layout
 
 \end_inset
@@ -2208,7 +2093,7 @@ Messaging Scalability
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -2225,6 +2110,10 @@ Problema de Investigación:
  Desarrollar y validar métodos para mejorar la escalabilidad y aseguramiento
  de entrega en sistemas de mensajería distribuidos, enfocándose en la eficiencia
  de la comunicación y dependabilidad en tiempo real y entornos multimodales.
+\end_layout
+
+\begin_layout Plain Layout
+eficiencia y fiabilidad
 \end_layout
 
 \end_inset
@@ -2277,6 +2166,16 @@ status open
 
 \end_layout
 
+\begin_layout Standard
+\align center
+
+\shape slanted
+\size scriptsize
+\color red
+Centralized server reliance in distributed messaging often results in inefficien
+t routing.
+\end_layout
+
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -2290,7 +2189,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-Problem statement
+Problem Statement
 \end_layout
 
 \end_inset
@@ -2305,42 +2204,16 @@ Multimodal ETL & AI
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
-
-\series bold
-Manejo Efectivo de Grandes Volúmenes de Datos Diversos en Tiempo Real para
- Procesos ETL Multimodales:
-\end_layout
-
-\begin_layout Plain Layout
-
-\emph on
-Problema de Investigación:
-\emph default
- Explorar estrategias para el manejo eficiente de grandes cantidades de
- datos variados en tiempo real, centrando la atención en la optimización
- de procesos ETL multimodales para reducir errores de procesamiento y retrasos.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-The inadequate management of substantial volumes of diverse data in real-time
- presents considerable difficulties in multimodal ETL procedures, heightening
- the likelihood of 
-\series bold
-processing inaccuracies and disruptions
-\series default
- in data transmission.
+A pesar de los avances en tecnologías ETL y ELT, muchos sistemas aún utilizan
+ enfoques ETL tradicionales, rígidos y secuenciales, que no son adecuados
+ para gestionar datos multimodales y en tiempo real.
+ Esto afecta la calidad de la integración y compromete el análisis en tiempo
+ real, especialmente en aplicaciones críticas.
+ Se requiere un enfoque innovador que sea flexible, escalable y capaz de
+ adaptarse a la naturaleza dinámica de los datos modernos.
 \end_layout
 
 \end_inset
@@ -2392,6 +2265,16 @@ status open
 
 \end_layout
 
+\begin_layout Standard
+\align center
+
+\shape slanted
+\size scriptsize
+\color red
+Relying on rigid, sequential data handling poses challenges in data integration
+ and real-time management .
+\end_layout
+
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -2405,7 +2288,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-Problem statement
+Problem Statement
 \end_layout
 
 \end_inset
@@ -2420,84 +2303,15 @@ Large-Scale File Transmission
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
-
-\series bold
-Seguridad y Eficiencia en la Transferencia de Archivos en Sistemas Multimodales
- y de Tiempo Real:
-\end_layout
-
-\begin_layout Plain Layout
-
-\emph on
-Problema de Investigación:
-\emph default
- Formular soluciones para reforzar la seguridad y optimizar el manejo del
- tamaño de archivos y el uso del ancho de banda en la transferencia de archivos,
- especialmente en sistemas que requieren operaciones multimodales y en tiempo
- real.
- 
-\end_layout
-
-\end_inset
-
- 
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-La 
-\begin_inset Quotes eld
-\end_inset
-
-sincronización
-\begin_inset Quotes erd
-\end_inset
-
- se refiere a garantizar que los datos más recientes y precisos estén disponible
-s en todas las plataformas necesarias simultáneamente, lo cual puede ser
- desafiante en entornos dinámicos y multimodales.
- 
-\end_layout
-
-\begin_layout Plain Layout
-"tiempo real" a menudo está más asociada con la transmisión continua de
- datos (como en los sistemas de mensajería) que con la transferencia tradicional
- de archivos.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-The real-time file transfer encounters the crucial obstacle of 
-\series bold
-synchronizing
-\series default
- and safeguarding 
-\series bold
-precise and timely
-\series default
- data across many platforms 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Zheng2020Design,Yin2023Network"
-literal "false"
-
-\end_inset
-
-.
+La transmisión de archivos a gran escala depende de protocolos estáticos,
+ lo cual resulta ineficiente y limita la adaptabilidad en entornos críticos
+ y cambiantes.
+ Se necesita un enfoque que permita una administración flexible y segura
+ del flujo de datos, ajustándose dinámicamente a la red para garantizar
+ la integridad y accesibilidad de los archivos transmitidos.
 \end_layout
 
 \end_inset
@@ -2549,6 +2363,15 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\shape slanted
+\size scriptsize
+\color red
+Depends primarily on protocols that are static and universally applicable.
 \end_layout
 
 \end_deeper
@@ -2689,6 +2512,48 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+
+\series bold
+Real-Time Systems:
+\series default
+ Se centra en mejorar la respuesta y la capacidad de gestión de recursos.
+ Las principales limitaciones se encuentran en la escalabilidad y en la
+ capacidad de adaptarse rápidamente a cambios de carga.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Communication Efficiency:
+\series default
+ Aborda la eficiencia en la transmisión de datos, tratando de optimizar
+ el uso del ancho de banda.
+ Las limitaciones incluyen altos costos computacionales y dificultades para
+ mantener una comunicación efectiva entre agentes.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Resource Management:
+\series default
+ Enfocado en la asignación eficiente de recursos, las soluciones se ven
+ limitadas por la complejidad de la coordinación y la sobrecarga de comunicación
+ en sistemas dinámicos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -2800,7 +2665,7 @@ Management, rotate=90
       [Dynamic Resources Management Under Limited Communication Based on
  Multi-level Agent System 
 \backslash
-citet{wang2023dynamic}]
+citet{wang2023dynamic}.]
 \end_layout
 
 \begin_layout Plain Layout
@@ -2808,7 +2673,7 @@ citet{wang2023dynamic}]
       [Online Task Allocation and Scheduling in Fog IoT using Virtual Bidding
  
 \backslash
-citet{joshi2022online}]
+citet{joshi2022online}.]
 \end_layout
 
 \begin_layout Plain Layout
@@ -2830,14 +2695,14 @@ Efficiency, rotate=90
       [Event-Triggered Communication Network with Limited-Bandwidth Constraint
  for Multi-Agent Reinforcement Learning 
 \backslash
-citet{hu2021event}]
+citet{hu2021event}.]
 \end_layout
 
 \begin_layout Plain Layout
 
       [Adaptive REST API Testing with Reinforcement Learning 
 \backslash
-citet{kim2023adaptive}]
+citet{kim2023adaptive}.]
 \end_layout
 
 \begin_layout Plain Layout
@@ -2859,14 +2724,14 @@ Systems, rotate=90
       [On the Design and Implementation of Real-Time Resource Access Protocols
  
 \backslash
-citet{dos2020design}]
+citet{dos2020design}.]
 \end_layout
 
 \begin_layout Plain Layout
 
       [Towards Self-Managing Cloud Storage with Reinforcement Learning 
 \backslash
-citet{noel2019towards}]
+citet{noel2019towards}.]
 \end_layout
 
 \begin_layout Plain Layout
@@ -2895,8 +2760,24 @@ end{forest}
 \begin_inset VSpace vfill
 \end_inset
 
-Challenges in dynamically adapting REST API parameters under real-time and
- multimodal constraints.
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\shape slanted
+\size scriptsize
+\color red
+Limitations in 
+\series bold
+real-time API performance
+\series default
+ and 
+\series bold
+adaptability
+\series default
+ due to static configuration settings.
 \end_layout
 
 \end_deeper
@@ -3028,6 +2909,39 @@ literal "false"
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+
+\series bold
+IoT and Scalable Architectures: 
+\series default
+Se enfoca en la mejora de la escalabilidad y resiliencia en sistemas distribuido
+s y arquitecturas IoT.
+ Las principales limitaciones incluyen la coordinación compleja entre nodos
+ y la dificultad para mantener el rendimiento durante picos de carga sin
+ puntos de referencia adecuados.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Event Streaming and Asynchronous Communication:
+\series default
+ Aborda la eficiencia de la comunicación mediante la transmisión de eventos
+ y modelos asincrónicos.
+ Las limitaciones identificadas son el incremento en la latencia al escalar
+ el sistema y la complejidad en la sincronización de eventos durante la
+ migración de la comunicación sincrónica a asincrónica.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -3140,7 +3054,7 @@ Async.
       [Reliability enhancements for high-availability systems using distributed
  event streaming platforms 
 \backslash
-citet{dincua2023reliability}]
+citet{dincua2023reliability}.]
 \end_layout
 
 \begin_layout Plain Layout
@@ -3148,7 +3062,7 @@ citet{dincua2023reliability}]
       [Adaptive Topology for Scalability and Immediacy in Distributed Publish-Su
 bscribe Messaging 
 \backslash
-citet{banno2020adaptive}]
+citet{banno2020adaptive}.]
 \end_layout
 
 \begin_layout Plain Layout
@@ -3170,14 +3084,14 @@ Architectures, rotate=90
       [Designing a Real-Time IoT Data Streaming Testbed for Horizontally
  Scalable Analytical Platforms 
 \backslash
-citet{vstufi2021designing}]
+citet{vstufi2021designing}.]
 \end_layout
 
 \begin_layout Plain Layout
 
       [Towards Scalable Cross-Chain Messaging 
 \backslash
-citet{otavio2023towards}]
+citet{otavio2023towards}.]
 \end_layout
 
 \begin_layout Plain Layout
@@ -3185,7 +3099,7 @@ citet{otavio2023towards}]
       [PISTIS: An Event-Triggered Real-Time Byzantine-Resilient Protocol
  Suite 
 \backslash
-citet{kozhaya2021pistis}]
+citet{kozhaya2021pistis}.]
 \end_layout
 
 \begin_layout Plain Layout
@@ -3208,6 +3122,21 @@ end{forest}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset VSpace vfill
+\end_inset
+
+
+\series bold
+\shape slanted
+\size scriptsize
+\color red
+Inefficiencies and scalability issues
+\series default
+ in distributed messaging systems affecting real-time communication.
 \end_layout
 
 \end_deeper
@@ -3240,7 +3169,7 @@ AI-Enhanced ETL Processes
 
 \size footnotesize
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Itemize
 
@@ -3315,6 +3244,39 @@ literal "false"
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+
+\series bold
+Advances in Disease Detection and Analysis:
+\series default
+\size footnotesize
+ Se centra en el uso de deep learning y machine learning para mejorar la
+ detección y análisis temprano de enfermedades a partir de datos biomédicos
+ complejos.
+ Las principales limitaciones incluyen la dificultad para procesar datos
+ no estructurados y temporales y la alta carga computacional para integrar
+ diferentes tipos de datos en los pipelines ETL.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Real-Time Health Monitoring:
+\series default
+\size footnotesize
+ Aborda la integración de IoT y machine learning para monitoreo de salud
+ en tiempo real, utilizando redes de sensores.
+ Las limitaciones incluyen los problemas de latencia en la transmisión de
+ datos y la complejidad operativa al gestionar múltiples componentes y grandes
+ volúmenes de datos en tiempo real.
 \end_layout
 
 \end_inset
@@ -3413,20 +3375,20 @@ t]},
 
 \begin_layout Plain Layout
 
-  [Data Integration and Real-Time
+  [Data Integration and
 \backslash
 
 \backslash
-Management Challenges, rotate=90 
+Real-Time Management, rotate=90 
 \end_layout
 
 \begin_layout Plain Layout
 
-    [Health Analysis
+    [Real-Time Health
 \backslash
 
 \backslash
-and Diseases, rotate=90
+Monitoring, rotate=90
 \end_layout
 
 \begin_layout Plain Layout
@@ -3434,15 +3396,15 @@ and Diseases, rotate=90
       [Integrating IoT and Machine Learning for Real-Time Patient Health
  Monitoring with Sensor Networks 
 \backslash
-citet{vimal2023integrating}]
+citet{vimal2023integrating}.]
 \end_layout
 
 \begin_layout Plain Layout
 
-      [{Machine Learning Revolution in Early Disease Detection for Healthcare
- 
+      [Data pipeline for real-time energy consumption data management and
+ prediction 
 \backslash
-citet{reddy2023machine}}]
+citet{im2024data}.]
 \end_layout
 
 \begin_layout Plain Layout
@@ -3452,19 +3414,19 @@ citet{reddy2023machine}}]
 
 \begin_layout Plain Layout
 
-    [Technological Applications
+    [Advances in Disease
 \backslash
 
 \backslash
-in Health, rotate=90 
+Detection and Analysis, rotate=90 
 \end_layout
 
 \begin_layout Plain Layout
 
-      [Data pipeline for real-time energy consumption data management and
- prediction 
+      [{Machine Learning Revolution in Early Disease Detection for Healthcare
+ 
 \backslash
-citet{im2024data}]
+citet{reddy2023machine}}.]
 \end_layout
 
 \begin_layout Plain Layout
@@ -3472,7 +3434,7 @@ citet{im2024data}]
       [{Deep learning from latent spatiotemporal information of the heart
  
 \backslash
-citet{chang2024deep}}]
+citet{chang2024deep}}.]
 \end_layout
 
 \begin_layout Plain Layout
@@ -3480,7 +3442,7 @@ citet{chang2024deep}}]
       [Deep Learning Applications in Vessel Dead Reckoning to Deal with
  Missing Automatic Identification System Data 
 \backslash
-citet{jmse12010152}]
+citet{jmse12010152}.]
 \end_layout
 
 \begin_layout Plain Layout
@@ -3503,6 +3465,26 @@ end{forest}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\shape slanted
+\size scriptsize
+\color red
+Inefficiencies in processing 
+\series bold
+unstructured and temporal data
+\series default
+ in AI-driven multimodal ETL systems.
 \end_layout
 
 \end_deeper
@@ -3535,7 +3517,7 @@ Advancements in Large-Scale File Transmission
 
 \size footnotesize
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Itemize
 
@@ -3608,6 +3590,41 @@ literal "false"
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+
+\series bold
+Coding Techniques and Distributed Systems:
+\series default
+\size footnotesize
+ Se enfoca en mejorar la eficiencia de la transferencia de archivos mediante
+ el uso de network coding y optimización de sistemas de archivos distribuidos
+ con tecnologías como RDMA.
+ Las principales limitaciones incluyen la complejidad de implementación
+ de las técnicas de codificación y la falta de integración efectiva entre
+ el sistema de archivos y la capa de transmisión de red, lo cual puede impactar
+ negativamente el rendimiento.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+Protocols and Network Security:
+\series default
+\size footnotesize
+ Aborda la seguridad y fiabilidad en la transferencia de archivos grandes,
+ especialmente en entornos adversos, como enlaces unidireccionales y redes
+ con alta pérdida de datos.
+ Las limitaciones se encuentran en la alta demanda de recursos para gestionar
+ datos en grandes volúmenes y en la complejidad de garantizar la fiabilidad
+ de la entrega bajo condiciones de red difíciles.
 \end_layout
 
 \end_inset
@@ -3727,7 +3744,7 @@ Network Security, rotate=90
       [{Reliable, Efficient Large-File Delivery over Lossy, Unidirectional
  Links 
 \backslash
-citet{van2021reliable}}]
+citet{van2021reliable}}.]
 \end_layout
 
 \begin_layout Plain Layout
@@ -3735,7 +3752,7 @@ citet{van2021reliable}}]
       [The Design of Intelligent Transportation Video Processing System
  in Big Data Environment 
 \backslash
-citet{hao2020design}]
+citet{hao2020design}.]
 \end_layout
 
 \begin_layout Plain Layout
@@ -3757,7 +3774,7 @@ Distributed Systems, rotate=90
       [Design and Optimization of a Distributed File System Based on RDMA
  
 \backslash
-citet{he2023design}]
+citet{he2023design}.]
 \end_layout
 
 \begin_layout Plain Layout
@@ -3765,7 +3782,7 @@ citet{he2023design}]
       [Network coding for efficient file transfer in narrowband environments
  
 \backslash
-citet{yin2023network}]
+citet{yin2023network}.]
 \end_layout
 
 \begin_layout Plain Layout
@@ -3773,7 +3790,7 @@ citet{yin2023network}]
       [Survey of Network Coding Based P2P File Sharing in Large Scale Networks
  
 \backslash
-citet{abudaqa2020survey}]
+citet{abudaqa2020survey}.]
 \end_layout
 
 \begin_layout Plain Layout
@@ -3798,6 +3815,26 @@ end{forest}
 
 \end_layout
 
+\begin_layout Standard
+\align center
+\begin_inset VSpace vfill
+\end_inset
+
+
+\shape slanted
+\size scriptsize
+\color red
+Challenges in ensuring 
+\series bold
+efficient and secure
+\series default
+ large-scale file transmission in 
+\series bold
+varying network conditions
+\series default
+.
+\end_layout
+
 \end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
@@ -3811,7 +3848,7 @@ end{forest}
 status open
 
 \begin_layout Plain Layout
-Question research
+Question Research
 \end_layout
 
 \end_inset
@@ -3821,12 +3858,62 @@ Question research
 
 \begin_deeper
 \begin_layout Standard
-...
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+¿Cómo pueden las técnicas avanzadas de inteligencia artificial y aprendizaje
+ automático mejorar la gestión de datos y las comunicaciones en entornos
+ digitales?
+\end_layout
+
+\begin_layout Itemize
+Cómo mejorar la flexibilidad y la eficacia de las 
+\series bold
+API
+\series default
+ en tiempo real.
+\end_layout
+
+\begin_layout Itemize
+Aumentar la eficiencia y la escalabilidad de los sistemas de 
+\series bold
+Mensajería Distribuida.
+\end_layout
+
+\begin_layout Itemize
+Para procesar eficazmente datos temporales y no estructurados en 
+\series bold
+Sistemas ETL
+\series default
+ multimodales.
+\end_layout
+
+\begin_layout Itemize
+Optimizar la 
+\series bold
+Transmisión de Archivos
+\series default
+ a gran escala en condiciones de red variables.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+How can advanced artificial intelligence and machine learning techniques
+ enhance data management and communications in digital environments? Specificall
+y, in improving real-time API flexibility and effectiveness, boosting distribute
+d messaging system efficiency and scalability, effectively processing unstructur
+ed and temporal data in multimodal ETL systems, and optimizing large-scale
+ file transmission under varying network conditions?
 \end_layout
 
 \end_deeper
 \begin_layout Section
-Aims
+Objectives
 \begin_inset Note Note
 status open
 
@@ -3844,7 +3931,7 @@ status open
 status open
 
 \begin_layout Plain Layout
-General aim
+General Objectives
 \end_layout
 
 \end_inset
@@ -3854,8 +3941,1130 @@ General aim
 
 \begin_deeper
 \begin_layout Standard
-\align block
-...
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Desarrollar un marco de trabajo impulsado por IA que mejore la gestión en
+ tiempo real del procesamiento de señales y datos a través de protocolos
+ de red, con un enfoque en la eficiencia, seguridad, escalabilidad y capacidad
+ de respuesta, mejorando así las capacidades de investigación y facilitando
+ el intercambio fluido de datos.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To develop an
+\series bold
+ AI-driven framework
+\series default
+ that enhances 
+\series bold
+real-time management
+\series default
+ of signal and data processing across network protocols, with a focus on
+ efficiency, security, scalability, and responsiveness, ultimately 
+\series bold
+improving research capabilities
+\series default
+ and facilitating seamless data exchange.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Specific Objectives
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+\size footnotesize
+To design a 
+\series bold
+multichannel time series processing strategy
+\series default
+ to enhance and strengthen the structure for immediate collection and display
+ of various types of signals, with a specific emphasis on 
+\series bold
+streamlining and parameterizing
+\series default
+ the required infrastructure for experiments and 
+\series bold
+merging different types of signals
+\series default
+ into a single interface.
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+
+\size footnotesize
+Procesar múltiples señales en tiempo real.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Simplificar la infraestructura experimental, haciéndola más adaptable.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Fusionar diferentes señales en una única interfaz para facilitar el análisis.
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\size footnotesize
+To implement an 
+\series bold
+AI strategy
+\series default
+ to improve the control of 
+\series bold
+real-time APIs
+\series default
+ and 
+\series bold
+multimodal ETL
+\series default
+ 
+\series bold
+processes
+\series default
+ through the utilization of 
+\series bold
+advanced machine learning and deep learning methods
+\series default
+ to enhance precision, effectiveness, and promptness in intricate data processin
+g and analysis.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+
+\size footnotesize
+Optimizar el control de APIs en tiempo real y procesos de ETL multimodales,
+ que involucran diferentes tipos de datos.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Utilizar machine learning y deep learning avanzados para mejorar el desempeño
+ en el procesamiento de datos complejos.
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Enfocarse en mejorar la precisión, efectividad y rapidez en el análisis
+ de datos para obtener resultados más confiables y rápidos.
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+
+\size footnotesize
+To create an 
+\series bold
+AI-based advanced platform
+\series default
+ for transmitting 
+\series bold
+large files
+\series default
+ and 
+\series bold
+distributing messages
+\series default
+ on a large scale.
+ This system will utilize artificial intelligence technologies to improve
+ efficiency, security, and scalability, and will also be capable of 
+\series bold
+adjusting to changing network conditions
+\series default
+ to boost communication and data transfer.
+ 
+\begin_inset Note Note
+status open
+
+\begin_layout Itemize
+Transmitir archivos grandes y distribuir mensajes de forma masiva.
+ 
+\end_layout
+
+\begin_layout Itemize
+Utilizar inteligencia artificial para mejorar la eficiencia, seguridad y
+ escalabilidad del sistema.
+ 
+\end_layout
+
+\begin_layout Itemize
+Adaptarse dinámicamente a cambios en la red, lo cual aumentará la eficacia
+ de la comunicación y la transferencia de datos en diferentes condiciones.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Methodology
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+General Methodology of Contributions
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\series bold
+State-of-the-Art Analysis:
+\series default
+ Review of existing technologies and approaches in real-time signal processing,
+ AI-driven automation, and data management.
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Conceptual Solution Design:
+\series default
+ Initial design for project contributions, including architectures, required
+ modules, and tools.
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Sandbox Implementation:
+\series default
+ Development of initial prototypes for feasibility validation of main components
+ and a Sandbox for future tunning0.
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Testing and Validation:
+\series default
+ Iterative testing to evaluate efficiency, scalability, and responsiveness.
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Integration and Scalability:
+\series default
+ Integration of developed modules into a complete system, ensuring cooperation
+ and scalability.
+\end_layout
+
+\begin_layout Plain Layout
+
+\series bold
+Impact Evaluation:
+\series default
+ Assessment of contributions on defined objectives to measure improvement.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/general_methodology.svg
+	lyxscale 10
+	width 80col%
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\shape slanted
+\size scriptsize
+\color red
+A six-step approach to analyze, design, prototype, test, integrate, and
+ evaluate real-time AI-driven solutions.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+AI Hyperparameter Tuning and System-Level Optimization
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Enhancing Model Performance and System Efficiency through Dual Optimization
+ Techniques
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+t
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+\size footnotesize
+Joint Optimization Approach
+\end_layout
+
+\begin_layout Itemize
+
+\size footnotesize
+Optimize both 
+\series bold
+model hyperparameters
+\series default
+ and 
+\series bold
+system resources
+\series default
+ (CPU, memory, latency, energy) to enhance overall performance.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/opt.svg
+	lyxscale 10
+	width 60col%
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+t
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.55
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+\size footnotesize
+Reinforcement Learning (RL) for Adaptive Optimization
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\size footnotesize
+RL 
+\series default
+adjusts 
+\series bold
+system resources
+\series default
+ (CPU/GPU, memory, network) in real-time to maintain efficiency under changing
+ conditions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/rl.svg
+	lyxscale 10
+	width 60col%
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\align center
+\begin_inset CommandInset line
+LatexCommand rule
+offset "0.5ex"
+width "80col%"
+height "1pt"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.7
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+\size footnotesize
+Synergy Between Techniques
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\size footnotesize
+Bayesian Optimization
+\series default
+ finds optimal initial configurations.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\size footnotesize
+RL
+\series default
+ continuously adapts configurations to maintain 
+\series bold
+efficiency
+\series default
+ under different operational conditions.
+\end_layout
+
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.3
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/syn.svg
+	lyxscale 10
+	width 70col%
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\align center
+\begin_inset VSpace vfill
+\end_inset
+
+
+\shape italic
+\size scriptsize
+\color red
+By integrating 
+\series bold
+Bayesian optimization
+\series default
+ for initial setup with
+\series bold
+ reinforcement learning
+\series default
+ for continuous adaptation, the goal is to achieve 
+\series bold
+robust performance
+\series default
+ and 
+\series bold
+resource efficiency
+\series default
+ under diverse system conditions.
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Testing Contexts of Interest
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+y otro slide que hable de los contextos de prueba de interes, proyectos
+ ane y proyecto neonatos ses para declarar que esas serian los escenarios
+ de prueba de interes
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Scenarios for Testing
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+\size footnotesize
+Prototipo costo-eficiente y escalable para el monitoreo del espectro radioeléctr
+ico en Colombia mediante radio definido por software y aprendizaje profundo.
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+c
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.45
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Scalability
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Develop a system that can expand with minimal additional costs by leveraging
+ affordable hardware like Jetson Nano and SDR modules, allowing more sensors
+ to be easily integrated into the monitoring network.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Robustness
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Implement a flexible and reconfigurable network that ensures consistent
+ monitoring capabilities across diverse conditions, supporting multiple
+ frequency bands, and maintaining performance under varying environmental
+ and network conditions.
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Low Latency
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Ensure real-time data acquisition and analysis, utilizing efficient hardware
+ and optimized deep learning models to provide timely information for regulatory
+ and management decisions.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Reliability
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Guarantee a high-quality, continuous monitoring system capable of supporting
+ the ANE in maintaining the radioelectric spectrum's efficiency and compliance
+ with national regulations.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+c
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.55
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/architecture.svg
+	lyxscale 3
+	height 40pheight%
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\shape italic
+\size footnotesize
+Sistema de integración de EEG, ECG y SpO2 para seguimiento de neonatos en
+ unidad de cuidados intensivos del Hospital Universitario de Caldas - SES
+ HUC.
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+c
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Real-Time Monitoring
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Implement a system capable of acquiring and integrating real-time multimodal
+ bio-signal data (EEG, ECG, SpO2) to monitor neonates effectively and continuous
+ly in the NICU environment.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Data Centralization
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Create a centralized platform for synchronized acquisition and integration
+ of bio-signals, allowing healthcare professionals to have a holistic view
+ of the patient's condition.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Alarm Generation
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Develop an automated alert system based on machine learning for early detection
+ of critical health conditions, enabling immediate medical response to potential
+ complications.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Accuracy in Critical Settings
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Validate the system in clinical settings, ensuring that the bio-signal integrati
+on supports precise diagnosis and decision-making, aiming to reduce neonatal
+ mortality.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+c
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/ccp.jpg
+	lyxscale 30
+	width 100col%
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Standard
+\align center
+\begin_inset VSpace vfill
+\end_inset
+
+
+\shape slanted
+\size scriptsize
+\color red
+Two diverse research projects provide essential testing environments for
+ validating scalability, robustness, and real-time data integration as part
+ of the system development methodology.
 \end_layout
 
 \end_deeper
@@ -3871,7 +5080,7 @@ General aim
 status open
 
 \begin_layout Plain Layout
-Specific aims
+Testing Contexts of Interest
 \end_layout
 
 \end_inset
@@ -3880,17 +5089,227 @@ Specific aims
 \end_layout
 
 \begin_deeper
+\begin_layout FrameSubtitle
+Scenarios for Testing
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-...
+
+\shape italic
+\size footnotesize
+Prototipo Funcional de Lengua Electrónica para la Identificación de Sabores
+ en Cacao Fino de Origen Colombiano.
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+c
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.45
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Flavor Profile Identification
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Automate the identification of flavor profiles in cacao extracts, such as
+ liquors and coatings.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Portability and Real-Time Analysis
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Improve the design for portability and real-time monitoring, optimizing
+ its use in uncontrolled conditions.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\size scriptsize
+Quality Validation
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Apply chemometrics to ensure the accuracy and quality of flavor analysis
+ for both Luker's products and external samples.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+c
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.55
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/Rueda_Sabores.jpg
+	lyxscale 30
+	width 75col%
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
-\begin_layout Frame
+\begin_layout Column
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
-\begin_layout Section
-Methodology
+\begin_layout Standard
+Together, these three projects provide a 
+\series bold
+comprehensive validation of the AI-driven solution, enhancing robustness,
+ adaptability
+\series default
+, and practical applications across sectors from telecommunications to food
+ quality.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\align center
+\begin_inset VSpace vfill
+\end_inset
+
+
+\shape slanted
+\size scriptsize
+\color red
+The electronic tongue prototype supports research by providing a practical
+ testing environment for enhancing flavor analysis methodologies in cacao
+ production.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Frame
@@ -3898,7 +5317,7 @@ Methodology
 status open
 
 \begin_layout Plain Layout
-Methodology [obj1]
+Methodology [OBJ1]
 \end_layout
 
 \end_inset
@@ -3907,7 +5326,447 @@ Methodology [obj1]
 \end_layout
 
 \begin_deeper
+\begin_layout FrameSubtitle
+Streamlining Signal Integration:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+A Comprehensive Approach to Real-Time Data Management and Visualization
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.4
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/diagrams/metodology/aim1.1.svg
+	lyxscale 10
+	width 100col%
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.6
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/diagrams/metodology/aim1.2.svg
+	lyxscale 10
+	width 100col%
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout ColumnsTopAligned
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\shape slanted
+\size scriptsize
+\color red
+Create a 
+\series bold
+modular and parameterized
+\series default
+ system for real-time signal acquisition, processing, and integration.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Methodology [OBJ1]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+BCI-Framework V1.0
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/animation/plot.png
+	lyxscale 10
+	width 70col%
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/animation/ide.png
+	lyxscale 10
+	width 70col%
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/animation/delivery.png
+	lyxscale 10
+	width 70col%
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/animation/connect.png
+	lyxscale 10
+	width 70col%
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Description
+
+\size scriptsize
+GitHub: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://github.com/UN-GCPDS/bci-framework"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+\size scriptsize
+Documentation: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://bci-framework.readthedocs.io/en/latest/"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Methodology [OBJ2]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Optimizing System Performance:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+Configuring Key Parameters for Enhanced Efficiency and Security
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 Propongo un sistema basado en aprendizaje reforzado que ajuste dinámicamente
  los parámetros de configuración de una API REST.
  Este sistema sería capaz de modificar en tiempo real aspectos críticos
@@ -3922,22 +5781,163 @@ res) y la interacción con la base de datos.
  la API, incluso ante cambios dinámicos en el entorno y la demanda.
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-El problema a abordar es cómo superar las limitaciones de tasa de solicitudes
- de API, que generan dificultades en la transmisión de datos en escenarios
- multimodales y en tiempo real, y complican la adaptación y mantenimiento
- cuando se cambian los proveedores de API.
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+Propongo un sistema orientado a optimizar los procesos de ETL multimodal
+ en entornos de inteligencia artificial a través de algoritmos avanzados
+ de aprendizaje automático y aprendizaje profundo, centrado en la integración
+ eficiente y procesamiento de datos no estructurados mediante redes neuronales
+ convolucionales y la gestión dinámica de secuencias de datos temporales
+ utilizando redes neuronales recurrentes.
+ Este enfoque práctico involucra el desarrollo de prototipos y su validación
+ en escenarios de uso real, destacando aplicaciones como la monitorización
+ en tiempo real y el análisis de grandes conjuntos de datos, con el objetivo
+ de mejorar significativamente la precisión, eficiencia y capacidad de respuesta
+ de los sistemas de ETL, proporcionando un marco concreto y aplicable para
+ enfrentar desafíos actuales en el procesamiento de datos en IA.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/diagrams/metodology/aim2.1.svg
+	lyxscale 10
+	width 100col%
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+\shape slanted
+\size scriptsize
+\color red
+Implement 
+\series bold
+AI-driven automation
+\series default
+ for optimizing real-time API and ETL configurations.
+\end_layout
+
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/diagrams/metodology/aim2.2.svg
+	lyxscale 10
+	width 95col%
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_deeper
-\begin_layout Frame
+\begin_layout ColumnsTopAligned
 
 \end_layout
 
-\begin_layout Frame
-
-\end_layout
-
+\end_deeper
 \begin_layout Standard
 \begin_inset Separator plain
 \end_inset
@@ -3950,7 +5950,7 @@ El problema a abordar es cómo superar las limitaciones de tasa de solicitudes
 status open
 
 \begin_layout Plain Layout
-Methodology [obj2]
+Methodology [OBJ2]
 \end_layout
 
 \end_inset
@@ -3959,7 +5959,257 @@ Methodology [obj2]
 \end_layout
 
 \begin_deeper
+\begin_layout FrameSubtitle
+Scalable Service Management for AI Applications
+\end_layout
+
 \begin_layout Standard
+
+\series bold
+Foundation
+\series default
+ is a scalable AI framework for managing distributed services and data processes
+, designed to optimize efficiency and flexibility in Docker Swarm environments.
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset Argument 1
+status collapsed
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.77
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\size scriptsize
+Service Management:
+\series default
+ Automates creation, deletion, and scaling of services in Docker Swarm.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\size scriptsize
+Worker Lifecycle Control:
+\series default
+ Manages Python, Django, and Brython services, ensuring efficient deployment
+ and operation.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\size scriptsize
+Distributed Logging:
+\series default
+ Centralized log management via HTTP and Kafka for better monitoring.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\size scriptsize
+Dynamic Resource Allocation:
+\series default
+ Adaptive management of CPU, memory, and network resources to optimize performan
+ce.
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\size scriptsize
+Integration with AI Models:
+\series default
+ Supports integration of machine learning models for automated decision-making
+ and optimization.
+\end_layout
+
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.15
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/diagrams/metodology/foundation.svg
+	lyxscale 10
+	width 100col%
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+\size scriptsize
+GitHub: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://github.com/dunderlab/python-dunerlab.foundation"
+literal "false"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+\size scriptsize
+Documentation: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://dunderlab-foundation.readthedocs.io/en/latest/index.html"
+literal "false"
+
+\end_inset
+
+ (Not yet)
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Methodology [OBJ3]
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Building Advanced AI-based Network protocols:
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+
+\backslash
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+Enhancing Communication and Data Transfer Efficiency
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
 Propongo un sistema avanzado de mensajería distribuida, basado en una red
  de malla donde cada nodo puede enviar y recibir mensajes.
  Esta red integra específicamente tecnologías de inteligencia artificial
@@ -3975,66 +6225,16 @@ Propongo un sistema avanzado de mensajería distribuida, basado en una red
  aumenta la resistencia de la red a fallos y ataques.
 \end_layout
 
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
 \end_inset
 
 
 \end_layout
 
-\begin_layout Frame
-\begin_inset Argument 4
-status open
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
 
 \begin_layout Plain Layout
-Methodology [obj3]
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
-Propongo un sistema orientado a optimizar los procesos de ETL multimodal
- en entornos de inteligencia artificial a través de algoritmos avanzados
- de aprendizaje automático y aprendizaje profundo, centrado en la integración
- eficiente y procesamiento de datos no estructurados mediante redes neuronales
- convolucionales y la gestión dinámica de secuencias de datos temporales
- utilizando redes neuronales recurrentes.
- Este enfoque práctico involucra el desarrollo de prototipos y su validación
- en escenarios de uso real, destacando aplicaciones como la monitorización
- en tiempo real y el análisis de grandes conjuntos de datos, con el objetivo
- de mejorar significativamente la precisión, eficiencia y capacidad de respuesta
- de los sistemas de ETL, proporcionando un marco concreto y aplicable para
- enfrentar desafíos actuales en el procesamiento de datos en IA.
-\end_layout
-
-\end_deeper
-\begin_layout Standard
-\begin_inset Separator plain
-\end_inset
-
-
-\end_layout
-
-\begin_layout Frame
-\begin_inset Argument 4
-status open
-
-\begin_layout Plain Layout
-Methodology [obj4]
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_deeper
-\begin_layout Standard
 Para optimizar la transmisión de archivos a gran escala, propongo un sistema
  de servidor inteligente capaz de adaptarse en tiempo real a las condiciones
  de conexión y restricciones del cliente, como la pérdida de paquetes y
@@ -4055,9 +6255,140 @@ Para optimizar la transmisión de archivos a gran escala, propongo un sistema
  cliente.
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/diagrams/metodology/aim3.1.svg
+	lyxscale 10
+	width 100col%
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.5
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/diagrams/metodology/aim3.2.svg
+	lyxscale 10
+	width 100col%
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
 \end_deeper
-\begin_layout Section
-Academic advances
+\begin_layout Standard
+\align center
+
+\shape slanted
+\size scriptsize
+\color red
+Build a scalable, 
+\series bold
+AI-enhanced platform
+\series default
+ for efficient file transmission and distributed messaging.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
 \end_layout
 
 \begin_layout Frame
@@ -4065,7 +6396,7 @@ Academic advances
 status open
 
 \begin_layout Plain Layout
-Academic advances
+Methodology [OBJ3]
 \end_layout
 
 \end_inset
@@ -4075,55 +6406,1055 @@ Academic advances
 
 \begin_deeper
 \begin_layout FrameSubtitle
-Papers, patents and software registers
+Dynamic Communication Framework for Distributed Networks
 \end_layout
 
-\begin_layout Itemize
-[2023] Paper published...
-\end_layout
+\begin_layout Standard
 
-\begin_layout Itemize
-[2022] The systems were submitted to the 
 \series bold
-Crearlo no es suficiente
+Chaski-Confluent
 \series default
- summons for a 
-\emph on
-patentability search process
-\emph default
- with the 
-\emph on
-Universidad Nacional de Colombia sede Manizales
-\emph default
- as main beneficiary with the title 
-\series bold
-"MÉTODO Y SISTEMA PARA LA SINCRONIZACIÓN DE MARCADORES ASOCIADOS A SISTEMAS
- DE INTERFAZ CEREBRO-COMPUTADOR"
-\series default
-, postulation 
-\emph on
-ID 343 
-\emph default
-and Application number 
-\emph on
-NC2022/0007405
-\emph default
- from May 28, 2022.
+ is a distributed communication framework designed for scalable message
+ handling and dynamic node pairing, tailored for TCP/IP networks and optimized
+ for efficient data exchange.
+\end_layout
+
+\begin_layout ColumnsTopAligned
+
+\end_layout
+
+\begin_deeper
+\begin_layout Column
+\begin_inset Argument 1
+status collapsed
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.75
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
+
+\series bold
+\size scriptsize
+Scalable Messaging:
+\series default
+ Supports robust node discovery and efficient message routing in large-scale
+ networks.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\size scriptsize
+Dynamic Node Pairing:
+\series default
+ Manages automatic pairing of nodes based on subscription topics, ensuring
+ adaptive communication.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\size scriptsize
+Remote Python Execution:
+\series default
+ Facilitates remote Python script execution similar to RPyC, enhancing computati
+onal flexibility.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\size scriptsize
+AI-Enhanced Data Transfer:
+\series default
+ Integrates AI-based techniques for optimizing large file transfers and
+ message distribution.
+ 
+\end_layout
+
+\begin_layout Itemize
+
+\series bold
+\size scriptsize
+Real-Time Adaptability:
+\series default
+ Adjusts to network changes for improved communication and resource utilization.
+\end_layout
+
+\begin_layout Column
+\begin_inset Argument 1
+status open
+
+\begin_layout Plain Layout
+b
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+0.2
+\backslash
+textwidth
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename images/diagrams/metodology/chaski.svg
+	lyxscale 10
+	width 100col%
+	rotateOrigin centerBaseline
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+\size scriptsize
+GitHub: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://github.com/dunderlab/python-chaski"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+\size scriptsize
+Documentation: 
+\begin_inset CommandInset href
+LatexCommand href
+target "https://chaski-confluent.readthedocs.io/en/latest/"
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Obtained Results
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Obtained Results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Papers
+\end_layout
+
+\begin_layout Description
+\noindent
+
+\size scriptsize
+[2023] Published a research paper titled "
+\series bold
+A Novel OpenBCI Framework for EEG-Based Neurophysiological Experiments
+\series default
+" in the journal Sensors.
+ The paper discusses the development of an Open Brain-Computer Interface
+ (OpenBCI) framework, utilizing open-source hardware and firmware to facilitate
+ EEG-based neurophysiological experiments.
+ The framework is designed to overcome the limitations of OpenBCI systems,
+ particularly in communication and flexibility for various neurophysiological
+ protocols.
+ The research was published in Volume 23, Issue 7 of Sensors, 2023 (DOI:
+ 10.3390/s23073763) (MDPI).
+\size footnotesize
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+\size scriptsize
+[2023] At the "III Congreso Latinoamericano de Investigación, Innovación
+ y Emprendimiento Educativo," presented "
+\series bold
+Real-Time Processing for BCI-Based MI Paradigms Using Deep Learning Models
+\series default
+" This paper showcases advancements in BCI technology, highlighting the
+ application of deep learning models for efficient, real-time processing
+ in Motor Imagery (MI) paradigms.
+ The study emphasizes improvements in processing speed and accuracy, addressing
+ challenges in real-time applications and setting new standards for BCI
+ system performance.
+ The work has significant implications for both academic research and practical
+ BCI applications in various fields.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Obtained Results
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Patents and software registers
+\end_layout
+
+\begin_layout Description
+\noindent
+
+\size scriptsize
+[2022] The systems were submitted to the Crearlo no es suficiente summons
+ for a patentability search process with the Universidad Nacional de Colombia
+ sede Manizales as main beneficiary with the title "
+\series bold
+MÉTODO Y SISTEMA PARA LA SINCRONIZACIÓN DE MARCADORES ASOCIADOS A SISTEMAS
+ DE INTERFAZ CEREBRO-COMPUTADOR
+\series default
+", postulation ID 343 and Application number NC2022/0007405 from May 28,
+ 2022.
+\size footnotesize
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\noindent
+
+\size scriptsize
 [2022] A script developed with BCI-Framework for
 \series bold
  Motor imagery paradigm with game-based stimulus (Pacman interface)
 \series default
- was submitted to the software register in the 
-\emph on
-Universidad Nacional de Colombia sede Manizales
-\emph default
-.
+ was submitted to the software register in the Universidad Nacional de Colombia
+ sede Manizales.
 \end_layout
 
 \end_deeper
+\begin_layout Standard
+\begin_inset Separator plain
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Work in Progress
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout FrameSubtitle
+Software development
+\end_layout
+
+\begin_layout Description
+
+\size scriptsize
+[2023-] Developed and documented an application using TimescaleDB, focusing
+ on efficient data management and analytics for time-series data, optimized
+ for fast data ingest and complex queries in modern, data-driven applications.
+\size footnotesize
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+\size scriptsize
+[2023-] The Foundation framework is a microservices-based system using Docker,
+ built with Python, Django, and Django REST framework, enhancing data analytical
+ capabilities through seamless integration with TimescaleDB and real-time
+ data streaming using Apache Kafka.
+\size footnotesize
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+\size scriptsize
+[2023-] The ESP32-based system is being developed for data centralization
+ in the NICU, aiming to revolutionize patient data collection and monitoring,
+ with a focus on signal synchronization and managing high data traffic to
+ ensure reliable monitoring.
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Implementation Schedule
+\end_layout
+
+\begin_layout Frame
+\begin_inset Argument 4
+status open
+
+\begin_layout Plain Layout
+Implementation Schedule
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Note Note
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{table}[H]
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering 
+\backslash
+scriptsize 
+\backslash
+begin{tabular}{c|lllllllllllllllllllllll|}        & 
+\backslash
+multicolumn{23}{c|}{Activities}                                        
+                                                                       
+                                                                       
+                                                                       
+                                                                       
+                                                                       
+                                                                       
+                                                                       
+                                                                       
+                     
+\backslash
+
+\backslash
+ 
+\backslash
+cline{2-24}  Months & 
+\backslash
+multicolumn{7}{c|}{Phases OBJ 1}                                       
+                                                                       
+                                                                 & 
+\backslash
+multicolumn{7}{c|}{Phases OBJ 2}                                       
+                                                                       
+                                                                 & 
+\backslash
+multicolumn{9}{c|}{Phases OBJ 3}                                       
+                                                                       
+                                                                       
+                           
+\backslash
+
+\backslash
+ 
+\backslash
+hline 1-2    & 
+\backslash
+cellcolor[HTML]{BED189} &                          &                   
+       &                          &                          &         
+                 & 
+\backslash
+multicolumn{1}{l|}{}                         & 
+\backslash
+cellcolor[HTML]{BED189} &                          &                   
+       &                          &                          &         
+                 & 
+\backslash
+multicolumn{1}{l|}{}                         & 
+\backslash
+cellcolor[HTML]{BED189} &                          &                   
+       &                          &                          &         
+                 &                          &                          &
+                          
+\backslash
+
+\backslash
+ 2-4    &                          & 
+\backslash
+cellcolor[HTML]{BED189} &                          &                   
+       &                          &                          & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ & 
+\backslash
+cellcolor[HTML]{BED189} &                          &                   
+       &                          &                          & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ & 
+\backslash
+cellcolor[HTML]{BED189} &                          &                   
+       &                          &                          &         
+                 &                          &                          
+\backslash
+
+\backslash
+ 4-6    &                          &                          & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+cellcolor[HTML]{BED189} &                          &                   
+       & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ &                          &                          &               
+           &                          &                          & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ &                          &                          &               
+           &                          &                          &     
+                     &                          &                      
+    
+\backslash
+
+\backslash
+ 6-8    &                          &                          &        
+                  & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+cellcolor[HTML]{BED189} &                          & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ &                          &                          &               
+           &                          &                          & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ &                          &                          &               
+           &                          &                          &     
+                     &                          &                      
+    
+\backslash
+
+\backslash
+ 8-10   &                          &                          &        
+                  &                          &                         
+ &                          & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ &                          & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+cellcolor[HTML]{BED189} &                          & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ &                          &                          &               
+           &                          &                          &     
+                     &                          &                      
+    
+\backslash
+
+\backslash
+ 10-12  &                          &                          &        
+                  &                          &                         
+ &                          & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ &                          &                          & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ &                          &                          &               
+           &                          &                          &     
+                     &                          &                      
+    
+\backslash
+
+\backslash
+ 12-14  &                          &                          &        
+                  &                          &                         
+ &                          & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ &                          &                          &               
+           &                          &                          & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ &                          & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+cellcolor[HTML]{BED189} &                          &                   
+       &                          
+\backslash
+
+\backslash
+ 14-16  &                          &                          &        
+                  &                          &                         
+ &                          & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ &                          &                          &               
+           &                          &                          & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ &                          &                          & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+cellcolor[HTML]{BED189} &                          &                   
+       
+\backslash
+
+\backslash
+ 16-18  &                          &                          &        
+                  &                          &                         
+ & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+multicolumn{1}{l|}{
+\backslash
+cellcolor[HTML]{BED189}} &                          &                  
+        &                          &                          &        
+                  &                          & 
+\backslash
+multicolumn{1}{l|}{
+\backslash
+cellcolor[HTML]{BED189}} &                          &                  
+        &                          &                          &        
+                  &                          &                         
+ & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+cellcolor[HTML]{BED189} 
+\backslash
+end{tabular} 
+\backslash
+end{table}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+centering 
+\backslash
+scalebox{0.8}{
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{table}[] 
+\backslash
+scriptsize 
+\backslash
+begin{tabular}{c|lllllllllllllllllllllllllll|}                         
+ & 
+\backslash
+multicolumn{27}{c|}{Activities}                                        
+                                                                       
+                                                                       
+                                                                       
+                                                                       
+                                                                       
+                                                                       
+                                                                       
+                                                                       
+                                                                       
+                                                                       
+              
+\backslash
+
+\backslash
+ 
+\backslash
+cline{2-28}                           & 
+\backslash
+multicolumn{7}{c|}{}                                                   
+                                                                       
+                                                                 & 
+\backslash
+multicolumn{7}{c|}{}                                                   
+                                                                       
+                                                                 & 
+\backslash
+multicolumn{9}{c|}{}                                                   
+                                                                       
+                                                                       
+                                                & 
+\backslash
+multicolumn{4}{c|}{
+\backslash
+begin{tabular}[c]{@{}c@{}}Papers and thesis 
+\backslash
+
+\backslash
+ document writing
+\backslash
+end{tabular}}              
+\backslash
+
+\backslash
+ 
+\backslash
+cline{25-28}  
+\backslash
+multirow{-2}{*}{Months} & 
+\backslash
+multicolumn{7}{c|}{
+\backslash
+multirow{-2}{*}{Phases OBJ 1}}                                         
+                                                                       
+                                             & 
+\backslash
+multicolumn{7}{c|}{
+\backslash
+multirow{-2}{*}{Phases OBJ 2}}                                         
+                                                                       
+                                             & 
+\backslash
+multicolumn{9}{c|}{
+\backslash
+multirow{-2}{*}{Phases OBJ 3}}                                         
+                                                                       
+                                                                       
+                            & 
+\backslash
+multicolumn{1}{l|}{Paper} & 
+\backslash
+multicolumn{1}{l|}{Paper} & 
+\backslash
+multicolumn{1}{l|}{Paper} & Thesis                   
+\backslash
+
+\backslash
+ 
+\backslash
+hline 1-2                      & 
+\backslash
+cellcolor[HTML]{BED189} &                          &                   
+       &                          &                          &         
+                 & 
+\backslash
+multicolumn{1}{l|}{}                         & 
+\backslash
+cellcolor[HTML]{BED189} &                          &                   
+       &                          &                          &         
+                 & 
+\backslash
+multicolumn{1}{l|}{}                         & 
+\backslash
+cellcolor[HTML]{BED189} &                          &                   
+       &                          &                          &         
+                 &                          &                          &
+ 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+   &                            &                            &         
+                 
+\backslash
+
+\backslash
+ 2-4                      &                          & 
+\backslash
+cellcolor[HTML]{BED189} &                          &                   
+       &                          &                          & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ & 
+\backslash
+cellcolor[HTML]{BED189} &                          &                   
+       &                          &                          & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ & 
+\backslash
+cellcolor[HTML]{BED189} &                          &                   
+       &                          &                          &         
+                 &                          & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+   &                            &                            &         
+                 
+\backslash
+
+\backslash
+ 4-6                      &                          &                 
+         & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+cellcolor[HTML]{BED189} &                          &                   
+       & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ &                          &                          &               
+           &                          &                          & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ &                          &                          &               
+           &                          &                          &     
+                     &                          & 
+\backslash
+multicolumn{1}{l|}{}                         & 
+\backslash
+cellcolor[HTML]{BED189}   &                            &               
+             & 
+\backslash
+cellcolor[HTML]{BED189} 
+\backslash
+
+\backslash
+ 6-8                      &                          &                 
+         &                          & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+cellcolor[HTML]{BED189} &                          & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ &                          &                          &               
+           &                          &                          & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ &                          &                          &               
+           &                          &                          &     
+                     &                          & 
+\backslash
+multicolumn{1}{l|}{}                         & 
+\backslash
+cellcolor[HTML]{BED189}   &                            &               
+             & 
+\backslash
+cellcolor[HTML]{BED189} 
+\backslash
+
+\backslash
+ 8-10                     &                          &                 
+         &                          &                          &       
+                   &                          & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ &                          & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+cellcolor[HTML]{BED189} &                          & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ &                          &                          &               
+           &                          &                          &     
+                     &                          & 
+\backslash
+multicolumn{1}{l|}{}                         & 
+\backslash
+cellcolor[HTML]{BED189}   & 
+\backslash
+cellcolor[HTML]{BED189}   &                            & 
+\backslash
+cellcolor[HTML]{BED189} 
+\backslash
+
+\backslash
+ 10-12                    &                          &                 
+         &                          &                          &       
+                   &                          & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ &                          &                          & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ &                          &                          &               
+           &                          &                          &     
+                     &                          & 
+\backslash
+multicolumn{1}{l|}{}                         & 
+\backslash
+cellcolor[HTML]{BED189}   & 
+\backslash
+cellcolor[HTML]{BED189}   &                            & 
+\backslash
+cellcolor[HTML]{BED189} 
+\backslash
+
+\backslash
+ 12-14                    &                          &                 
+         &                          &                          &       
+                   &                          & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ &                          &                          &               
+           &                          &                          & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ &                          & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+cellcolor[HTML]{BED189} &                          &                   
+       & 
+\backslash
+multicolumn{1}{l|}{}                         & 
+\backslash
+cellcolor[HTML]{BED189}   & 
+\backslash
+cellcolor[HTML]{BED189}   & 
+\backslash
+cellcolor[HTML]{BED189}   & 
+\backslash
+cellcolor[HTML]{BED189} 
+\backslash
+
+\backslash
+ 14-16                    &                          &                 
+         &                          &                          &       
+                   &                          & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ &                          &                          &               
+           &                          &                          & 
+\backslash
+multicolumn{1}{l|}{}                         &                         
+ &                          &                          & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+cellcolor[HTML]{BED189} &                          & 
+\backslash
+multicolumn{1}{l|}{}                         & 
+\backslash
+cellcolor[HTML]{BED189}   & 
+\backslash
+cellcolor[HTML]{BED189}   & 
+\backslash
+cellcolor[HTML]{BED189}   & 
+\backslash
+cellcolor[HTML]{BED189} 
+\backslash
+
+\backslash
+ 16-18                    &                          &                 
+         &                          &                          &       
+                   & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+multicolumn{1}{l|}{
+\backslash
+cellcolor[HTML]{BED189}} &                          &                  
+        &                          &                          &        
+                  &                          & 
+\backslash
+multicolumn{1}{l|}{
+\backslash
+cellcolor[HTML]{BED189}} &                          &                  
+        &                          &                          &        
+                  &                          &                         
+ & 
+\backslash
+cellcolor[HTML]{BED189} & 
+\backslash
+multicolumn{1}{l|}{
+\backslash
+cellcolor[HTML]{BED189}} & 
+\backslash
+cellcolor[HTML]{BED189}   & 
+\backslash
+cellcolor[HTML]{BED189}   & 
+\backslash
+cellcolor[HTML]{BED189}   & 
+\backslash
+cellcolor[HTML]{BED189} 
+\backslash
+
+\backslash
+ 
+\backslash
+hline 
+\backslash
+end{tabular} 
+\backslash
+end{table}
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Frame
+
+\end_layout
+
 \begin_layout Section
 Acknowledgements
 \end_layout
@@ -4143,7 +7474,17 @@ Acknowledgements
 
 \begin_deeper
 \begin_layout Standard
-...
+This research would not have been possible without the support provided
+ by the project 
+\shape italic
+Prototipo Funcional de Lengua Electrónica para la Identificación de Sabores
+ en Cacao Fino de Origen Colombiano (código 202010039703)
+\shape default
+ funded by 
+\series bold
+Casa Luker
+\series default
+.
 \end_layout
 
 \end_deeper

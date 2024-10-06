@@ -7,10 +7,24 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \setlength{\parindent}{0cm}
+\usepackage[active]{srcltx}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\ifx\hypersetup\undefined
+  \AtBeginDocument{%
+    \hypersetup{unicode=true}
+  }
+\else
+  \hypersetup{unicode=true}
+\fi
 
 \makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% A simple dot to overcome graphicx limitations
+\newcommand{\lyxdot}{.}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
 % this default might be overridden by plain title style
 \newcommand\makebeamertitle{\frame{\maketitle}}%
@@ -59,6 +73,20 @@
 \usepackage{tikz}
 \usepackage{tikz-qtree}
 
+%
+\usepackage{tabularx}
+\usepackage{etoolbox}
+\usepackage{array}
+\usepackage{colortbl}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{arydshln}
+\usepackage{bm}
+%
+
+
 \usepackage{forest}
 \forestset{
   qtree/.style={
@@ -94,14 +122,21 @@
 	}
 }}
 
+
+\definecolor{UN_primary}{RGB}{148,180,59}
+\definecolor{UN_comp4}{RGB}{177,178,176}
+
 \makeatother
 
 
 \begin{document}
-\title[Multimodal Data Exchange Systems for Enhanced Interaction and Management]{Multimodal Data Exchange System for\\Enhanced Interaction and Management}
+\title{}
+\title[Developing an AI-Driven Framework for Real-Time Signal Processing
+and Data Management]{Developing an AI-Driven Framework for\\Real-Time Signal Processing
+and Data Exchange}
 \author{Yeison Nolberto Cardona-Álvarez}
-\institute{\textbf{Advisor:} Andrés Marino Álvarez-Meza, Ph.D\\
-\textbf{Co-Advisor:} César Germán Castellanos-Domínguez, Ph.D}
+\institute{\textbf{Advisor:} Andres Marino Alvarez-Meza, Ph.D\\
+\textbf{Co-Advisor:} Germán Castellanos-Domínguez, Ph.D}
 \titlegraphic{\ungraphic}
 \date{}
 
@@ -112,6 +147,7 @@
 \let\oldcite\cite
 \renewcommand*\cite[1]{{\color {gray}\tiny{\oldcite{#1}}}}
 \newcommand*\citet[1]{{\color {gray}\fontsize{4}{4}\selectfont{\oldcite{#1}}}}
+\newcommand*\reallysmall[1]{{\color {gray}\fontsize{2}{2}\selectfont{\oldcite{#1}}}}
 
 \begin{frame}{Outline}
 
@@ -196,6 +232,39 @@ infrastructure \cite{KearneyGlobalServices2023}.
 %
 \begin{frame}{Motivation}
 
+\framesubtitle{AI-Driven Hyperautomation: The Future of Smart Workflows}
+
+\textbf{Hyperautomation} elevates traditional software automation,
+infusing it with AI to transform data ecosystems into adaptive, \textbf{self-optimizing
+entities}, reshaping the dynamics of data management and analysis.
+\begin{columns}[t]
+
+\column{0.5\textwidth}
+\begin{itemize}
+\item {\scriptsize{}Data Process Automation }{\scriptsize\par}
+\item {\scriptsize{}Analysis and Decision-Making }{\scriptsize\par}
+\item {\scriptsize{}Workflow Optimization }{\scriptsize\par}
+\item {\scriptsize{}System Integration }{\scriptsize\par}
+\item {\scriptsize{}Data Governance }{\scriptsize\par}
+\item {\scriptsize{}Scalability and Maintenance }{\scriptsize\par}
+\end{itemize}
+
+\column{0.5\textwidth}
+
+\begin{figure}
+\centering{}\includegraphics[width=0.5\columnwidth]{images/Hyperautomation-1}
+\end{figure}
+
+\end{columns}
+
+\vfill{}
+Integrating \textbf{AI} into software transforms data ecosystems into
+intelligent, self-evolving networks, revolutionizing the approach
+to data management and analysis. \cite{haleem2021hyperautomation}. 
+\end{frame}
+%
+\begin{frame}{Motivation}
+
 \framesubtitle{SPRG: Signal Processing and Recognition Group}
 
 Our research group develops \textbf{transdisciplinary data exchange}
@@ -223,30 +292,33 @@ discoveries \textbf{across academic areas} \cite{gomezestrategia,aguirre2023feet
 
 \end{frame}
 
-\section{Problem statement}
-\begin{frame}{Problem statement}
+\section{Problem Statement}
 
-\framesubtitle{Limitations of Data Exchange Methodologies}
+\begin{frame}{Problem Satement}
+
+\framesubtitle{Methodologies for Data Exchange }
 
  
 \begin{columns}[t]
 
 \column{0.5\textwidth}
 \begin{description}
-\item [{{\scriptsize{}APIs:}}] {\scriptsize{}Request rate, security, and
-provider stability/changes limit them \cite{velepucha2023survey}.}{\scriptsize\par}
+\item [{{\scriptsize{}APIs:}}] {\scriptsize{}They are limited by request
+rate, security, and provider stability/changes \cite{velepucha2023survey}.}{\scriptsize\par}
 \end{description}
 \vspace{1cm}
 
 \begin{description}
-\item [{{\scriptsize{}Messaging:}}] {\scriptsize{}Distributed system scalability,
-delivery assurance, state management, and security issues \cite{fang2019integrating}.}{\scriptsize\par}
+\item [{{\scriptsize{}Messaging:}}] {\scriptsize{}Scalability, delivery
+assurance, state management, and security issues in distributed systems.
+\cite{fang2019integrating}.}{\scriptsize\par}
 \end{description}
 
 \column{0.5\textwidth}
 \begin{description}
-\item [{{\scriptsize{}ETL:}}] {\scriptsize{}Data quality-dependent performance
-and complexity concerns with big amounts of different data \cite{abdelhafiz2021sharding}.}{\scriptsize\par}
+\item [{{\scriptsize{}ETL:}}] {\scriptsize{}Performance and complexity
+concerns related to data quality and handling large amounts of diverse
+data. \cite{abdelhafiz2021sharding}.}{\scriptsize\par}
 \end{description}
 \vspace{1cm}
 
@@ -258,7 +330,7 @@ size, and bandwidth issues \cite{ordonez2023blockchain,yi2023compound}.}{\script
 
 \end{frame}
 %
-\begin{frame}{Problem statement}
+\begin{frame}{Problem Statement}
 
 \framesubtitle{API Request Limits}
 
@@ -270,9 +342,14 @@ changes \textbf{harder to adapt} and maintain \cite{Malki2022Impact,Malki2023Com
 \centering{}\includegraphics[height=0.35\paperheight]{images/diagrams/API_01}
 \end{figure}
 
+\begin{center}
+\textsl{\textcolor{red}{\scriptsize{}Manual configurations limit API
+effectiveness in multimodal and real-time environments.}}{\scriptsize\par}
+\par\end{center}
+
 \end{frame}
 %
-\begin{frame}{Problem statement}
+\begin{frame}{Problem Statement}
 
 \framesubtitle{Messaging Scalability}
 
@@ -285,9 +362,14 @@ of communication in real-time and multimodal contexts \cite{Arellanes2020Evaluat
 \centering{}\includegraphics[height=0.35\paperheight]{images/diagrams/MSG_01}
 \end{figure}
 
+\begin{center}
+\textsl{\textcolor{red}{\scriptsize{}Centralized server reliance in
+distributed messaging often results in inefficient routing.}}{\scriptsize\par}
+\par\end{center}
+
 \end{frame}
 %
-\begin{frame}{Problem statement}
+\begin{frame}{Problem Statement}
 
 \framesubtitle{Multimodal ETL \& AI }
 
@@ -301,9 +383,15 @@ and real-time data management
 \centering{}\includegraphics[height=0.35\paperheight]{images/diagrams/ETL_01}
 \end{figure}
 
+\begin{center}
+\textsl{\textcolor{red}{\scriptsize{}Relying on rigid, sequential
+data handling poses challenges in data integration and real-time management
+.}}{\scriptsize\par}
+\par\end{center}
+
 \end{frame}
 %
-\begin{frame}{Problem statement}
+\begin{frame}{Problem Statement}
 
 \framesubtitle{Large-Scale File Transmission}
 
@@ -318,9 +406,14 @@ in changing contexts \cite{Zheng2020Design,yin2023network}.
 \centering{}\includegraphics[height=0.35\paperheight]{images/diagrams/FLA_01}
 \end{figure}
 
+\begin{center}
+\textsl{\textcolor{red}{\scriptsize{}Depends primarily on protocols
+that are static and universally applicable.}}{\scriptsize\par}
+\par\end{center}
 \end{frame}
 
 \section{State-of-the-Art}
+
 \begin{frame}{State-of-the-Art}
 
 \framesubtitle{APIs: Infrastructure Improving}
@@ -361,8 +454,11 @@ in changing contexts \cite{Zheng2020Design,yin2023network}.
 
 \vfill{}
 
-Limitations in \textbf{real-time API performance} and \textbf{adaptability}
-due to static configuration settings.
+\begin{center}
+\textsl{\textcolor{red}{\scriptsize{}Limitations in }}\textbf{\textsl{\textcolor{red}{\scriptsize{}real-time
+API performance}}}\textsl{\textcolor{red}{\scriptsize{} and }}\textbf{\textsl{\textcolor{red}{\scriptsize{}adaptability}}}\textsl{\textcolor{red}{\scriptsize{}
+due to static configuration settings.}}{\scriptsize\par}
+\par\end{center}
 
 \end{frame}
 %
@@ -398,10 +494,13 @@ due to static configuration settings.
     ]
   ]
 \end{forest}
-
+\begin{center}
 \vfill{}
-\textbf{Inefficiencies and scalability issues} in distributed messaging
-systems affecting real-time communication.
+\textbf{\textsl{\textcolor{red}{\scriptsize{}Inefficiencies and scalability
+issues}}}\textsl{\textcolor{red}{\scriptsize{} in distributed messaging
+systems affecting real-time communication.}}{\scriptsize\par}
+\par\end{center}
+
 \end{frame}
 %
 \begin{frame}{State-of-the-Art}
@@ -441,8 +540,13 @@ systems affecting real-time communication.
 
 \vfill{}
 
-Inefficiencies in processing \textbf{unstructured and temporal data}
-in AI-driven multimodal ETL systems.
+\begin{center}
+\textsl{\textcolor{red}{\scriptsize{}Inefficiencies in processing
+}}\textbf{\textsl{\textcolor{red}{\scriptsize{}unstructured and temporal
+data}}}\textsl{\textcolor{red}{\scriptsize{} in AI-driven multimodal
+ETL systems.}}{\scriptsize\par}
+\par\end{center}
+
 \end{frame}
 %
 \begin{frame}{State-of-the-Art}
@@ -479,136 +583,539 @@ in AI-driven multimodal ETL systems.
     ]
   ]
 \end{forest}
-
+\begin{center}
 \vfill{}
-Challenges in ensuring \textbf{efficient and secure} large-scale file
-transmission in \textbf{varying network conditions}.
+\textsl{\textcolor{red}{\scriptsize{}Challenges in ensuring }}\textbf{\textsl{\textcolor{red}{\scriptsize{}efficient
+and secure}}}\textsl{\textcolor{red}{\scriptsize{} large-scale file
+transmission in }}\textbf{\textsl{\textcolor{red}{\scriptsize{}varying
+network conditions}}}\textsl{\textcolor{red}{\scriptsize{}.}}{\scriptsize\par}
+\par\end{center}
+
 \end{frame}
 %
-\begin{frame}{Question research}
+\begin{frame}{Question Research}
 
 How can advanced artificial intelligence and machine learning techniques
-be used to address important issues in data management and communications
-in digital environments? Specifically, how can they improve the flexibility
-and effectiveness of real-time APIs, enhance the efficiency and scalability
-of distributed messaging systems, process unstructured and temporal
-data effectively in multimodal ETL systems, and optimize large-scale
-file transmission in different network conditions?
+enhance data management and communications in digital environments?
+Specifically, in improving real-time API flexibility and effectiveness,
+boosting distributed messaging system efficiency and scalability,
+effectively processing unstructured and temporal data in multimodal
+ETL systems, and optimizing large-scale file transmission under varying
+network conditions?
 \end{frame}
 
-\section{Aims}
-\begin{frame}{General aim}
-...
+\section{Objectives}
+\begin{frame}{General Objectives}
+
+To develop an \textbf{AI-driven framework} for enhancing \textbf{real-time
+management} of signals, APIs, and data processes across network protocols,
+focusing on efficiency, security, \textbf{scalability}, and responsiveness
+to improve research capabilities and \textbf{data exchange}.
 
 \end{frame}
 %
-\begin{frame}{Specific aims}
-
-...
-
+\begin{frame}{Specific Objectives}
+\begin{enumerate}
+\item {\footnotesize{}To design a }\textbf{\footnotesize{}multichannel time
+series processing strategy}{\footnotesize{} to enhance and strengthen
+the structure for immediate collection and display of various types
+of signals, with a specific emphasis on }\textbf{\footnotesize{}streamlining
+and parameterizing}{\footnotesize{} the required infrastructure for
+experiments and }\textbf{\footnotesize{}merging different types of
+signals}{\footnotesize{} into a single interface.\vfill{}
+}{\footnotesize\par}
+\item {\footnotesize{}To implement an }\textbf{\footnotesize{}AI strategy}{\footnotesize{}
+to improve the control of }\textbf{\footnotesize{}real-time APIs}{\footnotesize{}
+and }\textbf{\footnotesize{}multimodal ETL}{\footnotesize{} }\textbf{\footnotesize{}processes}{\footnotesize{}
+through the utilization of }\textbf{\footnotesize{}advanced machine
+learning and deep learning methods}{\footnotesize{} to enhance precision,
+effectiveness, and promptness in intricate data processing and analysis.\vfill{}
+}{\footnotesize\par}
+\item {\footnotesize{}To create an }\textbf{\footnotesize{}AI-based advanced
+platform}{\footnotesize{} for transmitting }\textbf{\footnotesize{}large
+files}{\footnotesize{} and }\textbf{\footnotesize{}distributing messages}{\footnotesize{}
+on a large scale. This system will utilize artificial intelligence
+technologies to improve efficiency, security, and scalability, and
+will also be capable of }\textbf{\footnotesize{}adjusting to changing
+network conditions}{\footnotesize{} to boost communication and data
+transfer.}{\footnotesize\par}
+\end{enumerate}
 \end{frame}
 
 \section{Methodology}
-\begin{frame}{Methodology {[}obj1{]}}
+\begin{frame}{General Methodology of Contributions}
 
-Propongo un sistema basado en aprendizaje reforzado que ajuste dinámicamente
-los parámetros de configuración de una API REST. Este sistema sería
-capaz de modificar en tiempo real aspectos críticos como la configuración
-del servidor (que opera en un entorno basado en contenedores) y la
-interacción con la base de datos. La idea central es que el sistema
-aprenda y se adapte automáticamente a las variaciones en el uso y
-demanda de la API, optimizando recursos, mejorando el rendimiento
-y garantizando una gestión eficiente de la tasa de solicitudes. Este
-enfoque busca combinar la flexibilidad y escalabilidad de los contenedores
-con la inteligencia y adaptabilidad proporcionadas por el aprendizaje
-reforzado, enfocándose en mantener un alto nivel de servicio y disponibilidad
-de la API, incluso ante cambios dinámicos en el entorno y la demanda.
+\begin{figure}
+\centering{}\includegraphics[width=0.8\columnwidth]{images/general_methodology}
+\end{figure}
+\vfill{}
 
-El problema a abordar es cómo superar las limitaciones de tasa de
-solicitudes de API, que generan dificultades en la transmisión de
-datos en escenarios multimodales y en tiempo real, y complican la
-adaptación y mantenimiento cuando se cambian los proveedores de API.
+\begin{center}
+\textsl{\textcolor{red}{\scriptsize{}A six-step approach to analyze,
+design, prototype, test, integrate, and evaluate real-time AI-driven
+solutions.}}{\scriptsize\par}
+\par\end{center}
 
 \end{frame}
 %
-\begin{frame}{Methodology {[}obj2{]}}
+\begin{frame}{AI Hyperparameter Tuning and System-Level Optimization}
 
-Propongo un sistema avanzado de mensajería distribuida, basado en
-una red de malla donde cada nodo puede enviar y recibir mensajes.
-Esta red integra específicamente tecnologías de inteligencia artificial
-para optimizar su funcionamiento: utiliza Redes Neuronales Recurrentes
-(RNN) para el enrutamiento dinámico y predecir la congestión de la
-red, técnicas de clustering para el balanceo equitativo de carga,
-Autoencoders para la detección de anomalías y seguridad, y aprendizaje
-por refuerzo para la optimización constante de rutas. Además, emplea
-modelos de regresión para predecir fallos de nodos y algoritmos de
-segmentación de usuarios para personalizar la experiencia de comunicación.
-Este enfoque brinda una red más eficiente, segura y adaptable, mejorando
-la entrega de mensajes y la experiencia del usuario, al mismo tiempo
-que aumenta la resistencia de la red a fallos y ataques.
-\end{frame}
-%
-\begin{frame}{Methodology {[}obj3{]}}
+\framesubtitle{Enhancing Model Performance and System Efficiency through Dual Optimization
+Techniques}
+\begin{columns}[t]
 
-Propongo un sistema orientado a optimizar los procesos de ETL multimodal
-en entornos de inteligencia artificial a través de algoritmos avanzados
-de aprendizaje automático y aprendizaje profundo, centrado en la integración
-eficiente y procesamiento de datos no estructurados mediante redes
-neuronales convolucionales y la gestión dinámica de secuencias de
-datos temporales utilizando redes neuronales recurrentes. Este enfoque
-práctico involucra el desarrollo de prototipos y su validación en
-escenarios de uso real, destacando aplicaciones como la monitorización
-en tiempo real y el análisis de grandes conjuntos de datos, con el
-objetivo de mejorar significativamente la precisión, eficiencia y
-capacidad de respuesta de los sistemas de ETL, proporcionando un marco
-concreto y aplicable para enfrentar desafíos actuales en el procesamiento
-de datos en IA.
-\end{frame}
-%
-\begin{frame}{Methodology {[}obj4{]}}
+\column[t]{0.5\textwidth}
 
-Para optimizar la transmisión de archivos a gran escala, propongo
-un sistema de servidor inteligente capaz de adaptarse en tiempo real
-a las condiciones de conexión y restricciones del cliente, como la
-pérdida de paquetes y variaciones en el ancho de banda. Este sistema
-utilizará Redes Neuronales Recurrentes, en particular Long Short-Term
-Memory (LSTM), para monitorear y predecir de manera continua y precisa
-las condiciones de la red del cliente. Basándose en esta información,
-el servidor ajustará dinámicamente la tasa de transmisión de archivos,
-seleccionará protocolos de comunicación óptimos y aplicará técnicas
-de compresión de datos para adaptarse a las limitaciones del cliente.
-Además, el sistema contará con mecanismos de aprendizaje continuo
-que le permitirán mejorar progresivamente su capacidad de adaptación,
-asegurando una transmisión eficiente y confiable en un amplio rango
-de condiciones de red. Esta propuesta busca proporcionar una experiencia
-de usuario óptima con un enfoque proactivo y adaptable a las necesidades
-específicas de cada cliente.
-\end{frame}
-
-\section{Academic advances}
-\begin{frame}{Academic advances}
-
-\framesubtitle{Papers, patents and software registers}
+\textit{\footnotesize{}Joint Optimization Approach}{\footnotesize\par}
 \begin{itemize}
-\item {[}2023{]} Paper published...
-\item {[}2022{]} The systems were submitted to the \textbf{Crearlo no es
-suficiente} summons for a \emph{patentability search process} with
-the \emph{Universidad Nacional de Colombia sede Manizales} as main
-beneficiary with the title \textbf{\textquotedbl MÉTODO Y SISTEMA
-PARA LA SINCRONIZACIÓN DE MARCADORES ASOCIADOS A SISTEMAS DE INTERFAZ
-CEREBRO-COMPUTADOR\textquotedbl}, postulation \emph{ID 343 }and
-Application number \emph{NC2022/0007405} from May 28, 2022.
-\item {[}2022{]} A script developed with BCI-Framework for\textbf{ Motor
-imagery paradigm with game-based stimulus (Pacman interface)} was
-submitted to the software register in the \emph{Universidad Nacional
-de Colombia sede Manizales}.
+\item {\footnotesize{}Optimize both }\textbf{\footnotesize{}model hyperparameters}{\footnotesize{}
+and }\textbf{\footnotesize{}system resources}{\footnotesize{} (CPU,
+memory, latency, energy) to enhance overall performance.}{\footnotesize\par}
 \end{itemize}
+\begin{figure}
+\centering{}\includegraphics[width=0.6\columnwidth]{images/opt}
+\end{figure}
+
+
+\column[t]{0.55\textwidth}
+
+\textit{\footnotesize{}Reinforcement Learning (RL) for Adaptive Optimization}{\footnotesize\par}
+\begin{itemize}
+\item \textbf{\footnotesize{}RL }{\footnotesize{}adjusts }\textbf{\footnotesize{}system
+resources}{\footnotesize{} (CPU/GPU, memory, network) in real-time
+to maintain efficiency under changing conditions.}{\footnotesize\par}
+\end{itemize}
+\begin{figure}
+\centering{}\includegraphics[width=0.6\columnwidth]{images/rl}
+\end{figure}
+
+\end{columns}
+
+\begin{center}
+\rule[0.5ex]{0.8\columnwidth}{1pt}
+\par\end{center}
+\begin{columns}[t]
+
+\column[b]{0.7\textwidth}
+
+\textit{\footnotesize{}Synergy Between Techniques}{\footnotesize\par}
+\begin{itemize}
+\item \textbf{\footnotesize{}Bayesian Optimization}{\footnotesize{} finds
+optimal initial configurations. }{\footnotesize\par}
+\item \textbf{\footnotesize{}RL}{\footnotesize{} continuously adapts configurations
+to maintain }\textbf{\footnotesize{}efficiency}{\footnotesize{} under
+different operational conditions.}{\footnotesize\par}
+\end{itemize}
+
+\column[b]{0.3\textwidth}
+
+\begin{figure}
+\centering{}\includegraphics[width=0.7\columnwidth]{images/syn}
+\end{figure}
+
+\end{columns}
+
+\begin{center}
+\vfill{}
+\textit{\textcolor{red}{\scriptsize{}By integrating }}\textbf{\textit{\textcolor{red}{\scriptsize{}Bayesian
+optimization}}}\textit{\textcolor{red}{\scriptsize{} for initial setup
+with}}\textbf{\textit{\textcolor{red}{\scriptsize{} reinforcement
+learning}}}\textit{\textcolor{red}{\scriptsize{} for continuous adaptation,
+the goal is to achieve }}\textbf{\textit{\textcolor{red}{\scriptsize{}robust
+performance}}}\textit{\textcolor{red}{\scriptsize{} and }}\textbf{\textit{\textcolor{red}{\scriptsize{}resource
+efficiency}}}\textit{\textcolor{red}{\scriptsize{} under diverse system
+conditions.}}{\scriptsize\par}
+\par\end{center}
+
+\end{frame}
+%
+\begin{frame}{Testing Contexts of Interest}
+
+\framesubtitle{Scenarios for Testing}
+\begin{columns}[t]
+
+\column{0.5\textwidth}
+
+\textit{\footnotesize{}Prototipo costo-eficiente y escalable para
+el monitoreo del espectro radioeléctrico en Colombia mediante radio
+definido por software y aprendizaje profundo.}{\footnotesize\par}
+\begin{columns}[t]
+
+\column[c]{0.45\textwidth}
+\begin{itemize}
+\item {\scriptsize{}Scalability}{\scriptsize\par}
+\item {\scriptsize{}Robustness }{\scriptsize\par}
+\item {\scriptsize{}Low Latency}{\scriptsize\par}
+\item {\scriptsize{}Reliability}{\scriptsize\par}
+\end{itemize}
+
+\column[c]{0.55\textwidth}
+
+\begin{figure}
+\centering{}\includegraphics[height=0.4\paperheight]{images/architecture}
+\end{figure}
+
+\end{columns}
+
+\vfill{}
+
+
+\column{0.5\textwidth}
+
+\textit{\footnotesize{}Sistema de integración de EEG, ECG y SpO2 para
+seguimiento de neonatos en unidad de cuidados intensivos del Hospital
+Universitario de Caldas - SES HUC.}{\footnotesize\par}
+\begin{columns}[t]
+
+\column[c]{0.5\textwidth}
+\begin{itemize}
+\item {\scriptsize{}Real-Time Monitoring}{\scriptsize\par}
+\item {\scriptsize{}Data Centralization}{\scriptsize\par}
+\item {\scriptsize{}Alarm Generation}{\scriptsize\par}
+\item {\scriptsize{}Accuracy in Critical Settings}{\scriptsize\par}
+\end{itemize}
+
+\column[c]{0.5\textwidth}
+
+\begin{figure}
+\centering{}\includegraphics[width=1\columnwidth]{images/ccp}
+\end{figure}
+
+\end{columns}
+
+\end{columns}
+
+\begin{center}
+\vfill{}
+\textsl{\textcolor{red}{\scriptsize{}Two diverse research projects
+provide essential testing environments for validating scalability,
+robustness, and real-time data integration as part of the system development
+methodology.}}{\scriptsize\par}
+\par\end{center}
+
+\end{frame}
+%
+\begin{frame}{Testing Contexts of Interest}
+
+\framesubtitle{Scenarios for Testing}
+\begin{columns}[t]
+
+\column{0.5\textwidth}
+
+\textit{\footnotesize{}Prototipo Funcional de Lengua Electrónica para
+la Identificación de Sabores en Cacao Fino de Origen Colombiano}{\footnotesize\par}
+\begin{columns}[t]
+
+\column[c]{0.45\textwidth}
+\begin{itemize}
+\item {\scriptsize{}Flavor Profile Identification}{\scriptsize\par}
+\item {\scriptsize{}Portability and Real-Time Analysis}{\scriptsize\par}
+\item {\scriptsize{}Quality Validation}{\scriptsize\par}
+\end{itemize}
+
+\column[c]{0.55\textwidth}
+
+\begin{figure}
+\centering{}\includegraphics[width=0.75\columnwidth]{images/Rueda_Sabores}
+\end{figure}
+
+\end{columns}
+
+
+\column{0.5\textwidth}
+
+Together, these three projects provide a \textbf{comprehensive validation
+of the AI-driven solution, enhancing robustness, adaptability}, and
+practical applications across sectors from telecommunications to food
+quality.
+\end{columns}
+
+\begin{center}
+\vfill{}
+\textsl{\textcolor{red}{\scriptsize{}The electronic tongue prototype
+supports research by providing a practical testing environment for
+enhancing flavor analysis methodologies in cacao production.}}{\scriptsize\par}
+\par\end{center}
+
+\end{frame}
+%
+\begin{frame}{Methodology {[}OBJ1{]}}
+
+\framesubtitle{Streamlining Signal Integration:\\\,\,\,\,\,\,A Comprehensive
+Approach to Real-Time Data Management and Visualization}
+\begin{columns}[t]
+
+\column[b]{0.4\textwidth}
+
+\begin{figure}
+\centering{}\includegraphics[width=1\columnwidth]{images/diagrams/metodology/aim1\lyxdot 1}
+\end{figure}
+
+
+\column[b]{0.6\textwidth}
+
+\begin{figure}
+\centering{}\includegraphics[width=1\columnwidth]{images/diagrams/metodology/aim1\lyxdot 2}
+\end{figure}
+
+\vfill{}
+\end{columns}
+
+\begin{center}
+\textsl{\textcolor{red}{\scriptsize{}Create a }}\textbf{\textsl{\textcolor{red}{\scriptsize{}modular
+and parameterized}}}\textsl{\textcolor{red}{\scriptsize{} system for
+real-time signal acquisition, processing, and integration.}}{\scriptsize\par}
+\par\end{center}
+
+\end{frame}
+%
+\begin{frame}{Methodology {[}OBJ1{]}}
+
+\framesubtitle{BCI-Framework 1.0}
+\begin{columns}[t]
+
+\column[b]{0.5\textwidth}
+
+\begin{figure}
+\centering{}\includegraphics[width=0.7\columnwidth]{images/animation/plot}
+\end{figure}
+\begin{figure}
+\centering{}\includegraphics[width=0.7\columnwidth]{images/animation/ide}
+\end{figure}
+
+
+\column[b]{0.5\textwidth}
+
+\begin{figure}
+\centering{}\includegraphics[width=0.7\columnwidth]{images/animation/delivery}
+\end{figure}
+\begin{figure}
+\centering{}\includegraphics[width=0.7\columnwidth]{images/animation/connect}
+\end{figure}
+
+\end{columns}
+
+\begin{description}
+\item [{{\scriptsize{}GitHub:}}] {\scriptsize{}\href{https://github.com/UN-GCPDS/bci-framework}{https://github.com/UN-GCPDS/bci-framework}}{\scriptsize\par}
+\item [{{\scriptsize{}Documentation:}}] {\scriptsize{}\href{https://bci-framework.readthedocs.io/en/latest/}{https://bci-framework.readthedocs.io/en/latest/}}{\scriptsize\par}
+\end{description}
+\end{frame}
+%
+\begin{frame}{Methodology {[}OBJ2{]}}
+
+\framesubtitle{Optimizing System Performance: Configuring Key Parameters for Enhanced
+Efficiency and Security}
+
+\begin{columns}[t]
+
+\column[b]{0.5\textwidth}
+
+\begin{figure}
+\centering{}\includegraphics[width=1\columnwidth]{images/diagrams/metodology/aim2\lyxdot 1}
+\end{figure}
+\vfill{}
+
+\begin{center}
+\textsl{\textcolor{red}{\scriptsize{}Implement }}\textbf{\textsl{\textcolor{red}{\scriptsize{}AI-driven
+automation}}}\textsl{\textcolor{red}{\scriptsize{} for optimizing
+real-time API and ETL configurations.}}{\scriptsize\par}
+\par\end{center}
+
+\column[b]{0.5\textwidth}
+
+\begin{figure}
+\centering{}\includegraphics[width=0.95\columnwidth]{images/diagrams/metodology/aim2\lyxdot 2}
+\end{figure}
+
+\end{columns}
+
+\end{frame}
+%
+\begin{frame}{Methodology {[}OBJ2{]}}
+
+\framesubtitle{Scalable Service Management for AI Applications}
+
+\textbf{Foundation} is a scalable AI framework for managing distributed
+services and data processes, designed to optimize efficiency and flexibility
+in Docker Swarm environments.
+\begin{columns}[t]
+
+\column[b]{0.77\textwidth}
+\begin{itemize}
+\item \textbf{\scriptsize{}Service Management:}{\scriptsize{} Automates
+creation, deletion, and scaling of services in Docker Swarm. }{\scriptsize\par}
+\item \textbf{\scriptsize{}Worker Lifecycle Control:}{\scriptsize{} Manages
+Python, Django, and Brython services, ensuring efficient deployment
+and operation. }{\scriptsize\par}
+\item \textbf{\scriptsize{}Distributed Logging:}{\scriptsize{} Centralized
+log management via HTTP and Kafka for better monitoring. }{\scriptsize\par}
+\item \textbf{\scriptsize{}Dynamic Resource Allocation:}{\scriptsize{} Adaptive
+management of CPU, memory, and network resources to optimize performance.}{\scriptsize\par}
+\item \textbf{\scriptsize{}Integration with AI Models:}{\scriptsize{} Supports
+integration of machine learning models for automated decision-making
+and optimization.}{\scriptsize\par}
+\end{itemize}
+
+\column[b]{0.15\textwidth}
+
+\begin{figure}
+\centering{}\includegraphics[width=1\columnwidth]{images/diagrams/metodology/foundation}
+\end{figure}
+
+\end{columns}
+
+\vfill{}
+
+\begin{description}
+\item [{{\scriptsize{}GitHub:}}] {\scriptsize{}\href{https://github.com/dunderlab/python-dunerlab.foundation}{https://github.com/dunderlab/python-dunerlab.foundation}}{\scriptsize\par}
+\item [{{\scriptsize{}Documentation:}}] {\scriptsize{}\href{https://dunderlab-foundation.readthedocs.io/en/latest/index.html}{https://dunderlab-foundation.readthedocs.io/en/latest/index.html}
+(Not yet)}{\scriptsize\par}
+\end{description}
+\end{frame}
+%
+\begin{frame}{Methodology {[}OBJ3{]}}
+
+\framesubtitle{Building Advanced AI-based Network protocols: Enhancing Communication
+and Data Transfer Efficiency}
+
+\begin{columns}[t]
+
+\column[b]{0.5\textwidth}
+
+\begin{figure}
+\centering{}\includegraphics[width=1\columnwidth]{images/diagrams/metodology/aim3\lyxdot 1}
+\end{figure}
+
+
+\column[b]{0.5\textwidth}
+
+\begin{figure}
+\centering{}\includegraphics[width=1\columnwidth]{images/diagrams/metodology/aim3\lyxdot 2}
+\end{figure}
+\vfill{}
+
+\end{columns}
+
+\begin{center}
+\textsl{\textcolor{red}{\scriptsize{}Build a scalable, }}\textbf{\textsl{\textcolor{red}{\scriptsize{}AI-enhanced
+platform}}}\textsl{\textcolor{red}{\scriptsize{} for efficient file
+transmission and distributed messaging.}}{\scriptsize\par}
+\par\end{center}
+
+\end{frame}
+%
+\begin{frame}{Methodology {[}OBJ3{]}}
+
+\framesubtitle{Dynamic Communication Framework for Distributed Networks}
+
+\textbf{Chaski-Confluent} is a distributed communication framework
+designed for scalable message handling and dynamic node pairing, tailored
+for TCP/IP networks and optimized for efficient data exchange.
+\begin{columns}[t]
+
+\column[b]{0.75\textwidth}
+\begin{itemize}
+\item \textbf{\scriptsize{}Scalable Messaging:}{\scriptsize{} Supports robust
+node discovery and efficient message routing in large-scale networks. }{\scriptsize\par}
+\item \textbf{\scriptsize{}Dynamic Node Pairing:}{\scriptsize{} Manages
+automatic pairing of nodes based on subscription topics, ensuring
+adaptive communication. }{\scriptsize\par}
+\item \textbf{\scriptsize{}Remote Python Execution:}{\scriptsize{} Facilitates
+remote Python script execution similar to RPyC, enhancing computational
+flexibility. }{\scriptsize\par}
+\item \textbf{\scriptsize{}AI-Enhanced Data Transfer:}{\scriptsize{} Integrates
+AI-based techniques for optimizing large file transfers and message
+distribution. }{\scriptsize\par}
+\item \textbf{\scriptsize{}Real-Time Adaptability:}{\scriptsize{} Adjusts
+to network changes for improved communication and resource utilization.}{\scriptsize\par}
+\end{itemize}
+
+\column[b]{0.2\textwidth}
+
+\begin{figure}
+\centering{}\includegraphics[width=1\columnwidth]{images/diagrams/metodology/chaski}
+\end{figure}
+
+\end{columns}
+
+\vfill{}
+
+\begin{description}
+\item [{{\scriptsize{}GitHub:}}] {\scriptsize{}\href{https://github.com/dunderlab/python-chaski}{https://github.com/dunderlab/python-chaski}}{\scriptsize\par}
+\item [{{\scriptsize{}Documentation:}}] {\scriptsize{}\href{https://chaski-confluent.readthedocs.io/en/latest/}{https://chaski-confluent.readthedocs.io/en/latest/}}{\scriptsize\par}
+\end{description}
+\end{frame}
+
+\section{Obtained Results}
+\begin{frame}{Obtained Results}
+
+\framesubtitle{Papers}
+\begin{description}
+\item [{{\scriptsize{}{[}2023{]}}}] \noindent {\scriptsize{}Published a
+research paper titled \textquotedbl}\textbf{\scriptsize{}A Novel
+OpenBCI Framework for EEG-Based Neurophysiological Experiments}{\scriptsize{}\textquotedbl{}
+in the journal Sensors. The paper discusses the development of an
+Open Brain-Computer Interface (OpenBCI) framework, utilizing open-source
+hardware and firmware to facilitate EEG-based neurophysiological experiments.
+The framework is designed to overcome the limitations of OpenBCI systems,
+particularly in communication and flexibility for various neurophysiological
+protocols. The research was published in Volume 23, Issue 7 of Sensors,
+2023 (DOI: 10.3390/s23073763) (MDPI).}{\footnotesize{}\vfill{}
+}{\footnotesize\par}
+\item [{{\scriptsize{}{[}2023{]}}}] {\scriptsize{}At the \textquotedbl III
+Congreso Latinoamericano de Investigación, Innovación y Emprendimiento
+Educativo,\textquotedbl{} presented \textquotedbl}\textbf{\scriptsize{}Real-Time
+Processing for BCI-Based MI Paradigms Using Deep Learning Models}{\scriptsize{}\textquotedbl{}
+This paper showcases advancements in BCI technology, highlighting
+the application of deep learning models for efficient, real-time processing
+in Motor Imagery (MI) paradigms. The study emphasizes improvements
+in processing speed and accuracy, addressing challenges in real-time
+applications and setting new standards for BCI system performance.
+The work has significant implications for both academic research and
+practical BCI applications in various fields.}{\scriptsize\par}
+\end{description}
+\end{frame}
+%
+\begin{frame}{Obtained Results}
+
+\framesubtitle{Patents and software registers}
+\begin{description}
+\item [{{\scriptsize{}{[}2022{]}}}] \noindent {\scriptsize{}The systems
+were submitted to the Crearlo no es suficiente summons for a patentability
+search process with the Universidad Nacional de Colombia sede Manizales
+as main beneficiary with the title \textquotedbl}\textbf{\scriptsize{}MÉTODO
+Y SISTEMA PARA LA SINCRONIZACIÓN DE MARCADORES ASOCIADOS A SISTEMAS
+DE INTERFAZ CEREBRO-COMPUTADOR}{\scriptsize{}\textquotedbl , postulation
+ID 343 and Application number NC2022/0007405 from May 28, 2022.}{\footnotesize{}\vfill{}
+}{\footnotesize\par}
+\item [{{\scriptsize{}{[}2022{]}}}] \noindent {\scriptsize{}A script developed
+with BCI-Framework for}\textbf{\scriptsize{} Motor imagery paradigm
+with game-based stimulus (Pacman interface)}{\scriptsize{} was submitted
+to the software register in the Universidad Nacional de Colombia sede
+Manizales.}{\scriptsize\par}
+\end{description}
+\end{frame}
+%
+
+
+\section{Implementation Schedule}
+\begin{frame}{Implementation Schedule}
+
+\centering \scalebox{0.8}{
+
+\begin{table}[] \scriptsize \begin{tabular}{c|lllllllllllllllllllllllllll|}                          & \multicolumn{27}{c|}{Activities}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            \\ \cline{2-28}                           & \multicolumn{7}{c|}{}                                                                                                                                                                                           & \multicolumn{7}{c|}{}                                                                                                                                                                                           & \multicolumn{9}{c|}{}                                                                                                                                                                                                                                                 & \multicolumn{4}{c|}{\begin{tabular}[c]{@{}c@{}}Papers and thesis \\ document writing\end{tabular}}              \\ \cline{25-28}  \multirow{-2}{*}{Months} & \multicolumn{7}{c|}{\multirow{-2}{*}{Phases OBJ 1}}                                                                                                                                                             & \multicolumn{7}{c|}{\multirow{-2}{*}{Phases OBJ 2}}                                                                                                                                                             & \multicolumn{9}{c|}{\multirow{-2}{*}{Phases OBJ 3}}                                                                                                                                                                                                                   & \multicolumn{1}{l|}{Paper} & \multicolumn{1}{l|}{Paper} & \multicolumn{1}{l|}{Paper} & Thesis                   \\ \hline 1-2                      & \cellcolor[HTML]{BED189} &                          &                          &                          &                          &                          & \multicolumn{1}{l|}{}                         & \cellcolor[HTML]{BED189} &                          &                          &                          &                          &                          & \multicolumn{1}{l|}{}                         & \cellcolor[HTML]{BED189} &                          &                          &                          &                          &                          &                          &                          & \multicolumn{1}{l|}{}                         &                            &                            &                            &                          \\ 2-4                      &                          & \cellcolor[HTML]{BED189} &                          &                          &                          &                          & \multicolumn{1}{l|}{}                         &                          & \cellcolor[HTML]{BED189} &                          &                          &                          &                          & \multicolumn{1}{l|}{}                         &                          & \cellcolor[HTML]{BED189} &                          &                          &                          &                          &                          &                          & \multicolumn{1}{l|}{}                         &                            &                            &                            &                          \\ 4-6                      &                          &                          & \cellcolor[HTML]{BED189} & \cellcolor[HTML]{BED189} &                          &                          & \multicolumn{1}{l|}{}                         &                          &                          &                          &                          &                          &                          & \multicolumn{1}{l|}{}                         &                          &                          &                          &                          &                          &                          &                          &                          & \multicolumn{1}{l|}{}                         & \cellcolor[HTML]{BED189}   &                            &                            & \cellcolor[HTML]{BED189} \\ 6-8                      &                          &                          &                          & \cellcolor[HTML]{BED189} & \cellcolor[HTML]{BED189} &                          & \multicolumn{1}{l|}{}                         &                          &                          &                          &                          &                          &                          & \multicolumn{1}{l|}{}                         &                          &                          &                          &                          &                          &                          &                          &                          & \multicolumn{1}{l|}{}                         & \cellcolor[HTML]{BED189}   &                            &                            & \cellcolor[HTML]{BED189} \\ 8-10                     &                          &                          &                          &                          &                          &                          & \multicolumn{1}{l|}{}                         &                          &                          & \cellcolor[HTML]{BED189} & \cellcolor[HTML]{BED189} & \cellcolor[HTML]{BED189} &                          & \multicolumn{1}{l|}{}                         &                          &                          &                          &                          &                          &                          &                          &                          & \multicolumn{1}{l|}{}                         & \cellcolor[HTML]{BED189}   & \cellcolor[HTML]{BED189}   &                            & \cellcolor[HTML]{BED189} \\ 10-12                    &                          &                          &                          &                          &                          &                          & \multicolumn{1}{l|}{}                         &                          &                          &                          & \cellcolor[HTML]{BED189} & \cellcolor[HTML]{BED189} & \cellcolor[HTML]{BED189} & \multicolumn{1}{l|}{}                         &                          &                          &                          &                          &                          &                          &                          &                          & \multicolumn{1}{l|}{}                         & \cellcolor[HTML]{BED189}   & \cellcolor[HTML]{BED189}   &                            & \cellcolor[HTML]{BED189} \\ 12-14                    &                          &                          &                          &                          &                          &                          & \multicolumn{1}{l|}{}                         &                          &                          &                          &                          &                          &                          & \multicolumn{1}{l|}{}                         &                          &                          & \cellcolor[HTML]{BED189} & \cellcolor[HTML]{BED189} & \cellcolor[HTML]{BED189} & \cellcolor[HTML]{BED189} &                          &                          & \multicolumn{1}{l|}{}                         & \cellcolor[HTML]{BED189}   & \cellcolor[HTML]{BED189}   & \cellcolor[HTML]{BED189}   & \cellcolor[HTML]{BED189} \\ 14-16                    &                          &                          &                          &                          &                          &                          & \multicolumn{1}{l|}{}                         &                          &                          &                          &                          &                          &                          & \multicolumn{1}{l|}{}                         &                          &                          &                          & \cellcolor[HTML]{BED189} & \cellcolor[HTML]{BED189} & \cellcolor[HTML]{BED189} & \cellcolor[HTML]{BED189} &                          & \multicolumn{1}{l|}{}                         & \cellcolor[HTML]{BED189}   & \cellcolor[HTML]{BED189}   & \cellcolor[HTML]{BED189}   & \cellcolor[HTML]{BED189} \\ 16-18                    &                          &                          &                          &                          &                          & \cellcolor[HTML]{BED189} & \multicolumn{1}{l|}{\cellcolor[HTML]{BED189}} &                          &                          &                          &                          &                          &                          & \multicolumn{1}{l|}{\cellcolor[HTML]{BED189}} &                          &                          &                          &                          &                          &                          &                          & \cellcolor[HTML]{BED189} & \multicolumn{1}{l|}{\cellcolor[HTML]{BED189}} & \cellcolor[HTML]{BED189}   & \cellcolor[HTML]{BED189}   & \cellcolor[HTML]{BED189}   & \cellcolor[HTML]{BED189} \\ \hline \end{tabular} \end{table}
+
+}
+
 \end{frame}
 
 \section{Acknowledgements}
 \begin{frame}{Acknowledgements}
 
-...
+This research would not have been possible without the support provided
+by the project \textit{Prototipo Funcional de Lengua Electrónica para
+la Identificación de Sabores en Cacao Fino de Origen Colombiano (código
+202010039703)} funded by \textbf{Casa Luker}.
 \end{frame}
 
 \section{References}
