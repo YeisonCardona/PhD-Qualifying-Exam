@@ -215,7 +215,7 @@ status open
 
 Real-Time Signal Processing and Data Exchange
 \begin_inset Argument 1
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Developing an AI-Driven Framework for Real-Time Signal Processing and Data
@@ -482,16 +482,6 @@ LatexCommand tableofcontents
 \end_deeper
 \begin_layout Section
 Motivation
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-5 min (0 min)
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Frame
@@ -510,23 +500,6 @@ Motivation
 \begin_deeper
 \begin_layout FrameSubtitle
 Data Exchange: Definition
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Data Exchange is the 
-\series bold
-proficient and secure transfer
-\series default
- of data across various platforms and processes.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -607,91 +580,6 @@ Data Exchange: Applications and Investments
 \end_layout
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Although data interchange provides advantages, it is essential to tackle
- obstacles such as 
-\series bold
-strong security
-\series default
- measures and encryption, guaranteeing the 
-\series bold
-precision
-\series default
- and 
-\series bold
-dependability
-\series default
- of data, and complying with industry-specific rules.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-While data exchange offers benefits, it's crucial to address challenges
- like robust security and encryption, ensuring data accuracy and reliability,
- and adhering to 
-\series bold
-industry-specific compliance regulations
-\series default
-.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Las dificultades están intrínsecamente ligadas a las aplicaciones de intercambio
- de datos.
- Describirlas en la sección de aplicaciones ayuda a comprender mejor las
- condiciones y requisitos necesarios para que estas aplicaciones funcionen
- correctamente.
- 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Although data interchange provides advantages, it's crucial to address
-\series bold
- intrinsic requirements
-\series default
- such as robust security and encryption, ensuring data accuracy and reliability,
- and adhering to industry-specific 
-\series bold
-compliance regulations
-\series default
-.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 It requires strong security and encryption, data quality and dependability,
  and industry-specific 
 \series bold
@@ -752,7 +640,7 @@ literal "false"
 
 .
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Companies gather data from different sources (sales, customer interaction,
@@ -780,7 +668,7 @@ literal "false"
 
 .
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Credit checks, risk assessment, and fraud detection rely heavily on data
@@ -808,7 +696,7 @@ literal "false"
 
 .
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Government agencies often need to share data to improve services and create
@@ -835,7 +723,7 @@ literal "false"
 
 .
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Data exchanges often operate as marketplaces where companies can buy or
@@ -864,7 +752,7 @@ literal "false"
 
 .
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Sharing patient data securely between different healthcare providers (hospitals,
@@ -892,7 +780,7 @@ literal "false"
 
 .
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 The cornerstone of scientific discovery is often built on collaboration
@@ -936,7 +824,7 @@ textwidth
 
 \size scriptsize
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1085,7 +973,7 @@ textwidth
 Fourth largest data center market in Latin America.
  
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Itemize
 
@@ -1114,7 +1002,7 @@ Esto refleja la creciente demanda de infraestructura de TI en el país, impulsad
 Significant investments in infrastructure.
  
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Itemize
 
@@ -1146,7 +1034,7 @@ Aunque las cifras exactas de estas inversiones pueden no estar públicamente
 Attractive for international investments.
  
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Itemize
 
@@ -1176,7 +1064,7 @@ La demanda en aumento de servicios digitales en el país crea oportunidades
 Strategic location advantage.
  
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Itemize
 
@@ -1318,7 +1206,7 @@ textwidth
 \size scriptsize
 Data Process Automation 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1337,7 +1225,7 @@ Implement RPA to automate data collection, entry, and management in Data
 \size scriptsize
 Analysis and Decision-Making 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1356,7 +1244,7 @@ Apply ML/AI for pattern identification, predictive analytics, and informed
 \size scriptsize
 Workflow Optimization 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1375,7 +1263,7 @@ Use Hyperautomation tools to design Data Exchange workflows that automatically
 \size scriptsize
 System Integration 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1394,7 +1282,7 @@ Orchestrate seamless data flow and integration across diverse platforms
 \size scriptsize
 Data Governance 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1413,7 +1301,7 @@ Strengthen data governance and compliance through automated systems that
 \size scriptsize
 Scalability and Maintenance 
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -1514,28 +1402,6 @@ Motivation
 \begin_deeper
 \begin_layout FrameSubtitle
 SPRG: Signal Processing and Recognition Group
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Our research group is deeply committed to advancing the field of 
-\series bold
-interdisciplinary data exchange
-\series default
-, recognizing its pivotal role in unlocking innovative solutions and driving
- collaborative breakthroughs across 
-\series bold
-diverse research domains
-\series default
-.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1680,31 +1546,6 @@ status open
 \end_deeper
 \begin_layout Section
 Problem Statement
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-5 min (5 min)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-En "Planteamiento del problema", se enfatiza la relevancia y el impacto
- del problema, utilizando una frase que conecte los desafíos técnicos con
- la necesidad de soluciones innovadoras.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Frame
@@ -1898,7 +1739,7 @@ API Request Limits
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -2041,7 +1882,6 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/diagrams/API_01.svg
-	lyxscale 10
 	height 35pheight%
 	rotateOrigin centerBaseline
 
@@ -2093,7 +1933,7 @@ Messaging Scalability
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -2152,7 +1992,6 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/diagrams/MSG_01.svg
-	lyxscale 10
 	height 35pheight%
 	rotateOrigin centerBaseline
 
@@ -2204,7 +2043,7 @@ Multimodal ETL & AI
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 A pesar de los avances en tecnologías ETL y ELT, muchos sistemas aún utilizan
@@ -2251,7 +2090,6 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/diagrams/ETL_01.svg
-	lyxscale 10
 	height 35pheight%
 	rotateOrigin centerBaseline
 
@@ -2303,7 +2141,7 @@ Large-Scale File Transmission
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Plain Layout
 La transmisión de archivos a gran escala depende de protocolos estáticos,
@@ -2351,7 +2189,6 @@ status open
 \align center
 \begin_inset Graphics
 	filename images/diagrams/FLA_01.svg
-	lyxscale 10
 	height 35pheight%
 	rotateOrigin centerBaseline
 
@@ -2377,16 +2214,6 @@ Depends primarily on protocols that are static and universally applicable.
 \end_deeper
 \begin_layout Section
 State-of-the-Art
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-5 min (10 min)
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Frame
@@ -3903,27 +3730,34 @@ Transmisión de Archivos
 \end_layout
 
 \begin_layout Standard
+
+\series bold
 How can advanced artificial intelligence and machine learning techniques
- enhance data management and communications in digital environments? Specificall
-y, in improving real-time API flexibility and effectiveness, boosting distribute
-d messaging system efficiency and scalability, effectively processing unstructur
-ed and temporal data in multimodal ETL systems, and optimizing large-scale
- file transmission under varying network conditions?
+ enhance data management and communications in digital environments? 
+\series default
+Specifically, in improving real-time 
+\shape italic
+API
+\shape default
+ flexibility and effectiveness, boosting 
+\shape italic
+distributed messaging
+\shape default
+ system efficiency and scalability, effectively processing unstructured
+ and temporal data in multimodal 
+\shape italic
+ETL
+\shape default
+ systems, and optimizing large-scale 
+\shape italic
+file transmission
+\shape default
+ under varying network conditions?
 \end_layout
 
 \end_deeper
 \begin_layout Section
 Objectives
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-5 min (15 min)
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Frame
@@ -3945,11 +3779,10 @@ General Objectives
 status open
 
 \begin_layout Plain Layout
-Desarrollar un marco de trabajo impulsado por IA que mejore la gestión en
- tiempo real del procesamiento de señales y datos a través de protocolos
- de red, con un enfoque en la eficiencia, seguridad, escalabilidad y capacidad
- de respuesta, mejorando así las capacidades de investigación y facilitando
- el intercambio fluido de datos.
+Desarrollar un marco de trabajo impulsado por IA para mejorar la gestión
+ en tiempo real de señales y el procesamiento de datos a través de protocolos
+ de red, enfocándose en la eficiencia, seguridad, escalabilidad y capacidad
+ de respuesta para optimizar la investigación y el intercambio de datos.
 \end_layout
 
 \end_inset
@@ -3958,20 +3791,23 @@ Desarrollar un marco de trabajo impulsado por IA que mejore la gestión en
 \end_layout
 
 \begin_layout Standard
-To develop an
+To develop an 
 \series bold
- AI-driven framework
+AI-driven framework
 \series default
- that enhances 
+ for enhancing 
 \series bold
 real-time management
 \series default
- of signal and data processing across network protocols, with a focus on
- efficiency, security, scalability, and responsiveness, ultimately 
+ 
 \series bold
-improving research capabilities
+of signals and data processing
 \series default
- and facilitating seamless data exchange.
+ across network protocols, focusing on 
+\series bold
+efficiency, security, scalability, and responsiveness
+\series default
+ to improve research capabilities and data exchange.
 \end_layout
 
 \end_deeper
@@ -4003,6 +3839,17 @@ Specific Objectives
 \begin_layout Enumerate
 
 \size footnotesize
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Diseñar una estrategia para procesar señales multicanal en tiempo real.
+\end_layout
+
+\end_inset
+
 To design a 
 \series bold
 multichannel time series processing strategy
@@ -4018,7 +3865,7 @@ merging different types of signals
 \series default
  into a single interface.
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Itemize
 
@@ -4052,6 +3899,17 @@ Fusionar diferentes señales en una única interfaz para facilitar el análisis.
 \begin_layout Enumerate
 
 \size footnotesize
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Implementar una estrategia de IA para optimizar APIs y procesos ETL.
+\end_layout
+
+\end_inset
+
 To implement an 
 \series bold
 AI strategy
@@ -4076,7 +3934,7 @@ advanced machine learning and deep learning methods
 g and analysis.
  
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Itemize
 
@@ -4112,6 +3970,18 @@ Enfocarse en mejorar la precisión, efectividad y rapidez en el análisis
 \begin_layout Enumerate
 
 \size footnotesize
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Crear una plataforma avanzada basada en IA para la gestión de mensajería
+ distribuida y la transmisión de archivos grandes.
+\end_layout
+
+\end_inset
+
 To create an 
 \series bold
 AI-based advanced platform
@@ -4133,7 +4003,7 @@ adjusting to changing network conditions
  to boost communication and data transfer.
  
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Itemize
 Transmitir archivos grandes y distribuir mensajes de forma masiva.
@@ -4291,7 +4161,7 @@ A six-step approach to analyze, design, prototype, test, integrate, and
 status open
 
 \begin_layout Plain Layout
-AI Hyperparameter Tuning and System-Level Optimization
+AI-Based Hyperparameter Tuning and System-Level Optimization
 \end_layout
 
 \end_inset
@@ -4306,6 +4176,22 @@ Enhancing Model Performance and System Efficiency through Dual Optimization
 \end_layout
 
 \begin_layout ColumnsTopAligned
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+En cuanto a la forma en como se va a incluir la IA en este proyecto, vamos
+ a usar enfoques de aprendizaje automático para mejorar el rendimiento del
+ modelo y la eficiencia del sistema.
+\end_layout
+
+\begin_layout Plain Layout
+Por un lado optimizadores Bayesianos para encontrar óptimos de configuración
+ inicial y modelos de Aprendizaje por refuerzo para adaptación continua.
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
@@ -4624,18 +4510,6 @@ status open
 
 \begin_layout Plain Layout
 Testing Contexts of Interest
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-y otro slide que hable de los contextos de prueba de interes, proyectos
- ane y proyecto neonatos ses para declarar que esas serian los escenarios
- de prueba de interes
 \end_layout
 
 \end_inset
@@ -5754,54 +5628,6 @@ status open
 Configuring Key Parameters for Enhanced Efficiency and Security
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Propongo un sistema basado en aprendizaje reforzado que ajuste dinámicamente
- los parámetros de configuración de una API REST.
- Este sistema sería capaz de modificar en tiempo real aspectos críticos
- como la configuración del servidor (que opera en un entorno basado en contenedo
-res) y la interacción con la base de datos.
- La idea central es que el sistema aprenda y se adapte automáticamente a
- las variaciones en el uso y demanda de la API, optimizando recursos, mejorando
- el rendimiento y garantizando una gestión eficiente de la tasa de solicitudes.
- Este enfoque busca combinar la flexibilidad y escalabilidad de los contenedores
- con la inteligencia y adaptabilidad proporcionadas por el aprendizaje reforzado
-, enfocándose en mantener un alto nivel de servicio y disponibilidad de
- la API, incluso ante cambios dinámicos en el entorno y la demanda.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Propongo un sistema orientado a optimizar los procesos de ETL multimodal
- en entornos de inteligencia artificial a través de algoritmos avanzados
- de aprendizaje automático y aprendizaje profundo, centrado en la integración
- eficiente y procesamiento de datos no estructurados mediante redes neuronales
- convolucionales y la gestión dinámica de secuencias de datos temporales
- utilizando redes neuronales recurrentes.
- Este enfoque práctico involucra el desarrollo de prototipos y su validación
- en escenarios de uso real, destacando aplicaciones como la monitorización
- en tiempo real y el análisis de grandes conjuntos de datos, con el objetivo
- de mejorar significativamente la precisión, eficiencia y capacidad de respuesta
- de los sistemas de ETL, proporcionando un marco concreto y aplicable para
- enfrentar desafíos actuales en el procesamiento de datos en IA.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout ColumnsTopAligned
 
 \end_layout
@@ -5971,7 +5797,7 @@ Foundation
 \begin_deeper
 \begin_layout Column
 \begin_inset Argument 1
-status collapsed
+status open
 
 \begin_layout Plain Layout
 b
@@ -6197,61 +6023,6 @@ status open
 Enhancing Communication and Data Transfer Efficiency
 \end_layout
 
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Propongo un sistema avanzado de mensajería distribuida, basado en una red
- de malla donde cada nodo puede enviar y recibir mensajes.
- Esta red integra específicamente tecnologías de inteligencia artificial
- para optimizar su funcionamiento: utiliza Redes Neuronales Recurrentes
- (RNN) para el enrutamiento dinámico y predecir la congestión de la red,
- técnicas de clustering para el balanceo equitativo de carga, Autoencoders
- para la detección de anomalías y seguridad, y aprendizaje por refuerzo
- para la optimización constante de rutas.
- Además, emplea modelos de regresión para predecir fallos de nodos y algoritmos
- de segmentación de usuarios para personalizar la experiencia de comunicación.
- Este enfoque brinda una red más eficiente, segura y adaptable, mejorando
- la entrega de mensajes y la experiencia del usuario, al mismo tiempo que
- aumenta la resistencia de la red a fallos y ataques.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status collapsed
-
-\begin_layout Plain Layout
-Para optimizar la transmisión de archivos a gran escala, propongo un sistema
- de servidor inteligente capaz de adaptarse en tiempo real a las condiciones
- de conexión y restricciones del cliente, como la pérdida de paquetes y
- variaciones en el ancho de banda.
- Este sistema utilizará Redes Neuronales Recurrentes, en particular Long
- Short-Term Memory (LSTM), para monitorear y predecir de manera continua
- y precisa las condiciones de la red del cliente.
- Basándose en esta información, el servidor ajustará dinámicamente la tasa
- de transmisión de archivos, seleccionará protocolos de comunicación óptimos
- y aplicará técnicas de compresión de datos para adaptarse a las limitaciones
- del cliente.
- Además, el sistema contará con mecanismos de aprendizaje continuo que le
- permitirán mejorar progresivamente su capacidad de adaptación, asegurando
- una transmisión eficiente y confiable en un amplio rango de condiciones
- de red.
- Esta propuesta busca proporcionar una experiencia de usuario óptima con
- un enfoque proactivo y adaptable a las necesidades específicas de cada
- cliente.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout ColumnsTopAligned
 
 \end_layout
@@ -6418,7 +6189,7 @@ Chaski-Confluent
 \begin_deeper
 \begin_layout Column
 \begin_inset Argument 1
-status collapsed
+status open
 
 \begin_layout Plain Layout
 b
@@ -6714,7 +6485,7 @@ MÉTODO Y SISTEMA PARA LA SINCRONIZACIÓN DE MARCADORES ASOCIADOS A SISTEMAS
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Frame
 \begin_inset Argument 4
@@ -6797,268 +6568,10 @@ Implementation Schedule
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Note Note
-status collapsed
+\noindent
+\align center
 
-\begin_layout Plain Layout
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-begin{table}[H]
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-centering 
-\backslash
-scriptsize 
-\backslash
-begin{tabular}{c|lllllllllllllllllllllll|}        & 
-\backslash
-multicolumn{23}{c|}{Activities}                                        
-                                                                       
-                                                                       
-                                                                       
-                                                                       
-                                                                       
-                                                                       
-                                                                       
-                                                                       
-                     
-\backslash
-
-\backslash
- 
-\backslash
-cline{2-24}  Months & 
-\backslash
-multicolumn{7}{c|}{Phases OBJ 1}                                       
-                                                                       
-                                                                 & 
-\backslash
-multicolumn{7}{c|}{Phases OBJ 2}                                       
-                                                                       
-                                                                 & 
-\backslash
-multicolumn{9}{c|}{Phases OBJ 3}                                       
-                                                                       
-                                                                       
-                           
-\backslash
-
-\backslash
- 
-\backslash
-hline 1-2    & 
-\backslash
-cellcolor[HTML]{BED189} &                          &                   
-       &                          &                          &         
-                 & 
-\backslash
-multicolumn{1}{l|}{}                         & 
-\backslash
-cellcolor[HTML]{BED189} &                          &                   
-       &                          &                          &         
-                 & 
-\backslash
-multicolumn{1}{l|}{}                         & 
-\backslash
-cellcolor[HTML]{BED189} &                          &                   
-       &                          &                          &         
-                 &                          &                          &
-                          
-\backslash
-
-\backslash
- 2-4    &                          & 
-\backslash
-cellcolor[HTML]{BED189} &                          &                   
-       &                          &                          & 
-\backslash
-multicolumn{1}{l|}{}                         &                         
- & 
-\backslash
-cellcolor[HTML]{BED189} &                          &                   
-       &                          &                          & 
-\backslash
-multicolumn{1}{l|}{}                         &                         
- & 
-\backslash
-cellcolor[HTML]{BED189} &                          &                   
-       &                          &                          &         
-                 &                          &                          
-\backslash
-
-\backslash
- 4-6    &                          &                          & 
-\backslash
-cellcolor[HTML]{BED189} & 
-\backslash
-cellcolor[HTML]{BED189} &                          &                   
-       & 
-\backslash
-multicolumn{1}{l|}{}                         &                         
- &                          &                          &               
-           &                          &                          & 
-\backslash
-multicolumn{1}{l|}{}                         &                         
- &                          &                          &               
-           &                          &                          &     
-                     &                          &                      
-    
-\backslash
-
-\backslash
- 6-8    &                          &                          &        
-                  & 
-\backslash
-cellcolor[HTML]{BED189} & 
-\backslash
-cellcolor[HTML]{BED189} &                          & 
-\backslash
-multicolumn{1}{l|}{}                         &                         
- &                          &                          &               
-           &                          &                          & 
-\backslash
-multicolumn{1}{l|}{}                         &                         
- &                          &                          &               
-           &                          &                          &     
-                     &                          &                      
-    
-\backslash
-
-\backslash
- 8-10   &                          &                          &        
-                  &                          &                         
- &                          & 
-\backslash
-multicolumn{1}{l|}{}                         &                         
- &                          & 
-\backslash
-cellcolor[HTML]{BED189} & 
-\backslash
-cellcolor[HTML]{BED189} & 
-\backslash
-cellcolor[HTML]{BED189} &                          & 
-\backslash
-multicolumn{1}{l|}{}                         &                         
- &                          &                          &               
-           &                          &                          &     
-                     &                          &                      
-    
-\backslash
-
-\backslash
- 10-12  &                          &                          &        
-                  &                          &                         
- &                          & 
-\backslash
-multicolumn{1}{l|}{}                         &                         
- &                          &                          & 
-\backslash
-cellcolor[HTML]{BED189} & 
-\backslash
-cellcolor[HTML]{BED189} & 
-\backslash
-cellcolor[HTML]{BED189} & 
-\backslash
-multicolumn{1}{l|}{}                         &                         
- &                          &                          &               
-           &                          &                          &     
-                     &                          &                      
-    
-\backslash
-
-\backslash
- 12-14  &                          &                          &        
-                  &                          &                         
- &                          & 
-\backslash
-multicolumn{1}{l|}{}                         &                         
- &                          &                          &               
-           &                          &                          & 
-\backslash
-multicolumn{1}{l|}{}                         &                         
- &                          & 
-\backslash
-cellcolor[HTML]{BED189} & 
-\backslash
-cellcolor[HTML]{BED189} & 
-\backslash
-cellcolor[HTML]{BED189} & 
-\backslash
-cellcolor[HTML]{BED189} &                          &                   
-       &                          
-\backslash
-
-\backslash
- 14-16  &                          &                          &        
-                  &                          &                         
- &                          & 
-\backslash
-multicolumn{1}{l|}{}                         &                         
- &                          &                          &               
-           &                          &                          & 
-\backslash
-multicolumn{1}{l|}{}                         &                         
- &                          &                          & 
-\backslash
-cellcolor[HTML]{BED189} & 
-\backslash
-cellcolor[HTML]{BED189} & 
-\backslash
-cellcolor[HTML]{BED189} & 
-\backslash
-cellcolor[HTML]{BED189} &                          &                   
-       
-\backslash
-
-\backslash
- 16-18  &                          &                          &        
-                  &                          &                         
- & 
-\backslash
-cellcolor[HTML]{BED189} & 
-\backslash
-multicolumn{1}{l|}{
-\backslash
-cellcolor[HTML]{BED189}} &                          &                  
-        &                          &                          &        
-                  &                          & 
-\backslash
-multicolumn{1}{l|}{
-\backslash
-cellcolor[HTML]{BED189}} &                          &                  
-        &                          &                          &        
-                  &                          &                         
- & 
-\backslash
-cellcolor[HTML]{BED189} & 
-\backslash
-cellcolor[HTML]{BED189} 
-\backslash
-end{tabular} 
-\backslash
-end{table}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
+\size tiny
 \begin_inset ERT
 status open
 
@@ -7067,24 +6580,32 @@ status open
 
 \backslash
 centering 
-\backslash
-scalebox{0.8}{
-\end_layout
-
-\begin_layout Plain Layout
-
 \end_layout
 
 \begin_layout Plain Layout
 
 
 \backslash
-begin{table}[] 
+begin{table}[]
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
-scriptsize 
+tiny
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
-begin{tabular}{c|lllllllllllllllllllllllllll|}                         
- & 
+begin{tabular}{c|lllllllllllllllllllllllllll|}
+\end_layout
+
+\begin_layout Plain Layout
+
+                         & 
 \backslash
 multicolumn{27}{c|}{Activities}                                        
                                                                        
@@ -7103,7 +6624,12 @@ multicolumn{27}{c|}{Activities}
 \backslash
  
 \backslash
-cline{2-28}                           & 
+cline{2-28} 
+\end_layout
+
+\begin_layout Plain Layout
+
+                         & 
 \backslash
 multicolumn{7}{c|}{}                                                   
                                                                        
@@ -7132,7 +6658,12 @@ end{tabular}}
 \backslash
  
 \backslash
-cline{25-28}  
+cline{25-28} 
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 multirow{-2}{*}{Months} & 
 \backslash
@@ -7165,7 +6696,12 @@ multicolumn{1}{l|}{Paper} & Thesis
 \backslash
  
 \backslash
-hline 1-2                      & 
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+1-2                      & 
 \backslash
 cellcolor[HTML]{BED189} &                          &                   
        &                          &                          &         
@@ -7190,7 +6726,12 @@ multicolumn{1}{l|}{}                         &
 \backslash
 
 \backslash
- 2-4                      &                          & 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+2-4                      &                          & 
 \backslash
 cellcolor[HTML]{BED189} &                          &                   
        &                          &                          & 
@@ -7214,8 +6755,13 @@ multicolumn{1}{l|}{}                         &
 \backslash
 
 \backslash
- 4-6                      &                          &                 
-         & 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+4-6                      &                          &                  
+        & 
 \backslash
 cellcolor[HTML]{BED189} & 
 \backslash
@@ -7240,8 +6786,13 @@ cellcolor[HTML]{BED189}
 \backslash
 
 \backslash
- 6-8                      &                          &                 
-         &                          & 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+6-8                      &                          &                  
+        &                          & 
 \backslash
 cellcolor[HTML]{BED189} & 
 \backslash
@@ -7265,9 +6816,14 @@ cellcolor[HTML]{BED189}
 \backslash
 
 \backslash
- 8-10                     &                          &                 
-         &                          &                          &       
-                   &                          & 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+8-10                     &                          &                  
+        &                          &                          &        
+                  &                          & 
 \backslash
 multicolumn{1}{l|}{}                         &                         
  &                          & 
@@ -7293,9 +6849,14 @@ cellcolor[HTML]{BED189}
 \backslash
 
 \backslash
- 10-12                    &                          &                 
-         &                          &                          &       
-                   &                          & 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+10-12                    &                          &                  
+        &                          &                          &        
+                  &                          & 
 \backslash
 multicolumn{1}{l|}{}                         &                         
  &                          &                          & 
@@ -7321,9 +6882,14 @@ cellcolor[HTML]{BED189}
 \backslash
 
 \backslash
- 12-14                    &                          &                 
-         &                          &                          &       
-                   &                          & 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+12-14                    &                          &                  
+        &                          &                          &        
+                  &                          & 
 \backslash
 multicolumn{1}{l|}{}                         &                         
  &                          &                          &               
@@ -7353,9 +6919,14 @@ cellcolor[HTML]{BED189}
 \backslash
 
 \backslash
- 14-16                    &                          &                 
-         &                          &                          &       
-                   &                          & 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+14-16                    &                          &                  
+        &                          &                          &        
+                  &                          & 
 \backslash
 multicolumn{1}{l|}{}                         &                         
  &                          &                          &               
@@ -7384,9 +6955,14 @@ cellcolor[HTML]{BED189}
 \backslash
 
 \backslash
- 16-18                    &                          &                 
-         &                          &                          &       
-                   & 
+
+\end_layout
+
+\begin_layout Plain Layout
+
+16-18                    &                          &                  
+        &                          &                          &        
+                  & 
 \backslash
 cellcolor[HTML]{BED189} & 
 \backslash
@@ -7421,20 +6997,21 @@ cellcolor[HTML]{BED189}
 \backslash
  
 \backslash
-hline 
+hline
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
-end{tabular} 
+end{tabular}
+\end_layout
+
+\begin_layout Plain Layout
+
+
 \backslash
 end{table}
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-}
 \end_layout
 
 \end_inset
@@ -7443,10 +7020,6 @@ end{table}
 \end_layout
 
 \end_deeper
-\begin_layout Frame
-
-\end_layout
-
 \begin_layout Section
 Acknowledgements
 \end_layout
@@ -7486,7 +7059,7 @@ References
 
 \begin_layout Frame
 \begin_inset Argument 3
-status collapsed
+status open
 
 \begin_layout Plain Layout
 allowframebreaks
